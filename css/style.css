@@ -1,0 +1,26 @@
+header .hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/mainwallpaper.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+header .hero .hero::before {
+  content: "";
+}
+header .hero nav .content {
+  border: 1px solid yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .hero nav img {
+  width: 100px;
+}
+header .hero nav i {
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
