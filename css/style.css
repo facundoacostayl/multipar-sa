@@ -1,7 +1,12 @@
-header .hero {
-  position: relative;
+.section {
   height: 100vh;
   width: 100%;
+}
+
+header .hero {
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 header .hero nav .content {
   display: flex;
@@ -48,6 +53,14 @@ header .hero-content .hero-subtitle {
 }
 header .hero-content .hero-subtitle h2:last-child {
   color: #a42138;
+}
+header .hero-arrow {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding-bottom: 2rem;
 }
 
 .hero::before {
