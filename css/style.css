@@ -12,7 +12,19 @@ header .hero nav .content {
 header .hero nav img {
   width: 100px;
 }
-header .hero nav i {
+header .hero nav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .hero nav .nav-right .nav-info {
+  line-height: 3px;
+  text-align: right;
+}
+header .hero nav .nav-right .nav-info p {
+  color: red;
+}
+header .hero nav .nav-right i {
   font-size: 2rem;
 }
 

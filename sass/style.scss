@@ -19,9 +19,29 @@
                 img {
                     width: 100px;
                 }
-                
-                i {
-                    font-size: 2rem;
+
+                .nav-right {
+
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+
+                    .nav-info {
+
+                        line-height: 3px;
+                        text-align: right;
+
+                        p {
+                            color: red;
+                        }
+                    }
+                    
+
+                    i {
+                        font-size: 2rem;
+                    }
+
                 }
             }
         }
