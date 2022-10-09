@@ -143,3 +143,24 @@ h1, h2, h3, h4 {
             }
         }
     }
+
+    .servicios-section {
+
+        border: red solid 1px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+
+        .servicios-content {
+
+            p {
+                color: red;
+            }
+
+            a {
+                color: rgb(54, 54, 54);
+                text-decoration: none;
+            }
+        }
+    }

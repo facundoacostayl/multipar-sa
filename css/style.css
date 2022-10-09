@@ -116,4 +116,19 @@ header .hero-arrow {
   color: white;
 }
 
+.servicios-section {
+  border: red solid 1px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.servicios-section .servicios-content p {
+  color: red;
+}
+.servicios-section .servicios-content a {
+  color: rgb(54, 54, 54);
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=style.css.map */
