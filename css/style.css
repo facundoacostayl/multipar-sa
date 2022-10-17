@@ -184,4 +184,18 @@ header .hero-arrow {
   margin: 5px;
 }
 
+footer {
+  height: 100%;
+  background-color: #a42138;
+}
+footer .footer-content {
+  padding: 2rem;
+  color: white;
+}
+footer .footer-content .contact-info-side {
+  text-align: center;
+  border-bottom: 2px solid white;
+  margin-bottom: 50px;
+}
+
 /*# sourceMappingURL=style.css.map */

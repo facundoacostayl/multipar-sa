@@ -223,8 +223,26 @@ h1, h2, h3, h4 {
                     text-align: center;
                     margin: 5px;
                 }
+            }
+        }
+    }
 
+    footer {
+        height: 100%;
+        background-color: #a42138;
+        
+        .footer-content {
+            padding: 2rem;
+            color: white;
+
+            .contact-info-side {
+                text-align: center;
+                border-bottom: 2px solid white;
+                margin-bottom: 50px;
             }
 
+            .links-side {
+                
+            }
         }
     }
