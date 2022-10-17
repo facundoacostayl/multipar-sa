@@ -123,12 +123,65 @@ header .hero-arrow {
   justify-content: center;
   align-items: end;
 }
+.servicios-section .servicios-content {
+  display: none;
+}
 .servicios-section .servicios-content p {
   color: red;
 }
 .servicios-section .servicios-content a {
   color: rgb(54, 54, 54);
   text-decoration: none;
+}
+
+.contacto-section {
+  background-color: #025694;
+  height: 100%;
+}
+.contacto-section .contacto-content {
+  padding: 2rem;
+  color: white;
+}
+.contacto-section .contacto-content .contacto-title {
+  line-height: 1px;
+}
+.contacto-section .contacto-content .form-content {
+  padding: 25px 0 25px 0;
+}
+.contacto-section .contacto-content .form-content .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 15px;
+}
+.contacto-section .contacto-content .form-content .form-group input, .contacto-section .contacto-content .form-content .form-group textarea {
+  background-color: transparent;
+  border-bottom: white 1px solid;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+.contacto-section .contacto-content .form-content .form-group textarea {
+  height: 80px;
+}
+.contacto-section .contacto-content .form-content .form-button-container {
+  display: flex;
+  justify-content: right;
+}
+.contacto-section .contacto-content .form-content .form-button-container button {
+  margin: 10px 0 10px 0;
+  color: white;
+  border: none;
+  background-color: #025694;
+}
+.contacto-section .contacto-content .aside-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacto-section .contacto-content .aside-content .info-group {
+  text-align: center;
+  margin: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

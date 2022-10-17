@@ -154,6 +154,8 @@ h1, h2, h3, h4 {
 
         .servicios-content {
 
+            display: none;
+
             p {
                 color: red;
             }
@@ -162,5 +164,67 @@ h1, h2, h3, h4 {
                 color: rgb(54, 54, 54);
                 text-decoration: none;
             }
+        }
+    }
+
+    .contacto-section {
+        background-color: #025694;
+        height: 100%;
+
+        .contacto-content {
+            padding: 2rem;  
+            color: white;  
+
+            .contacto-title {
+                line-height: 1px;
+            }
+
+            .form-content {
+                padding: 25px 0 25px 0;
+                
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3px;
+                    margin-bottom: 15px;
+
+                    input, textarea {
+                        background-color: transparent;
+                        border-bottom: white 1px solid;
+                        border-top: none;
+                        border-right: none;
+                        border-left: none;
+                    }
+
+                    textarea {
+                        height: 80px;
+                    }
+                }
+
+                .form-button-container {
+                    display: flex;
+                    justify-content: right;
+
+                    button {
+                        margin: 10px 0 10px 0;
+                        color: white;
+                        border: none;
+                        background-color: #025694;
+                    }
+                }         
+            }
+
+            .aside-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .info-group {
+                    text-align: center;
+                    margin: 5px;
+                }
+
+            }
+
         }
     }
