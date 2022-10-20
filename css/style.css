@@ -163,6 +163,15 @@ header .hero-arrow {
 .about-section .about-content .about-aside-text p:last-child {
   color: white;
 }
+.about-section .reveal {
+  transform: translateX(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+.about-section .reveal.active {
+  transform: translateX(0);
+  opacity: 1;
+}
 
 .servicios-section {
   border: red solid 1px;

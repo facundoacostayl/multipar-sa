@@ -206,6 +206,17 @@ h1, h2, h3, h4 {
                 }
             }
         }
+
+        .reveal {
+            transform: translateX(150px);
+            opacity: 0;
+            transition: all 2s ease;
+        }
+
+        .reveal.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 
     .servicios-section {
