@@ -7,6 +7,9 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
+header {
+  font-weight: 300;
+}
 header .hero {
   height: 100%;
   width: 100%;
@@ -18,7 +21,8 @@ header .hero nav .content {
   align-items: center;
 }
 header .hero nav img {
-  width: 100px;
+  padding: 10px;
+  width: 80px;
 }
 header .hero nav .nav-right {
   display: flex;
@@ -30,12 +34,14 @@ header .hero nav .nav-right .nav-info {
   text-align: right;
 }
 header .hero nav .nav-right .nav-info p {
+  font-size: 15px;
   color: #a42138;
 }
 header .hero nav .nav-right i {
   font-size: 2rem;
 }
 header .hero-content {
+  color: #3c3b3b;
   height: 100%;
   width: 100%;
   position: absolute;
