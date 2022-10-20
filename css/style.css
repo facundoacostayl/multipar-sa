@@ -211,6 +211,8 @@ header .hero-arrow {
   margin: 0 auto;
   padding: 1rem;
   color: white;
+  opacity: 0;
+  animation: transitionIn 2s linear;
 }
 .contacto-section .contacto-content .contacto-title {
   line-height: 1px;
@@ -267,6 +269,15 @@ header .hero-arrow {
 }
 .contacto-section .contacto-content .aside-content .ubicacion-group p {
   margin-right: 1px;
+}
+.contacto-section .reveal {
+  transform: translateX(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+.contacto-section .reveal.active {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 footer {
