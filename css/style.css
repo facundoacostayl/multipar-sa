@@ -143,14 +143,14 @@ header .hero-arrow {
   height: 100%;
 }
 .contacto-section .contacto-content {
-  padding: 2rem;
+  padding: 1rem;
   color: white;
 }
 .contacto-section .contacto-content .contacto-title {
   line-height: 1px;
 }
 .contacto-section .contacto-content .form-content {
-  padding: 25px 0 25px 0;
+  padding: 25px 0 5px 0;
 }
 .contacto-section .contacto-content .form-content .form-group {
   display: flex;
@@ -179,13 +179,28 @@ header .hero-arrow {
   background-color: #025694;
 }
 .contacto-section .contacto-content .aside-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 14px;
+  line-height: 10px;
 }
 .contacto-section .contacto-content .aside-content .info-group {
-  text-align: center;
-  margin: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.contacto-section .contacto-content .aside-content .telefono-group {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contacto-section .contacto-content .aside-content .telefono-group h4 {
+  display: none;
+}
+.contacto-section .contacto-content .aside-content .ubicacion-group h4 {
+  display: none;
+}
+.contacto-section .contacto-content .aside-content .ubicacion-group p {
+  margin-right: 1px;
 }
 
 footer {
@@ -193,6 +208,7 @@ footer {
   background-color: #a42138;
 }
 footer .footer-content {
+  display: none;
   padding: 2rem;
   color: white;
 }
