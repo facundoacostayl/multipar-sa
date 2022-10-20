@@ -15,6 +15,17 @@ header .hero {
   width: 100%;
   position: relative;
 }
+header .hero .hero-all-content {
+  animation: transitionIn 1s ease-in-out;
+}
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 header .hero nav .content {
   max-width: 1200px;
   margin: 0 auto;
