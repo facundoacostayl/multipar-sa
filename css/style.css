@@ -91,13 +91,11 @@ header .hero-arrow {
   position: relative;
   height: 100%;
   width: 100%;
-  background-image: url(../img/maritime.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: #a42138;
 }
 .about-section .about-content {
   height: 100%;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
