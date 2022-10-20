@@ -213,14 +213,19 @@ footer p, footer a {
   color: white;
 }
 footer .footer-content {
-  padding: 1rem;
+  height: 100%;
+  padding: 0 1rem;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 footer .footer-content .contact-info-side {
   text-align: center;
   border-bottom: 2px solid white;
+  padding: 10px 0;
   margin-bottom: 20px;
-  padding-bottom: 10px;
 }
 footer .footer-content .contact-info-side span {
   font-weight: 100;
@@ -249,9 +254,7 @@ footer .footer-content .links-side .links-footer .menu-side-footer h4, footer .f
   margin-bottom: 12px;
 }
 footer .copyright-side {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  width: 100%;
   background-color: white;
   padding: 0.2rem 1rem;
 }

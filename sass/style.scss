@@ -271,14 +271,19 @@ h1, h2, h3, h4 {
         }
         
         .footer-content {
-            padding: 1rem;
+            height: 100%;
+            padding: 0 1rem;
             color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
 
             .contact-info-side {
                 text-align: center;
                 border-bottom: 2px solid white;
+                padding: 10px 0;
                 margin-bottom: 20px;
-                padding-bottom: 10px;
 
                 span {
                     font-weight: 100;
@@ -324,9 +329,9 @@ h1, h2, h3, h4 {
 
         .copyright-side {
 
-            position: absolute;
-            bottom: 0;
-            left: 0;
+            width: 100%;
+            
+            
             background-color: white;
             padding: .2rem 1rem;
 
