@@ -261,22 +261,93 @@ h1, h2, h3, h4 {
     }
 
     footer {
+        position: relative;
         height: 100%;
         background-color: #a42138;
+
+        p, a {
+            font-weight: 100;
+            color: white;
+        }
         
         .footer-content {
-            display: none;
-            padding: 2rem;
+            padding: 1rem;
             color: white;
 
             .contact-info-side {
                 text-align: center;
                 border-bottom: 2px solid white;
-                margin-bottom: 50px;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+
+                span {
+                    font-weight: 100;
+                    font-size: 13px;
+                }
             }
 
             .links-side {
                 
+                .logo-footer {
+
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+
+                    img {
+                        width: 150px;
+                    }
+                }
+
+                .links-footer {
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                        
+                    h4 {
+                        font-weight: 600;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }    
+
+                    .menu-side-footer, .herramientas-side-footer {
+                        h4 {
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
             }
         }
+
+        .copyright-side {
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            padding: .2rem 1rem;
+
+            p {
+                font-size: 13px;
+                color: #3c3b3b;
+                margin: 0;
+            }
+
+            .mm-logo {
+
+                display: flex;
+                justify-content: right;
+                align-items: flex-end;
+                gap: 5px;
+
+                img {
+                    width: 50px;
+                }
+
+            }
+        }
+
     }

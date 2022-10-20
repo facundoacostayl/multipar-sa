@@ -204,18 +204,70 @@ header .hero-arrow {
 }
 
 footer {
+  position: relative;
   height: 100%;
   background-color: #a42138;
 }
+footer p, footer a {
+  font-weight: 100;
+  color: white;
+}
 footer .footer-content {
-  display: none;
-  padding: 2rem;
+  padding: 1rem;
   color: white;
 }
 footer .footer-content .contact-info-side {
   text-align: center;
   border-bottom: 2px solid white;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+footer .footer-content .contact-info-side span {
+  font-weight: 100;
+  font-size: 13px;
+}
+footer .footer-content .links-side .logo-footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+footer .footer-content .links-side .logo-footer img {
+  width: 150px;
+}
+footer .footer-content .links-side .links-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .footer-content .links-side .links-footer h4 {
+  font-weight: 600;
+}
+footer .footer-content .links-side .links-footer a {
+  text-decoration: none;
+}
+footer .footer-content .links-side .links-footer .menu-side-footer h4, footer .footer-content .links-side .links-footer .herramientas-side-footer h4 {
+  margin-bottom: 12px;
+}
+footer .copyright-side {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  padding: 0.2rem 1rem;
+}
+footer .copyright-side p {
+  font-size: 13px;
+  color: #3c3b3b;
+  margin: 0;
+}
+footer .copyright-side .mm-logo {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  gap: 5px;
+}
+footer .copyright-side .mm-logo img {
+  width: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
