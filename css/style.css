@@ -16,6 +16,8 @@ header .hero {
   position: relative;
 }
 header .hero nav .content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,8 +94,50 @@ header .hero-arrow {
   height: 100%;
   width: 100%;
   background-color: #a42138;
+  overflow: hidden;
+}
+.about-section .bubble-effect-images img {
+  position: absolute;
+  bottom: -5%;
+  width: 100px;
+  opacity: 0;
+  animation: bubble 15s linear infinite;
+}
+.about-section .bubble-effect-images .faro-image {
+  left: -15%;
+  animation-delay: 1s;
+}
+.about-section .bubble-effect-images .brujula-image {
+  left: 15%;
+  animation-delay: 5s;
+}
+.about-section .bubble-effect-images .marinero-image {
+  left: 35%;
+  animation-delay: 10s;
+}
+.about-section .bubble-effect-images .elice-image {
+  left: 60%;
+  animation-delay: 15s;
+}
+.about-section .bubble-effect-images .ancla-image {
+  left: 80%;
+  animation-delay: 20s;
+}
+@keyframes bubble {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 100vh;
+  }
 }
 .about-section .about-content {
+  position: absolute;
+  top: -10%;
+  max-width: 800px;
   height: 100%;
   padding: 1rem;
   display: flex;
@@ -143,6 +187,8 @@ header .hero-arrow {
   height: 100%;
 }
 .contacto-section .contacto-content {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 1rem;
   color: white;
 }
