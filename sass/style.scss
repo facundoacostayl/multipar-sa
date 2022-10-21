@@ -6,10 +6,10 @@ h1, h2, h3, h4 {
     height: 100vh;
     width: 100%;
 }
+
+// MOBILE
     
     header {
-
-        font-weight: 300;
                 
         .hero {
             height: 100%;
@@ -77,6 +77,7 @@ h1, h2, h3, h4 {
 
         .hero-content {
             color: #3c3b3b;
+            border: 1px solid green;
             height: 100%;
             width: 100%;
             position: absolute;
@@ -84,8 +85,8 @@ h1, h2, h3, h4 {
             left: 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
 
             h1 {
                 
@@ -94,11 +95,10 @@ h1, h2, h3, h4 {
             }
 
             .hero-subtitle {
-                display: flex;
-                flex-direction: row;
-                gap: 7px;
 
-                h2:last-child {
+                display: flex;
+
+                h2 {
                     color: #a42138;
                 }
             }
@@ -126,10 +126,9 @@ h1, h2, h3, h4 {
         right: 0;
         bottom: 0;
         left: 0;
-        opacity: 0.2;
-
-    
+        opacity: 0.2; 
     }
+
 
     .about-section {
         position: relative;
@@ -261,6 +260,7 @@ h1, h2, h3, h4 {
     .contacto-section {
         background-color: #025694;
         height: 100%;
+        overflow: hidden;
 
         .contacto-content {
             max-width: 1200px;
@@ -298,8 +298,13 @@ h1, h2, h3, h4 {
                 }
 
                 .form-button-container {
+                    width:100%;
                     display: flex;
                     justify-content: right;
+
+                    img {
+                        width: 50px;
+                    }
 
                     button {
                         margin: 10px 0 10px 0;
@@ -458,4 +463,28 @@ h1, h2, h3, h4 {
             }
         }
 
+    }
+
+    //TABLET
+
+    @media screen and (min-width: 481px) {
+        .about-section {
+            .about-content {
+                font-size: 30px;
+                line-height: normal;
+
+                .about-aside-text {
+                    line-height: normal;
+    
+                    p {
+                        margin: 0;
+                    }
+    
+                    p:last-child {
+                        color: white;
+                    }
+                }
+            }
+
+        }
     }

@@ -7,9 +7,6 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-header {
-  font-weight: 300;
-}
 header .hero {
   height: 100%;
   width: 100%;
@@ -55,6 +52,7 @@ header .hero nav .nav-right i {
 }
 header .hero-content {
   color: #3c3b3b;
+  border: 1px solid green;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -62,8 +60,8 @@ header .hero-content {
   left: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 header .hero-content h1 {
   font-size: 5rem;
@@ -71,10 +69,8 @@ header .hero-content h1 {
 }
 header .hero-content .hero-subtitle {
   display: flex;
-  flex-direction: row;
-  gap: 7px;
 }
-header .hero-content .hero-subtitle h2:last-child {
+header .hero-content .hero-subtitle h2 {
   color: #a42138;
 }
 header .hero-arrow {
@@ -205,6 +201,7 @@ header .hero-arrow {
 .contacto-section {
   background-color: #025694;
   height: 100%;
+  overflow: hidden;
 }
 .contacto-section .contacto-content {
   max-width: 1200px;
@@ -237,8 +234,12 @@ header .hero-arrow {
   height: 80px;
 }
 .contacto-section .contacto-content .form-content .form-button-container {
+  width: 100%;
   display: flex;
   justify-content: right;
+}
+.contacto-section .contacto-content .form-content .form-button-container img {
+  width: 50px;
 }
 .contacto-section .contacto-content .form-content .form-button-container button {
   margin: 10px 0 10px 0;
@@ -348,6 +349,22 @@ footer .copyright-side .mm-logo {
 }
 footer .copyright-side .mm-logo img {
   width: 50px;
+}
+
+@media screen and (min-width: 481px) {
+  .about-section .about-content {
+    font-size: 30px;
+    line-height: normal;
+  }
+  .about-section .about-content .about-aside-text {
+    line-height: normal;
+  }
+  .about-section .about-content .about-aside-text p {
+    margin: 0;
+  }
+  .about-section .about-content .about-aside-text p:last-child {
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
