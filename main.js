@@ -29,3 +29,18 @@ menuIcon.addEventListener('click', () => {
     menuContent.classList.toggle("menu-active");
 })
 
+
+// TITLE APPEAR
+
+const title = document.querySelector(".title-effect");
+window.addEventListener("scroll", () => {
+    title.style.top = Math.max(10 - 0.35*window.scrollY, -45) + "px";
+});
+
+// CURSOR EFFECT
+
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+})

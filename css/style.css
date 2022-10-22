@@ -7,6 +7,9 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
+header {
+  z-index: 9999;
+}
 header nav {
   position: absolute;
   top: 0;
@@ -93,6 +96,7 @@ header .hero .hero-all-content {
   }
 }
 header .hero .hero-all-content .hero-content {
+  user-select: none;
   color: #3c3b3b;
   height: 100%;
   width: 100%;
@@ -103,6 +107,7 @@ header .hero .hero-all-content .hero-content {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height: 50px;
 }
 header .hero .hero-all-content .hero-content h1 {
   font-size: 5rem;
@@ -113,6 +118,7 @@ header .hero .hero-all-content .hero-content .hero-subtitle {
 }
 header .hero .hero-all-content .hero-content .hero-subtitle h2 {
   color: #a42138;
+  font-size: 30px;
 }
 header .hero .hero-all-content .hero-arrow {
   width: 100%;
@@ -268,20 +274,37 @@ header .menu-mode {
 }
 
 .contacto-section {
+  position: relative;
   background-color: #025694;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+.contacto-section .contacto-title {
+  line-height: 1px;
+  color: red;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+.contacto-section .contacto-title span {
+  font-weight: 100;
+  font-size: 12px;
+}
+.contacto-section .contacto-title h1 {
+  font-size: 50px;
+}
+.contacto-section .title-effect {
+  position: absolute;
+  top: 10px;
 }
 .contacto-section .contacto-content {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
   color: white;
   opacity: 0;
   animation: transitionIn 2s linear;
-}
-.contacto-section .contacto-content .contacto-title {
-  line-height: 1px;
 }
 .contacto-section .contacto-content .form-content {
   padding: 25px 0 5px 0;
@@ -350,7 +373,7 @@ header .menu-mode {
 .contacto-section .reveal {
   transform: translateX(150px);
   opacity: 0;
-  transition: all 2s ease;
+  transition: all 1s ease;
 }
 .contacto-section .reveal.active {
   transform: translateX(0);
@@ -428,6 +451,15 @@ footer .copyright-side .mm-logo img {
 }
 
 @media screen and (min-width: 481px) {
+  header .hero .hero-all-content .hero-content {
+    line-height: 65px;
+  }
+  header .hero .hero-all-content .hero-content h1 {
+    font-size: 100px;
+  }
+  header .hero .hero-all-content .hero-content .hero-subtitle h2 {
+    font-size: 40px;
+  }
   .about-section .bubble-effect-images img {
     width: 250px;
   }
@@ -443,6 +475,53 @@ footer .copyright-side .mm-logo img {
   }
   .about-section .about-content .about-aside-text p:last-child {
     color: white;
+  }
+  .contacto-section .contacto-content .form-content label {
+    font-size: 15px;
+  }
+  .contacto-section .contacto-content .aside-content {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .contacto-section .contacto-content .aside-content .info-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .contacto-section .contacto-content .aside-content .info-group h4 {
+    font-size: 27px;
+    font-weight: 500;
+    margin: 15px 0;
+  }
+  .contacto-section .contacto-content .aside-content .info-group p {
+    margin: 0;
+  }
+  .contacto-section .contacto-content .aside-content .telefono-group {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contacto-section .contacto-content .aside-content .telefono-group h4 {
+    display: block;
+    font-size: 27px;
+    font-weight: 500;
+    margin: 15px 0;
+  }
+  .contacto-section .contacto-content .aside-content .telefono-group p {
+    margin: 0;
+  }
+  .contacto-section .contacto-content .aside-content .ubicacion-group h4 {
+    display: block;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 15px 0;
+  }
+  .contacto-section .contacto-content .aside-content .ubicacion-group p {
+    margin: 0;
+    margin-right: 1px;
   }
 }
 
