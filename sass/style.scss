@@ -469,6 +469,13 @@ h1, h2, h3, h4 {
 
     @media screen and (min-width: 481px) {
         .about-section {
+
+            .bubble-effect-images {
+                img {
+                    width: 250px;
+                }
+            }
+
             .about-content {
                 font-size: 30px;
                 line-height: normal;
@@ -486,5 +493,9 @@ h1, h2, h3, h4 {
                 }
             }
 
+        }
+
+        .contacto-section {
+            
         }
     }
