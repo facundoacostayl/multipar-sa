@@ -106,7 +106,7 @@ header .hero-arrow {
 .about-section .bubble-effect-images img {
   position: absolute;
   bottom: -5%;
-  width: 100px;
+  width: 150px;
   opacity: 0;
   animation: bubble 15s linear infinite;
 }
@@ -181,21 +181,47 @@ header .hero-arrow {
 }
 
 .servicios-section {
-  border: red solid 1px;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: end;
+  width: 100%;
 }
 .servicios-section .servicios-content {
-  display: none;
+  height: 80%;
 }
-.servicios-section .servicios-content p {
-  color: red;
+.servicios-section .servicios-content h1 {
+  margin: 10px 10px;
+  color: #a42138;
+  font-size: 50px;
 }
-.servicios-section .servicios-content a {
-  color: rgb(54, 54, 54);
+.servicios-section .servicios-content .servicios-list {
+  padding: 0.5rem;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.servicios-section .servicios-content .servicios-list .servicio-group {
+  overflow: hidden;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group img {
+  width: 100%;
+}
+
+.interes-section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.interes-section .interes-content a {
+  font-size: 30px;
+  color: #3c3b3b;
   text-decoration: none;
+}
+.interes-section .interes-content a:nth-child(1) {
+  color: #a42138;
+}
+.interes-section .interes-content a:hover {
+  color: #a42138;
+  text-decoration: underline;
 }
 
 .contacto-section {

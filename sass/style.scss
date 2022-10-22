@@ -142,7 +142,7 @@ h1, h2, h3, h4 {
             img {
                 position: absolute;
                 bottom: -5%;
-                width: 100px;
+                width: 150px;
                 opacity: 0;
                 animation: bubble 15s linear infinite;
             }
@@ -236,23 +236,61 @@ h1, h2, h3, h4 {
 
     .servicios-section {
 
-        border: red solid 1px;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: end;
+        width: 100%;
 
         .servicios-content {
+            
+            height: 80%;
 
-            display: none;
-
-            p {
-                color: red;
+            h1 {
+                margin: 10px 10px;
+                color: #a42138;
+                font-size: 50px;
             }
+           
+            .servicios-list {
+
+                padding: .5rem;
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+
+                .servicio-group {
+
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                    }
+
+                }
+            }   
+        }
+    }
+
+    .interes-section {
+
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .interes-content {
 
             a {
-                color: rgb(54, 54, 54);
+                font-size: 30px;
+                color: #3c3b3b;
                 text-decoration: none;
+            }
+
+            a:nth-child(1) {
+                color: #a42138;
+            }
+
+            a:hover {
+                color: #a42138;
+                text-decoration: underline;
             }
         }
     }
