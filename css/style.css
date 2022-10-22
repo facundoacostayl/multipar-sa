@@ -7,10 +7,79 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
+header nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+header nav .content {
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav img {
+  width: 80px;
+}
+header nav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+header nav .nav-right .nav-info {
+  line-height: 3px;
+  text-align: right;
+}
+header nav .nav-right .nav-info p {
+  font-size: 15px;
+  color: #a42138;
+}
+header nav .nav-right .menu-icon {
+  width: 50px;
+}
+header nav .nav-right .menu-icon:hover {
+  cursor: pointer;
+}
 header .hero {
   height: 100%;
   width: 100%;
   position: relative;
+  background-image: url(../img/FLORES-LUIS-AGOSTO-2021-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+header .hero .hero-menu {
+  z-index: 9999;
+  height: 100%;
+  display: none;
+}
+header .hero .hero-menu .menu-container ul {
+  list-style: none;
+}
+header .hero .hero-menu .menu-container ul li {
+  transition: all ease-in 0.3s;
+  font-size: 40px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+header .hero .hero-menu .menu-container ul a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #3c3b3b;
+  transition: all ease-in 0.1s;
+}
+header .hero .hero-menu .menu-container ul a:hover {
+  color: #a42138;
+}
+header .hero .menu-active {
+  display: flex;
+  align-items: center;
 }
 header .hero .hero-all-content {
   animation: transitionIn 1s ease-in-out;
@@ -23,36 +92,8 @@ header .hero .hero-all-content {
     opacity: 1;
   }
 }
-header .hero nav .content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .hero nav img {
-  padding: 10px;
-  width: 80px;
-}
-header .hero nav .nav-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-header .hero nav .nav-right .nav-info {
-  line-height: 3px;
-  text-align: right;
-}
-header .hero nav .nav-right .nav-info p {
-  font-size: 15px;
-  color: #a42138;
-}
-header .hero nav .nav-right i {
-  font-size: 2rem;
-}
-header .hero-content {
+header .hero .hero-all-content .hero-content {
   color: #3c3b3b;
-  border: 1px solid green;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -63,17 +104,17 @@ header .hero-content {
   justify-content: center;
   align-items: center;
 }
-header .hero-content h1 {
+header .hero .hero-all-content .hero-content h1 {
   font-size: 5rem;
   margin: 0;
 }
-header .hero-content .hero-subtitle {
+header .hero .hero-all-content .hero-content .hero-subtitle {
   display: flex;
 }
-header .hero-content .hero-subtitle h2 {
+header .hero .hero-all-content .hero-content .hero-subtitle h2 {
   color: #a42138;
 }
-header .hero-arrow {
+header .hero .hero-all-content .hero-arrow {
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -81,21 +122,23 @@ header .hero-arrow {
   text-align: center;
   padding-bottom: 2rem;
 }
-
-.hero::before {
-  content: "";
-  background-image: url(../img/mainwallpaper.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.2;
+header .menu-mode {
+  display: none;
 }
 
+/*.hero::before {
+    content: "";
+    background-image: url(../img/mainwallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.2; 
+}*/
 .about-section {
   position: relative;
   height: 100%;
@@ -246,8 +289,11 @@ header .hero-arrow {
 .contacto-section .contacto-content .form-content .form-group {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 5px;
   margin-bottom: 15px;
+}
+.contacto-section .contacto-content .form-content .form-group label {
+  font-weight: 100;
 }
 .contacto-section .contacto-content .form-content .form-group input, .contacto-section .contacto-content .form-content .form-group textarea {
   background-color: transparent;
@@ -255,9 +301,13 @@ header .hero-arrow {
   border-top: none;
   border-right: none;
   border-left: none;
+  color: white;
 }
 .contacto-section .contacto-content .form-content .form-group textarea {
   height: 80px;
+}
+.contacto-section .contacto-content .form-content .form-group input:focus, .contacto-section .contacto-content .form-content .form-group textarea:focus {
+  outline: none;
 }
 .contacto-section .contacto-content .form-content .form-button-container {
   width: 100%;

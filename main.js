@@ -17,3 +17,15 @@ function reveal() {
         }
     }
 }
+
+// MENU REVEAL 
+
+const heroContent = document.querySelector('.hero-all-content');
+const menuContent = document.querySelector('.hero-menu');
+
+const menuIcon = document.querySelector('.menu-icon');
+menuIcon.addEventListener('click', () => {
+    heroContent.classList.toggle("menu-mode");
+    menuContent.classList.toggle("menu-active");
+})
+
