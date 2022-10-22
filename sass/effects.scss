@@ -9,6 +9,40 @@
     pointer-events: none;
 }
 
-.red-cursor {
-    background-color: #a42138;;
+nav {
+    .content:hover ~ .cursor{
+    background-color: #a42138;
+}
+}
+
+.hero {
+    .hero-all-content{
+        .hero-content:hover ~ .cursor {  
+            background-color: #a42138;
+    }
+    }
+}
+
+.hero-menu:hover ~ .cursor {
+    background-color: #a42138;
+}
+
+.about-section:hover ~ .cursor {
+    background-color: #3c3b3b;         
+}
+
+.servicios-section:hover ~ .cursor {
+    background-color: #a42138;         
+}
+
+.interes-section:hover ~ .cursor {
+    background-color: #a42138;
+}
+
+.contacto-section:hover ~ .cursor {
+    background-color: white;
+}
+
+.footer-content:hover ~ .cursor {
+    background-color: #3c3b3b; 
 }

@@ -56,11 +56,15 @@ header .hero {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 header .hero .hero-menu {
   z-index: 9999;
   height: 100%;
   display: none;
+}
+header .hero .hero-menu .menu-container {
+  width: 100%;
 }
 header .hero .hero-menu .menu-container ul {
   list-style: none;
