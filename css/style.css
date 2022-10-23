@@ -88,7 +88,7 @@ header .hero .hero-menu .menu-container ul li {
 }
 header .hero .hero-menu .menu-container ul a {
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 500;
   color: #3c3b3b;
   transition: all ease-in 0.1s;
 }
