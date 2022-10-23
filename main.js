@@ -29,6 +29,14 @@ menuIcon.addEventListener('click', () => {
     menuContent.classList.toggle("menu-active");
 })
 
+const menuLists = document.querySelectorAll('.menu-li');
+menuLists.forEach(li => {
+    li.addEventListener("click", () => {
+        heroContent.classList.remove("menu-mode");
+        menuContent.classList.remove("menu-active");
+    })
+})
+
 
 // TITLE APPEAR
 
