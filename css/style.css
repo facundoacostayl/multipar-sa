@@ -296,7 +296,7 @@ header .menu-mode {
   padding: 0 0.5rem;
 }
 .interes-section .interes-content a {
-  font-size: 50px;
+  font-size: 35px;
   color: #3c3b3b;
   text-decoration: none;
 }
@@ -483,6 +483,14 @@ footer .footer-content .links-side .links-footer .side-footer p {
 }
 footer .footer-content .links-side .links-footer .multipar-side-footer h4, footer .footer-content .links-side .links-footer .menu-side-footer h4, footer .footer-content .links-side .links-footer .herramientas-side-footer h4 {
   margin-bottom: 12px;
+}
+footer .footer-content .arrow-up-container {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+footer .footer-content .arrow-up-container img {
+  width: 50px;
 }
 footer .copyright-side {
   position: absolute;
@@ -690,7 +698,7 @@ footer .copyright-side .copyright-container .mm-logo img {
     margin: 0 auto;
   }
   .interes-section .interes-content a {
-    font-size: 45px;
+    font-size: 60px;
     color: #3c3b3b;
     text-decoration: none;
   }

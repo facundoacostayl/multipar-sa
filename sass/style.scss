@@ -388,7 +388,7 @@ h1, h2, h3, h4 {
             padding: 0 .5rem;
 
             a {
-                font-size: 50px;
+                font-size: 35px;
                 color: #3c3b3b;
                 text-decoration: none;
             }
@@ -631,6 +631,17 @@ h1, h2, h3, h4 {
                     }
                 }
             }
+
+            .arrow-up-container {
+                position: absolute;
+                bottom: 5%;
+                right: 5%;
+
+                img {
+                    width: 50px;
+                }
+            }
+
         }
 
         .copyright-side {
@@ -971,7 +982,7 @@ h1, h2, h3, h4 {
 
 
                 a {
-                    font-size: 45px;
+                    font-size: 60px;
                     color: #3c3b3b;
                     text-decoration: none;
                 }
