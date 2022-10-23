@@ -1,42 +1,36 @@
-.cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-nav .content:hover ~ .cursor {
-  background-color: #a42138;
-}
-
-.hero .hero-all-content .hero-content:hover ~ .cursor {
-  background-color: #a42138;
-}
-
-.hero-menu:hover ~ .cursor {
-  background-color: #a42138;
-}
-
-.about-section:hover ~ .cursor {
-  background-color: #3c3b3b;
-}
-
-.servicios-section:hover ~ .cursor {
-  background-color: #a42138;
-}
-
-.interes-section:hover ~ .cursor {
-  background-color: #a42138;
-}
-
-.contacto-section:hover ~ .cursor {
-  background-color: white;
-}
-
-.footer-content:hover ~ .cursor {
-  background-color: #3c3b3b;
+@media screen and (min-width: 1024px) {
+  .cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  nav .content:hover ~ .cursor {
+    background-color: #a42138;
+  }
+  .hero .hero-all-content .hero-content:hover ~ .cursor {
+    background-color: #a42138;
+  }
+  .hero-menu:hover ~ .cursor {
+    background-color: #a42138;
+  }
+  .about-section:hover ~ .cursor {
+    background-color: white;
+  }
+  .servicios-section:hover ~ .cursor {
+    background-color: #a42138;
+  }
+  .interes-section:hover ~ .cursor {
+    background-color: #a42138;
+  }
+  .contacto-section:hover ~ .cursor {
+    background-color: white;
+  }
+  .footer-content:hover ~ .cursor {
+    background-color: white;
+  }
 }
 
 /*# sourceMappingURL=effects.css.map */

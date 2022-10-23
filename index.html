@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="https://use.typekit.net/rco5sgx.css" />
     <link rel="stylesheet" href="./css/utils.css" />
-    <link rel="stylesheet" href="./css/effects.css">
+    <link rel="stylesheet" href="./css/effects.css" />
     <script defer src="./main.js"></script>
     <script defer src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script defer src="./jquery.js"></script>
@@ -56,16 +56,18 @@
 
             <div class="hero-all-content reveal">
               <div class="hero-content">
-           
-                <h1>Multipar</h1>
-                <div class="hero-subtitle">
-                  <h2>Río Paraná</h2>
+                <div class="hero-title">
+                  <h1>Multipar</h1>
+                  <div class="hero-subtitle">
+                    <h2>Río Paraná</h2>
+                  </div>
                 </div>
-                
               </div>
 
               <div class="hero-arrow">
-                <i>ARROW</i>
+                <a href="#about-section"
+                  ><img src="./img/icons/arrow.png" alt="arrow"
+                /></a>
               </div>
               <div class="cursor"></div>
             </div>
@@ -74,7 +76,7 @@
       </header>
 
       <div class="section">
-        <div class="about-section">
+        <div id="about-section" class="about-section">
           <div class="bubble-effect-images">
             <img
               class="faro-image"
@@ -109,7 +111,8 @@
               especializada en la prestación de servicios de pilotaje en el Río
               Paraná. Desde esa fecha ha cubierto los requerimientos de sus
               clientes ininterrumpidamente, las veinticuatro horas del día,
-              todos los días del año, por profesionales calificados.
+              todos los días del año, por
+              <span>profesionales calificados</span>.
             </h4>
 
             <div class="about-aside-text">
@@ -128,18 +131,38 @@
             <div class="servicios-list">
               <div class="servicio-group">
                 <img src="./img/servicios/practicaje.jpg" alt="practicaje" />
+
+                <div class="servicio-info">
+                  <h4>PRACTICAJE</h4>
+                  <p>Río Paraná</p>
+                </div>
               </div>
               <div class="servicio-group">
                 <img
                   src="./img/servicios/asesoramiento.jpg"
                   alt="asesoramiento"
                 />
+
+                <div class="servicio-info">
+                  <h4>ASESORAMIENTO</h4>
+                  <p>Información complementaria disponible con guardia de atención permanente.</p>
+                </div>
               </div>
               <div class="servicio-group">
                 <img src="./img/servicios/translados.JPG" alt="translados" />
+
+                <div class="servicio-info">
+                  <h4>TRANSLADOS</h4>
+                  <p>Acuáticos y terrestres</p>
+                </div>
               </div>
               <div class="servicio-group">
                 <img src="./img/servicios/info.jpg" alt="infoimg" />
+
+                <div class="servicio-info">
+                  <h4>INFORMACIÓN ACTUALIZADA</h4>
+                  <p>Meteorológica, mareológica e hidrológica</p>
+                </div>
               </div>
             </div>
           </div>
@@ -209,18 +232,21 @@
             <div class="aside-content">
               <div class="info-group email-group">
                 <h4>E-mail:</h4>
-                <p>inforio@riopar.com.ar</p>
+                <p><span>E-mail</span>: inforio@riopar.com.ar</p>
               </div>
               <div class="info-group telefono-group">
                 <h4>Teléfono</h4>
-                <p>Teléfono: +54 11 4331.9111</p>
-                <p>WhatsApp: +54 9 11 4331.9111</p>
+                <p><span>Teléfono</span>: +54 11 4331.9111</p>
+                <p><span>WhatsApp</span>: +54 9 11 4331.9111</p>
               </div>
               <div class="info-group ubicacion-group">
                 <h4>Donde estamos</h4>
+                <div class="ubicacion-info">
                 <p>Av. Julio A. Roca 620, Piso 13.</p>
-                <p>CABA.</p>
+                <p class="big-screen-info">Ciudad Autónoma de Buenos Aires.</p>
+                <p class="small-screen-info">CABA.</p>
                 <p>Argentina.</p>
+              </div>
               </div>
             </div>
           </div>
@@ -238,6 +264,8 @@
                   <h3>inforio@multipar.com</h3>
                   <h3>(+54 11) 4331.9111</h3>
                 </div>
+
+                <img src="./img/iconos-bubble/radio-multipar.svg" alt="radio" />
               </div>
 
               <div class="links-side">
@@ -249,45 +277,46 @@
                 </div>
 
                 <div class="links-footer">
-                  <div class="multipar-side-footer">
+                  <div class="multipar-side-footer side-footer">
                     <h4>Multipar</h4>
                     <p>Pilotaje</p>
                     <p>Coordinación y Comunicación</p>
                     <p>Traslados Acuáticos y Terrestres</p>
                   </div>
-                  <div class="menu-side-footer">
+                  <div class="menu-side-footer side-footer">
                     <h4>Menú</h4>
                     <a href="#">Inicio</a>
-                    -
+                    <span>-</span>
                     <a href="#">Quienes somos</a>
-                    -
+                    <span>-</span>
                     <a href="#">Servicios</a>
-                    -
+                    <span>-</span>
                     <a href="#">Herramientas</a>
-                    -
+                    <span>-</span>
                     <a href="#">Contacto</a>
                   </div>
-                  <div class="herramientas-side-footer">
+                  <div class="herramientas-side-footer side-footer">
                     <h4>Herramientas</h4>
                     <a href="#">Live Ship Map</a>
-                    -
+                    <span>-</span>
                     <a href="#">Profundidades Mínimas</a>
-                    -
+                    <span>-</span>
                     <a href="#">Horarios de Mareas</a>
-                    -
+                    <span>-</span>
                     <a href="#">Pronóstico Meteorológico</a>
-                    -
+                    <span>-</span>
                     <a href="#">Comisión Administradora del Rio de la Plata</a>
-                    -
+                    <span>-</span>
                     <a href="#">Prefectura Naval Argentina</a>
-                    -
+                    <span>-</span>
                     <a href="#">WindGURU</a>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="copyright-side">
+          </div>
+          <div class="copyright-side">
+            <div class="copyright-container">
               <p>
                 Copyright @ 2022 Multipar S.A. Todos los derechos reservados.
               </p>
