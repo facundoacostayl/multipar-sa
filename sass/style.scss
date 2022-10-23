@@ -281,7 +281,6 @@ h1, h2, h3, h4 {
         .about-content {
             position: absolute;
             top: -10%;
-            max-width: 800px;
             height: 100%;
             padding: 1rem;
             display: flex;
@@ -389,7 +388,7 @@ h1, h2, h3, h4 {
             padding: 0 .5rem;
 
             a {
-                font-size: 30px;
+                font-size: 50px;
                 color: #3c3b3b;
                 text-decoration: none;
             }
@@ -435,7 +434,6 @@ h1, h2, h3, h4 {
 
         .contacto-content {
             position: relative;
-            max-width: 1200px;
             margin: 0 auto;
             padding: 1rem;  
             color: white;  
@@ -616,9 +614,17 @@ h1, h2, h3, h4 {
 
                     a {
                         text-decoration: none;
-                    }    
+                    }  
+                    
+                    .side-footer {
+                        line-height: 25px;
 
-                    .menu-side-footer, .herramientas-side-footer {
+                        p{
+                            margin: 0;
+                        }
+                    }
+
+                    .multipar-side-footer, .menu-side-footer, .herramientas-side-footer {
                         h4 {
                             margin-bottom: 12px;
                         }
@@ -913,15 +919,23 @@ h1, h2, h3, h4 {
 
             nav {
                 img {
-                    width: 150px;
+                    width: 200px;
                 }
 
                 .nav-right {
+
+                    gap: 40px;
+
                     .nav-info {
                         p {
-                            font-size: 20px;
+                            font-size: 30px;
                         }
                     }
+
+                    .menu-icon{
+                        width: 80px;
+                    }
+
                 }
             }
 
@@ -953,7 +967,6 @@ h1, h2, h3, h4 {
     
             .interes-content {
     
-                max-width: 900px;
                 margin: 0 auto;
 
 
@@ -1185,7 +1198,6 @@ h1, h2, h3, h4 {
 
             .about-content {
                 text-align: left;
-                max-width: 1260px;
                 font-size: 35px;
                 line-height: normal;
 
@@ -1270,12 +1282,22 @@ h1, h2, h3, h4 {
     }
 
     @media screen and (min-width: 1024px) {
+
+        .interes-section {            
+    
+            .interes-content {
+
+                a {
+                    font-size: 90px;
+                }
+            }
+        }
+
         .contacto-section {
                 
             
             .contacto-content {
                 position: relative;
-                max-width: 1200px;
                 height: 100%;
                 margin: 0 auto;
                 padding: 1rem;  
@@ -1419,7 +1441,6 @@ h1, h2, h3, h4 {
             .footer-content {
 
                 margin: 0 auto;
-                max-width: 1200px;
                 height: 100%;
                 color: white;
                 display: flex;
@@ -1519,7 +1540,6 @@ h1, h2, h3, h4 {
                 padding: .2rem 1rem;
 
                 .copyright-container {
-                    max-width: 1200px;
                     margin: 0 auto;
                     display: flex;
                     justify-content: space-between;
