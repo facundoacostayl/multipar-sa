@@ -1,11 +1,23 @@
 @media screen and (min-width: 1024px) {
   .cursor {
     position: fixed;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.1s;
     pointer-events: none;
+  }
+  .cursor p {
+    position: absolute;
+    left: -50px;
+    font-size: 20px;
+    white-space: nowrap;
+    margin-top: 28px;
+    width: 100%;
+  }
+  .cursor .cursor-special-text {
+    display: none;
   }
   nav .content:hover ~ .cursor {
     background-color: #a42138;

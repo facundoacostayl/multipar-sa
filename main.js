@@ -54,3 +54,14 @@ document.addEventListener('mousemove', (e) => {
         cursor.style.top = e.clientY + 'px';
     })
 })
+
+const serviciosImages = document.querySelectorAll('.servicio-img');
+const cursorText = document.querySelector('.cursor-text');
+const cursorSpecialText = document.querySelector('.cursor-special-text');
+
+serviciosImages.forEach(img => {
+    img.addEventListener("onmouseover", () => {
+        console.log("yes")
+    })
+})
+

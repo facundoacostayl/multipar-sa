@@ -63,6 +63,7 @@ header .hero .hero-menu {
   z-index: 9999;
   height: 100%;
   display: none;
+  text-align: right;
 }
 header .hero .hero-menu .menu-container {
   width: 100%;
@@ -98,6 +99,9 @@ header .hero .hero-menu .menu-container ul a:hover {
 header .hero .menu-active {
   display: flex;
   align-items: center;
+}
+header .hero .menu-active .menu-container {
+  display: flex;
 }
 header .hero .hero-all-content {
   animation: transitionIn 0.5s ease-in-out;
@@ -250,31 +254,84 @@ header .menu-mode {
 
 .servicios-section {
   height: 100%;
-  width: 100%;
+  display: flex;
+  align-items: center;
 }
 .servicios-section .servicios-content {
-  padding: 0 1rem;
-  height: 100%;
-}
-.servicios-section .servicios-content h1 {
-  margin: 10px 10px;
-  color: #a42138;
-  font-size: 50px;
-}
-.servicios-section .servicios-content .servicios-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-.servicios-section .servicios-content .servicios-list .servicio-group {
+  position: relative;
+  width: 100%;
+  height: 90%;
   overflow: hidden;
 }
-.servicios-section .servicios-content .servicios-list .servicio-group img {
+.servicios-section .servicios-content h1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #a42138;
+  font-size: 50px;
+  margin: 0;
+}
+.servicios-section .servicios-content .servicios-list {
+  padding: 0 1rem;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(1) {
+  top: 5%;
+  left: 1%;
+  width: 60%;
+  height: 350px;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(1) img {
   width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(2) {
+  top: 10%;
+  right: 5%;
+  width: 25%;
+  height: 50%;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(2) img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(3) {
+  bottom: 5%;
+  left: 8%;
+  width: 25%;
+  height: 50%;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(3) img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(4) {
+  bottom: 7%;
+  right: 1%;
+  width: 60%;
+  height: 300px;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(4) img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(4) .servicios-lorem {
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  font-size: 17px;
+  color: white;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group {
+  position: absolute;
 }
 .servicios-section .servicios-content .servicios-list .servicio-group .servicio-info {
+  position: absolute;
   margin-top: 5px;
 }
 .servicios-section .servicios-content .servicios-list .servicio-group .servicio-info h4 {
@@ -395,6 +452,12 @@ header .menu-mode {
 }
 .contacto-section .contacto-content .aside-content .info-group p {
   font-size: 18px;
+}
+.contacto-section .contacto-content .aside-content .info-group a {
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 18px;
+  color: white;
 }
 .contacto-section .contacto-content .aside-content .info-group .big-screen-info {
   display: none;
@@ -681,6 +744,30 @@ footer .copyright-side .copyright-container .mm-logo img {
   header nav .nav-right .menu-icon {
     width: 80px;
   }
+  header .hero .hero-menu {
+    z-index: 9999;
+    height: 100%;
+    display: none;
+    text-align: right;
+  }
+  header .hero .hero-menu .menu-container ul li {
+    transition: all ease-in 0.3s;
+    font-size: 70px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  header .hero .hero-menu .menu-container ul a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #3c3b3b;
+    transition: all ease-in 0.1s;
+  }
+  header .hero .menu-active {
+    display: flex;
+  }
+  header .hero .menu-active .menu-container {
+    display: flex;
+  }
   header .hero .hero-all-content .hero-content {
     line-height: 90px;
   }
@@ -744,6 +831,10 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
   .contacto-section .contacto-content .aside-content .info-group p {
     margin: 0;
+    font-size: 25px;
+  }
+  .contacto-section .contacto-content .aside-content .info-group a {
+    line-height: 35px;
     font-size: 25px;
   }
   .contacto-section .contacto-content .aside-content .telefono-group {
@@ -868,33 +959,95 @@ footer .copyright-side .copyright-container .mm-logo img {
   .about-section .about-content .about-aside-text p:last-child {
     color: white;
   }
-  .servicios-section {
-    height: 100%;
+  .servicios-section .servicios-content h1 {
+    margin: 0 10px;
+    color: #a42138;
+    font-size: 80px;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group {
+    overflow: hidden;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group img {
     width: 100%;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group .servicio-info {
+    margin-top: 5px;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group .servicio-info h4 {
+    color: #a42138;
+    font-size: 20px;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group .servicio-info p {
+    margin-top: 5px;
+    color: #3c3b3b;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .servicios-section {
+    margin: 0 auto;
+    max-width: 1200px;
   }
   .servicios-section .servicios-content {
     padding: 0 1rem;
-    height: 100%;
   }
   .servicios-section .servicios-content h1 {
     margin: 10px 10px;
     color: #a42138;
     font-size: 80px;
   }
-  .servicios-section .servicios-content .servicios-list {
-    height: 80%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(1) {
+    top: 3%;
+    left: 1%;
+    width: 55%;
+    height: 350px;
   }
-  .servicios-section .servicios-content .servicios-list .servicio-group {
-    overflow: hidden;
-    height: 100%;
-  }
-  .servicios-section .servicios-content .servicios-list .servicio-group img {
+  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(1) img {
     width: 100%;
+    height: 80%;
+    object-fit: cover;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(2) {
+    top: 10%;
+    right: 8%;
+    width: 20%;
+    height: 50%;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(2) img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(3) {
+    bottom: 2%;
+    left: 8%;
+    width: 20%;
+    height: 50%;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(3) img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(4) {
+    bottom: 0%;
+    right: 1%;
+    width: 60%;
+    height: 350px;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(4) img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(4) .servicios-lorem {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    font-size: 23px;
+    color: white;
   }
   .servicios-section .servicios-content .servicios-list .servicio-group .servicio-info {
     margin-top: 5px;
@@ -908,8 +1061,6 @@ footer .copyright-side .copyright-container .mm-logo img {
     color: #3c3b3b;
     font-size: 15px;
   }
-}
-@media screen and (min-width: 1024px) {
   .interes-section .interes-content a {
     font-size: 90px;
   }
