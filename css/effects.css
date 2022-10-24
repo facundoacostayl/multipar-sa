@@ -1,11 +1,15 @@
+.cursor {
+  display: none;
+}
+
 @media screen and (min-width: 1024px) {
   .cursor {
+    display: block;
     position: fixed;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    transition: 0.1s;
     pointer-events: none;
   }
   .cursor p {

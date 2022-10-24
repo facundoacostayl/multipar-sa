@@ -11,11 +11,12 @@ header {
   z-index: 9999;
 }
 header nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 9999;
+  transition: 0.7s;
 }
 header nav .content {
   width: 90%;
@@ -24,12 +25,15 @@ header nav .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.7s;
 }
 header nav img {
+  transition: 0.7s;
   width: 80px;
   cursor: pointer;
 }
 header nav .nav-right {
+  transition: 0.7s;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -47,6 +51,23 @@ header nav .nav-right .menu-icon {
   width: 50px;
 }
 header nav .nav-right .menu-icon:hover {
+  cursor: pointer;
+}
+header .nav-down {
+  background-color: white;
+  padding: 5px 0;
+}
+header .nav-down img {
+  width: 75px;
+}
+header .nav-down .nav-right .nav-info p {
+  font-size: 13px;
+  color: #a42138;
+}
+header .nav-down .nav-right .menu-icon {
+  width: 40px;
+}
+header .nav-down .nav-right .menu-icon:hover {
   cursor: pointer;
 }
 header .hero {
@@ -743,6 +764,23 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
   header nav .nav-right .menu-icon {
     width: 80px;
+  }
+  header .nav-down {
+    background-color: white;
+    padding: 5px 0;
+  }
+  header .nav-down img {
+    width: 180px;
+  }
+  header .nav-down .nav-right .nav-info p {
+    font-size: 25px;
+    color: #a42138;
+  }
+  header .nav-down .nav-right .menu-icon {
+    width: 70px;
+  }
+  header .nav-down .nav-right .menu-icon:hover {
+    cursor: pointer;
   }
   header .hero .hero-menu {
     z-index: 9999;

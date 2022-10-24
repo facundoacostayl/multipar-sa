@@ -37,6 +37,13 @@ menuLists.forEach(li => {
     })
 })
 
+//NAV EFFECT
+
+window.addEventListener("scroll", () => {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("nav-down", window.scrollY > 0);
+})
+
 
 // TITLE APPEAR
 

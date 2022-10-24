@@ -15,11 +15,12 @@ h1, h2, h3, h4 {
 
         nav {
 
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 999;
+            z-index: 9999;
+            transition: 0.7s;
 
             .content {
                 width: 90%;
@@ -28,15 +29,18 @@ h1, h2, h3, h4 {
                 display: flex;
                 justify-content:space-between;
                 align-items: center;
+                transition: 0.7s;
             }
 
             img {
+                transition: 0.7s;
                 width: 80px;
                 cursor: pointer;
             }
 
             .nav-right {
 
+                transition: 0.7s;
                 display: flex;
                 align-items: center;
                 gap: 10px;
@@ -65,6 +69,38 @@ h1, h2, h3, h4 {
                 }
 
             }
+        }
+
+        .nav-down {
+
+            background-color: white;
+            
+            padding: 5px 0;
+
+            img {
+                width: 75px;
+            }
+
+                .nav-right {
+    
+                    .nav-info {
+    
+                        p {
+                            font-size: 13px;
+                            color: #a42138;
+                        }
+                    }
+                    
+    
+                    .menu-icon{
+                        width: 40px;
+                    }
+    
+                    .menu-icon:hover {
+                        cursor: pointer;
+                    }
+    
+                }
         }
                 
         .hero {
@@ -1022,6 +1058,38 @@ h1, h2, h3, h4 {
                     }
 
                 }
+            }
+
+            .nav-down {
+
+                background-color: white;
+                
+                padding: 5px 0;
+    
+                img {
+                    width: 180px;
+                }
+    
+                    .nav-right {
+        
+                        .nav-info {
+        
+                            p {
+                                font-size: 25px;
+                                color: #a42138;
+                            }
+                        }
+                        
+        
+                        .menu-icon{
+                            width: 70px;
+                        }
+        
+                        .menu-icon:hover {
+                            cursor: pointer;
+                        }
+        
+                    }
             }
 
             .hero {
