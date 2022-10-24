@@ -20,13 +20,21 @@ function reveal() {
 
 // MENU REVEAL 
 
+const hero = document.querySelector('.hero');
 const heroContent = document.querySelector('.hero-all-content');
 const menuContent = document.querySelector('.hero-menu');
+const hiddenSections = document.querySelectorAll('.hidden-section');
 
 const menuIcon = document.querySelector('.menu-icon');
 menuIcon.addEventListener('click', () => {
     heroContent.classList.toggle("menu-mode");
     menuContent.classList.toggle("menu-active");
+
+    //hero.classList.toggle("menu-active-background");
+
+    hiddenSections.forEach(section => {
+        section.classList.toggle("hidden-section-active")
+    })
 })
 
 const menuLists = document.querySelectorAll('.menu-li');
@@ -34,6 +42,12 @@ menuLists.forEach(li => {
     li.addEventListener("click", () => {
         heroContent.classList.remove("menu-mode");
         menuContent.classList.remove("menu-active");
+
+        //hero.classList.toggle("menu-active-background");
+
+        hiddenSections.forEach(section => {
+            section.classList.toggle("hidden-section-active")
+        })
     })
 })
 
