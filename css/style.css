@@ -291,86 +291,86 @@ header .menu-mode {
 }
 
 .servicios-section {
-  height: 100%;
-  display: flex;
-  align-items: center;
+  overflow: hidden;
+  padding: 100px 0;
 }
 .servicios-section .servicios-content {
-  position: relative;
-  width: 100%;
-  height: 90%;
-  overflow: hidden;
+  max-width: 1820px;
+  margin: 0 auto;
 }
 .servicios-section .servicios-content h1 {
-  position: absolute;
-  left: 0;
-  top: 0;
   color: #a42138;
-  font-size: 50px;
+  font-size: 150px;
   margin: 0;
 }
 .servicios-section .servicios-content .servicios-list {
-  padding: 0 1rem;
+  margin: 0 auto;
+  max-width: 1820px;
+  width: 95%;
 }
-.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(1) {
-  top: 5%;
-  left: 1%;
-  width: 60%;
-  height: 350px;
+.servicios-section .servicios-content .servicios-list .row-1 {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2vw;
 }
-.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(1) img {
+.servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(1) {
+  width: 40%;
+  height: 500px;
+}
+.servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(1) img {
   width: 100%;
   height: 80%;
   object-fit: cover;
+  transform: tranlsate(-50%);
 }
-.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(2) {
-  top: 10%;
-  right: 5%;
-  width: 25%;
-  height: 50%;
+.servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(2) {
+  margin-right: 150px;
+  width: 20%;
+  height: 700px;
+  justify-content: center;
 }
-.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(2) img {
+.servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(2) img {
   width: 100%;
   height: 80%;
   object-fit: cover;
+  transform: tranlsate(-50%);
 }
-.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(3) {
-  bottom: 5%;
-  left: 8%;
-  width: 25%;
-  height: 50%;
+.servicios-section .servicios-content .servicios-list .row-2 {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2vw;
 }
-.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(3) img {
-  width: 100%;
-  height: 75%;
-  object-fit: cover;
+.servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(1) {
+  margin-top: -150px;
+  margin-left: 200px;
+  width: 20%;
+  height: 700px;
 }
-.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(4) {
-  bottom: 7%;
-  right: 1%;
-  width: 60%;
-  height: 300px;
-}
-.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(4) img {
+.servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(1) img {
   width: 100%;
   height: 80%;
   object-fit: cover;
+  transform: tranlsate(-50%);
 }
-.servicios-section .servicios-content .servicios-list .servicio-group:nth-child(4) .servicios-lorem {
-  width: 80%;
+.servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(2) {
+  position: relative;
+  width: 40%;
+}
+.servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(2) img {
+  width: 100%;
+  object-fit: cover;
+}
+.servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(2) .servicios-lorem {
   position: absolute;
   top: 0;
-  left: 0;
-  padding: 1rem;
-  font-size: 17px;
+  width: 100%;
   color: white;
+  padding: 0 1rem;
+  font-size: 25px;
 }
 .servicios-section .servicios-content .servicios-list .servicio-group {
-  position: absolute;
-}
-.servicios-section .servicios-content .servicios-list .servicio-group .servicio-info {
-  position: absolute;
-  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
 }
 .servicios-section .servicios-content .servicios-list .servicio-group .servicio-info h4 {
   color: #a42138;
@@ -383,11 +383,13 @@ header .menu-mode {
 }
 
 .interes-section {
+  position: relative;
   height: 100%;
   display: flex;
   align-items: center;
 }
 .interes-section .interes-content {
+  position: relative;
   padding: 0 0.5rem;
 }
 .interes-section .interes-content a {
@@ -402,25 +404,27 @@ header .menu-mode {
   color: #a42138;
   text-decoration: underline;
 }
+.interes-section .contacto-title {
+  position: absolute;
+  left: 0;
+  bottom: -200px;
+  padding: 0 1rem;
+  color: #025694;
+  line-height: 65px;
+}
+.interes-section .contacto-title span {
+  font-size: 25px;
+}
+.interes-section .contacto-title h1 {
+  margin: 0;
+  font-size: 150px;
+}
 
 .contacto-section {
   position: relative;
   background-color: #025694;
   height: 100%;
   overflow: hidden;
-}
-.contacto-section .contacto-title {
-  line-height: 1px;
-  color: white;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-.contacto-section .contacto-title span {
-  font-weight: 100;
-}
-.contacto-section .contacto-title h1 {
-  font-size: 50px;
 }
 .contacto-section .title-effect {
   position: absolute;
@@ -1017,13 +1021,10 @@ footer .copyright-side .copyright-container .mm-logo img {
   .servicios-section .servicios-content h1 {
     margin: 0 10px;
     color: #a42138;
-    font-size: 80px;
+    font-size: 150px;
   }
   .servicios-section .servicios-content .servicios-list .servicio-group {
     overflow: hidden;
-  }
-  .servicios-section .servicios-content .servicios-list .servicio-group img {
-    width: 100%;
   }
   .servicios-section .servicios-content .servicios-list .servicio-group .servicio-info {
     margin-top: 5px;
@@ -1039,73 +1040,9 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
 }
 @media screen and (min-width: 1024px) {
-  .servicios-section {
-    margin: 0 auto;
-    max-width: 1200px;
-  }
-  .servicios-section .servicios-content {
-    padding: 0 1rem;
-  }
   .servicios-section .servicios-content h1 {
-    margin: 10px 10px;
     color: #a42138;
-    font-size: 80px;
-  }
-  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(1) {
-    top: 3%;
-    left: 1%;
-    width: 55%;
-    height: 350px;
-  }
-  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(1) img {
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-  }
-  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(2) {
-    top: 10%;
-    right: 8%;
-    width: 20%;
-    height: 50%;
-  }
-  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(2) img {
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-  }
-  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(3) {
-    bottom: 2%;
-    left: 8%;
-    width: 20%;
-    height: 50%;
-  }
-  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(3) img {
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-  }
-  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(4) {
-    bottom: 0%;
-    right: 1%;
-    width: 60%;
-    height: 350px;
-  }
-  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(4) img {
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-  }
-  .servicios-section .servicios-content .servicios-list .servicio-group:nth-child(4) .servicios-lorem {
-    width: 80%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 1rem;
-    font-size: 23px;
-    color: white;
-  }
-  .servicios-section .servicios-content .servicios-list .servicio-group .servicio-info {
-    margin-top: 5px;
+    font-size: 150px;
   }
   .servicios-section .servicios-content .servicios-list .servicio-group .servicio-info h4 {
     color: #a42138;
@@ -1134,13 +1071,13 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
   .contacto-section .contacto-content .form-content {
     width: 60%;
-    padding: 25px 0 5px 0;
+    padding: 0;
   }
   .contacto-section .contacto-content .form-content .form-group {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
   }
   .contacto-section .contacto-content .form-content .form-group label {
     font-weight: 100;
@@ -1165,9 +1102,11 @@ footer .copyright-side .copyright-container .mm-logo img {
     justify-content: right;
   }
   .contacto-section .contacto-content .form-content .form-button-container img {
-    width: 50px;
+    width: 100px;
   }
   .contacto-section .contacto-content .form-content .form-button-container button {
+    cursor: pointer;
+    font-size: 40px;
     margin: 10px 0 10px 0;
     color: white;
     border: none;

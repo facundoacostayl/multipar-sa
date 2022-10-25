@@ -59,13 +59,6 @@ window.addEventListener("scroll", () => {
 })
 
 
-// TITLE APPEAR
-
-const title = document.querySelector(".title-effect");
-window.addEventListener("scroll", () => {
-    title.style.top = Math.max(10 - 0.35*window.scrollY, -45) + "px";
-});
-
 // CURSOR EFFECT
 
 const cursors = document.querySelectorAll('.cursor');
@@ -85,4 +78,3 @@ serviciosImages.forEach(img => {
         console.log("yes")
     })
 })
-
