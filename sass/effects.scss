@@ -7,6 +7,7 @@
 @media screen and (min-width: 1024px) {
 
     .cursor {
+        z-index: inherit;
         display: block;
         position: fixed;
         width: 30px;
@@ -16,12 +17,13 @@
         pointer-events: none;
 
         p {
+            width: 100%;
             position: absolute;
             left: -50px;
             font-size: 20px;
             white-space: nowrap;
             margin-top: 28px;
-            width: 100%;
+            letter-spacing: 2px;
         }
 
         .cursor-special-text {

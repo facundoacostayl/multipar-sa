@@ -62,6 +62,7 @@ window.addEventListener("scroll", () => {
 // CURSOR EFFECT
 
 const cursors = document.querySelectorAll('.cursor');
+
 document.addEventListener('mousemove', (e) => {
     cursors.forEach(cursor => {
         cursor.style.left = e.clientX + 'px';
@@ -69,12 +70,22 @@ document.addEventListener('mousemove', (e) => {
     })
 })
 
-const serviciosImages = document.querySelectorAll('.servicio-img');
+const serviciosImages = document.querySelectorAll('.servicio-img-container:after');
 const cursorText = document.querySelector('.cursor-text');
 const cursorSpecialText = document.querySelector('.cursor-special-text');
 
-serviciosImages.forEach(img => {
-    img.addEventListener("onmouseover", () => {
-        console.log("yes")
+function changeCursorText() {
+    cursorText.style.display = "none"
+    cursorSpecialText.style.display = "block"
+    cursors.forEach(cursor => {
+        cursor.style.color = "white"
     })
-})
+}
+
+function getBackCursorText() {
+    cursorText.style.display = "block"
+    cursorSpecialText.style.display = "none"
+    cursors.forEach(cursor => {
+        cursor.style.color = "black"
+    })
+}

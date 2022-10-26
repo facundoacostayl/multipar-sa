@@ -4,23 +4,23 @@
 
 @media screen and (min-width: 1024px) {
   .cursor {
-    z-index: inherit;
     display: block;
     position: fixed;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     pointer-events: none;
   }
   .cursor p {
-    width: 100%;
+    font-weight: 100;
     position: absolute;
     left: -50px;
     font-size: 20px;
     white-space: nowrap;
     margin-top: 28px;
-    letter-spacing: 2px;
+    width: 100%;
   }
   .cursor .cursor-special-text {
     display: none;
@@ -50,5 +50,4 @@
     background-color: white;
   }
 }
-
 /*# sourceMappingURL=effects.css.map */
