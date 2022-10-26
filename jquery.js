@@ -17,10 +17,16 @@ $(window).scroll(function() {
     })
 
 
-// TITLE PARALLAX EFFECT ON (Y Position 3492)
+// TITLE PARALLAX EFFECT ON (CONTACT: Y Position 3492) (SERVICIOS TOP -20%)
 
     $(document).on('scroll', function() {
-        if(window.scrollY < 4160){
-            $('.contacto-title').css("bottom", Math.max(-200 + 0.35*(window.scrollY - 3500)) + "px")
+        if(window.scrollY < 4300){
+            $('.contacto-title').css("bottom", Math.max(-200 + 0.35*(window.scrollY - 3675)) + "px")
+        }
+    })
+
+    $(document).on('scroll', function() {
+        if(window.scrollY < 1470){
+            $('.servicios-title').css("top", Math.max(100 - 0.35*(window.scrollY - 1175)) + "px")
         }
     })
