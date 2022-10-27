@@ -59,7 +59,9 @@
   height: 500px;
   padding: 1rem;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-  background: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   visibility: hidden;
   opacity: 0;
   transition: 0.5s;
@@ -68,6 +70,7 @@
 .detalles-servicio-popup .contenido-popup {
   width: 100%;
   padding: 1.5rem 1rem;
+  position: relative;
 }
 .detalles-servicio-popup .contenido-popup h2 {
   width: 100%;
@@ -77,14 +80,15 @@
   text-transform: uppercase;
   margin-bottom: 1rem;
   user-select: none;
-  color: #a42138;
+  color: white;
 }
 .detalles-servicio-popup .contenido-popup p {
   font-size: 25px;
-  color: #3c3b3b;
+  color: white;
   user-select: none;
   width: 100%;
   margin: 0 auto;
+  padding: 1rem 0;
   line-height: 30px;
   text-align: left;
 }
@@ -94,7 +98,29 @@
 .detalles-servicio-popup .popup-button a {
   cursor: pointer;
   font-size: 25px;
-  color: #3c3b3b;
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 0.3rem 0.8rem;
+  transition: all 0.2s;
+}
+.detalles-servicio-popup .popup-button a:hover {
+  background-color: rgba(255, 255, 255, 0.274);
+}
+
+.popup-before-active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0.75;
+  transition: all 1s;
+  -webkit-transition: all 1s;
 }
 
 .detalles-servicio-popup.active {

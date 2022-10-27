@@ -107,6 +107,7 @@ serviciosImages.forEach(img => {
         popup.classList.add("active")
 
         if (imgId === "practicaje") {
+            popup.style.backgroundImage = "url(../img/servicios/practicaje.jpg)"
             tituloPopup.textContent = "Practicaje"
             textoPopup.textContent = `
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
@@ -120,6 +121,7 @@ serviciosImages.forEach(img => {
         }
 
         if (imgId === "translados") {
+            popup.style.backgroundImage = "url(../img/servicios/asesoramiento.jpg)"
             tituloPopup.textContent = "Translados"
             textoPopup.textContent = `
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
@@ -133,6 +135,7 @@ serviciosImages.forEach(img => {
         }
 
         if (imgId === "asesoramiento") {
+            popup.style.backgroundImage = "url(../img/servicios/translados.jpg)"
             tituloPopup.textContent = "Asesoramiento"
             textoPopup.textContent = `
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
@@ -146,6 +149,7 @@ serviciosImages.forEach(img => {
         }
 
         if (imgId === "informacion-actualizada") {
+            popup.style.backgroundImage = "url(../img/servicios/info.jpg)"
             tituloPopup.textContent = "Información Actualizada"
             textoPopup.textContent = `
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
