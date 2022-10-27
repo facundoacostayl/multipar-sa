@@ -50,5 +50,58 @@
     background-color: white;
   }
 }
+.detalles-servicio-popup {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  padding: 1rem;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 99999;
+}
+.detalles-servicio-popup .contenido-popup {
+  width: 100%;
+  padding: 1.5rem 1rem;
+}
+.detalles-servicio-popup .contenido-popup h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  user-select: none;
+  color: #a42138;
+}
+.detalles-servicio-popup .contenido-popup p {
+  font-size: 25px;
+  color: #3c3b3b;
+  user-select: none;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 30px;
+  text-align: left;
+}
+.detalles-servicio-popup .popup-button {
+  text-align: center;
+}
+.detalles-servicio-popup .popup-button a {
+  cursor: pointer;
+  font-size: 25px;
+  color: #3c3b3b;
+}
+
+.detalles-servicio-popup.active {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
 
 /*# sourceMappingURL=effects.css.map */

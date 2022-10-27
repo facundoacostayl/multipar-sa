@@ -329,19 +329,14 @@ header .menu-mode {
       -webkit-transition: all 1s;
   }*/
 }
-.servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(1) .servicio-img-container {
-  position: relative;
+.servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(1) img {
   min-width: 100%;
   width: 100%;
   height: 70%;
-}
-.servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(1) .servicio-img-container img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   transform: tranlsate(-50%);
 }
-.servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(1) .servicio-img-container h1 {
+.servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(1) h1 {
   position: absolute;
   top: 100px;
   z-index: -1;

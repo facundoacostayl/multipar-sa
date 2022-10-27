@@ -70,7 +70,10 @@ document.addEventListener('mousemove', (e) => {
     })
 })
 
-const serviciosImages = document.querySelectorAll('.servicio-img-container:after');
+//IMAGES
+const serviciosImages = document.querySelectorAll('.servicio-img');
+//
+
 const cursorText = document.querySelector('.cursor-text');
 const cursorSpecialText = document.querySelector('.cursor-special-text');
 
@@ -89,3 +92,74 @@ function getBackCursorText() {
         cursor.style.color = "black"
     })
 }
+
+//OPEN MODAL
+
+const popup = document.querySelector('.detalles-servicio-popup');
+const closePopupBtn = document.querySelector('#btn-close-popup');
+const tituloPopup = document.querySelector('.titulo-detalle');
+const textoPopup = document.querySelector('.texto-detalle');
+
+serviciosImages.forEach(img => {
+    img.addEventListener("click", (e) => {
+        const imgId = e.target.id;
+        
+        popup.classList.add("active")
+
+        if (imgId === "practicaje") {
+            tituloPopup.textContent = "Practicaje"
+            textoPopup.textContent = `
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            voluptate nobis molestiae vero et, saepe, asperiores amet laudantium
+            nam repudiandae culpa dicta in tenetur sed numquam. Natus
+            consequatur sunt quisquam? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut provident ad aliquam laudantium omnis
+            officiis, iusto ex laboriosam placeat enim, hic illum a! Deserunt
+            similique nesciunt delectus rem repudiandae nobis!
+            `
+        }
+
+        if (imgId === "translados") {
+            tituloPopup.textContent = "Translados"
+            textoPopup.textContent = `
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            voluptate nobis molestiae vero et, saepe, asperiores amet laudantium
+            nam repudiandae culpa dicta in tenetur sed numquam. Natus
+            consequatur sunt quisquam? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut provident ad aliquam laudantium omnis
+            officiis, iusto ex laboriosam placeat enim, hic illum a! Deserunt
+            similique nesciunt delectus rem repudiandae nobis!
+            `
+        }
+
+        if (imgId === "asesoramiento") {
+            tituloPopup.textContent = "Asesoramiento"
+            textoPopup.textContent = `
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            voluptate nobis molestiae vero et, saepe, asperiores amet laudantium
+            nam repudiandae culpa dicta in tenetur sed numquam. Natus
+            consequatur sunt quisquam? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut provident ad aliquam laudantium omnis
+            officiis, iusto ex laboriosam placeat enim, hic illum a! Deserunt
+            similique nesciunt delectus rem repudiandae nobis!
+            `
+        }
+
+        if (imgId === "informacion-actualizada") {
+            tituloPopup.textContent = "Información Actualizada"
+            textoPopup.textContent = `
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            voluptate nobis molestiae vero et, saepe, asperiores amet laudantium
+            nam repudiandae culpa dicta in tenetur sed numquam. Natus
+            consequatur sunt quisquam? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut provident ad aliquam laudantium omnis
+            officiis, iusto ex laboriosam placeat enim, hic illum a! Deserunt
+            similique nesciunt delectus rem repudiandae nobis!
+            `
+        }
+    })
+})
+
+closePopupBtn.addEventListener("click", () => {
+    popup.classList.remove("active")
+})

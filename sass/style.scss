@@ -414,16 +414,10 @@ h1, h2, h3, h4 {
                         width: 55%;
                         height: 700px;
 
-                        .servicio-img-container {
-
-                            position: relative;
-                            min-width: 100%;
-                            width: 100%;
-                            height: 70%;
-
                             img {
+                                min-width: 100%;
                                 width: 100%;
-                                height: 100%;
+                                height: 70%;
                                 object-fit: cover;
                                 transform: tranlsate(-50%);
                             }
@@ -433,7 +427,6 @@ h1, h2, h3, h4 {
                                 top: 100px;
                                 z-index: -1;
                             }
-                        }
 
                         /*.servicio-img-container:after {
                             content: '\A';
