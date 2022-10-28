@@ -384,7 +384,7 @@ h1, h2, h3, h4 {
 
     .servicios-section {
         
-        padding: 50px 0;
+       
 
         .servicios-content {
 
@@ -444,7 +444,7 @@ h1, h2, h3, h4 {
 
                     .servicio-group:nth-child(2) {
                     
-                        width: 20%;
+                        width: 25%;
                         height: 750px;
                         justify-content: center;
                         margin-top: 150px;
@@ -469,7 +469,7 @@ h1, h2, h3, h4 {
                     .servicio-group:nth-child(1) {
                     
                         margin-top: -100px;
-                        width: 20%;
+                        width: 25%;
                         height: 700px;
                         margin-left: 120px;
 
@@ -1745,9 +1745,9 @@ h1, h2, h3, h4 {
                 .contact-info-side {
                     text-align: left;
                     border-bottom: 2px solid white;
-                    padding: 70px 0;
+                    padding: 70px 0 100px 0;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: space-around;
     
                     span {
                         font-weight: 100;
@@ -1766,7 +1766,9 @@ h1, h2, h3, h4 {
     
                 .links-side {
 
+                    height: 100%;
                     display: flex;
+                    align-items: center;
                     
                     .logo-footer {
     

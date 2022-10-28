@@ -290,9 +290,6 @@ header .menu-mode {
   opacity: 1;
 }
 
-.servicios-section {
-  padding: 50px 0;
-}
 .servicios-section .servicios-content {
   margin: 0 auto;
   padding: 0 1rem;
@@ -342,7 +339,7 @@ header .menu-mode {
   z-index: -1;
 }
 .servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(2) {
-  width: 20%;
+  width: 25%;
   height: 750px;
   justify-content: center;
   margin-top: 150px;
@@ -362,7 +359,7 @@ header .menu-mode {
 }
 .servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(1) {
   margin-top: -100px;
-  width: 20%;
+  width: 25%;
   height: 700px;
   margin-left: 120px;
 }
@@ -1215,9 +1212,9 @@ footer .copyright-side .copyright-container .mm-logo img {
   footer .footer-content .contact-info-side {
     text-align: left;
     border-bottom: 2px solid white;
-    padding: 70px 0;
+    padding: 70px 0 100px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   footer .footer-content .contact-info-side span {
     font-weight: 100;
@@ -1231,7 +1228,9 @@ footer .copyright-side .copyright-container .mm-logo img {
     width: 100px;
   }
   footer .footer-content .links-side {
+    height: 100%;
     display: flex;
+    align-items: center;
   }
   footer .footer-content .links-side .logo-footer {
     display: flex;
