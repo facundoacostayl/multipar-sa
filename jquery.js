@@ -15,13 +15,14 @@
 // TITLE PARALLAX EFFECT ON (CONTACT: Y Position 3492) (SERVICIOS TOP -20%)
 
     $(document).on('scroll', function() {
-        if(window.scrollY < 4300){
-            $('.contacto-title').css("bottom", Math.max(-200 + 0.35*(window.scrollY - 3675)) + "px")
+        if(window.scrollY < 4275){
+            $('.contacto-title').css("bottom", Math.max(-200 + 0.35*(window.scrollY - 3600)) + "px")
         }
     })
 
     $(document).on('scroll', function() {
-        if(window.scrollY < 1470){
+        console.log(scrollY)
+        if(window.scrollY < 1525){
             $('.servicios-title').css("top", Math.max(100 - 0.35*(window.scrollY - 1175)) + "px")
         }
     })
