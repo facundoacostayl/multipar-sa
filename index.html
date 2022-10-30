@@ -5,17 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multipar S.A.</title>
-    <script
-      defer
-      src="https://kit.fontawesome.com/b95ba2cf7a.js"
-      crossorigin="anonymous"
-    ></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="https://use.typekit.net/rco5sgx.css" />
     <link rel="stylesheet" href="./css/utils.css" />
     <link rel="stylesheet" href="./css/effects.css" />
-    <script defer src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/b95ba2cf7a.js" crossorigin="anonymous"></script>    <script defer src="./main.js"></script>
     <script defer src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script defer src="./jquery.js"></script>
   </head>
@@ -25,7 +20,7 @@
         <div class="section">
           <nav class="">
             <div class="content">
-              <img src="./img/Logo-Multipar-Top.svg" alt="logo-multipar-sa" />
+              <a href="#header-section"><img src="./img/Logo-Multipar-Top.svg" alt="logo-multipar-sa" /></a>
               <div class="nav-right">
                 <div class="nav-info">
                   <p>inforio@multipar.com.ar</p>
@@ -389,16 +384,12 @@
         </footer>
       </div>
 
-      <div class="popup detalles-servicio-popup popup-before-active">
+      <div class="popup detalles-servicio-popup">
         <div class="contenido-popup">
           <h2 class="titulo-detalle"></h2>
           <p class="texto-detalle"></p>
-
-          <div class="popup-button">
-            <i class="fa-solid fa-xmark"></i>
-            <a id="btn-close-popup" class="btn">Cerrar</a>
-          </div>
         </div>
+        <span id="btn-close-popup">X</span>
       </div>
     </div>
   </body>

@@ -21,7 +21,6 @@
     })
 
     $(document).on('scroll', function() {
-        console.log(scrollY)
         if(window.scrollY < 1525){
             $('.servicios-title').css("top", Math.max(100 - 0.35*(window.scrollY - 1175)) + "px")
         }

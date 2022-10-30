@@ -53,11 +53,18 @@ menuLists.forEach(li => {
 
 //NAV EFFECT
 
+const nav = document.querySelector("nav");
+serviciosSection = document.querySelector("#servicios-section");
+contactoSection = document.querySelector("#contacto-section");
+
 window.addEventListener("scroll", () => {
-    const nav = document.querySelector("nav");
     nav.classList.toggle("nav-down", window.scrollY > 0);
 })
 
+//NAV DISABLED WHEN SECTION ON
+window.addEventListener("scroll", () => {
+    nav.classList.toggle("nav-disabled", contactoSection.getBoundingClientRect().top === 180.9375 ||  serviciosSection.getBoundingClientRect().top === 0)
+})
 
 // CURSOR EFFECT
 
@@ -107,7 +114,6 @@ serviciosImages.forEach(img => {
         popup.classList.add("active")
 
         if (imgId === "practicaje") {
-            popup.style.backgroundImage = "url(../img/servicios/practicaje.jpg)"
             tituloPopup.textContent = "Practicaje"
             textoPopup.textContent = `
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
@@ -121,7 +127,6 @@ serviciosImages.forEach(img => {
         }
 
         if (imgId === "translados") {
-            popup.style.backgroundImage = "url(../img/servicios/asesoramiento.jpg)"
             tituloPopup.textContent = "Translados"
             textoPopup.textContent = `
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
@@ -135,7 +140,6 @@ serviciosImages.forEach(img => {
         }
 
         if (imgId === "asesoramiento") {
-            popup.style.backgroundImage = "url(../img/servicios/translados.jpg)"
             tituloPopup.textContent = "Asesoramiento"
             textoPopup.textContent = `
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
@@ -149,7 +153,6 @@ serviciosImages.forEach(img => {
         }
 
         if (imgId === "informacion-actualizada") {
-            popup.style.backgroundImage = "url(../img/servicios/info.jpg)"
             tituloPopup.textContent = "Información Actualizada"
             textoPopup.textContent = `
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem

@@ -7,7 +7,7 @@
 @media screen and (min-width: 1024px) {
 
     .cursor {
-        z-index: inherit;
+        z-index: 99999;
         display: block;
         position: fixed;
         width: 30px;
@@ -71,6 +71,10 @@
     .footer-content:hover ~ .cursor {
         background-color: white; 
     }
+
+    .detalles-servicio-popup:hover ~ .cursor {
+        background-color: white;
+    }
     
 }
 
@@ -83,20 +87,18 @@
         transform: translate(-50%, -50%);
         width: 500px;
         height: 500px;
-        padding: 1rem;
-        box-shadow: 0 5px 30px rgba(0,0,0,.30);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        padding: 1.5rem 1rem;
+        background-color: #a42138;
         visibility: hidden;
         opacity: 0;
         transition: 0.5s;
-        z-index: 99999;
+        
 
         .contenido-popup {
 
             width: 100%;
             position: relative;
+            text-align: center;
             
             h2 {
                 width: 100%;
@@ -104,7 +106,7 @@
                 font-size: 1.8rem;
                 font-weight: 700;
                 text-transform: uppercase;
-                margin-bottom: 1rem;
+                margin: 1rem 0;
                 user-select: none;
                 color: white;
             }
@@ -115,45 +117,24 @@
                 user-select: none;
                 width: 100%;
                 margin: 0 auto;
-                padding: 1rem 0;
+                padding-top: 1rem;
                 line-height: 30px;
-                text-align: left;
             }
         }
 
-        .popup-button { 
-            text-align: center;
-
-            a {
-                cursor: pointer;
-                font-size: 25px;
-                color: white;
-                border: 1px solid white;
-                border-radius: 15px;
-                padding: .3rem .8rem;
-                transition: all .2s;
-            }
-
-            a:hover {
-                background-color: rgba(255, 255, 255, 0.274);
-            }
+        span {
+            font-family: sans-serif;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 1rem;
+            cursor: pointer;
+            font-size: 25px;
+            width: 20px;height: 20px;
+            color: white;
         }
-    }
 
-    .popup-before-active::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height:100%;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left:0;
-        background:rgba(0,0,0,0.6);
-        opacity: 0.75;
-        transition: all 1s;
-        -webkit-transition: all 1s;
-        
     }
     
     .detalles-servicio-popup.active {

@@ -16,7 +16,7 @@ h1, h2, h3, h4 {
     header {
 
         z-index: 9999;
-        transition: 0.7s;
+        transition: 0.9s;
 
         nav {
 
@@ -106,6 +106,10 @@ h1, h2, h3, h4 {
                     }
     
                 }
+        }
+
+        .nav-disabled {
+            top: -120px;
         }
                 
         .hero {
@@ -598,15 +602,9 @@ h1, h2, h3, h4 {
     }
 
     .contacto-section {
-        position: relative;
         background-color: #025694;
         height: 100%;
         overflow: hidden;
-
-        .title-effect {
-            position: absolute;
-            top: 10px;
-        }
 
         .contacto-content {
             position: relative;
