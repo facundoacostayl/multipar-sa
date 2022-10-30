@@ -466,7 +466,6 @@ header .menu-mode {
   overflow: hidden;
 }
 .contacto-section .contacto-content {
-  position: relative;
   margin: 0 auto;
   padding: 1rem;
   color: white;
@@ -1093,7 +1092,6 @@ footer .copyright-side .copyright-container .mm-logo img {
     font-size: 90px;
   }
   .contacto-section .contacto-content {
-    position: relative;
     height: 100%;
     margin: 0 auto;
     padding: 1rem;
