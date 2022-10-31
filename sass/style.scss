@@ -580,33 +580,19 @@ h1, h2, h3, h4 {
                 text-decoration: underline;
             }
         }
-        .contacto-title {
-            position: absolute;
-            left: 0;
-            bottom: -200px;
-            padding: 0 1rem;
-            //color: #025694;
-            color: #025694;
-            line-height: 65px;
-
-            span {
-                font-size: 25px;
-            }
-
-            h1 {
-                margin: 0;
-                font-size: 150px;
-            }
-        }
     }
 
     .contacto-section {
-        background-color: #025694;
+        position: relative;
+        background-color: white;
         height: 100%;
         overflow: hidden;
 
+        .contacto-container {
+            height: 82%;
+            background-color: #025694;
+
         .contacto-content {
-    
             margin: 0 auto;
             padding: 1rem;  
             color: white;  
@@ -720,6 +706,7 @@ h1, h2, h3, h4 {
 
             }
         }
+    }
 
         .reveal {
             transform: translateX(150px);
@@ -732,6 +719,25 @@ h1, h2, h3, h4 {
             opacity: 1;
         }
 
+    }
+
+    .contacto-title {
+        position: absolute;
+        top: 220px;
+        left: 0;
+        padding: 0 1rem;
+        color: #025694;
+        line-height: 70px;
+
+        p {
+            font-size: 25px;
+            margin: 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 150px;
+        }
     }
 
     footer {
@@ -869,6 +875,7 @@ h1, h2, h3, h4 {
 
         .contacto-section {
 
+            .contacto-container {
             .contacto-content {
                 .aside-content {
 
@@ -919,6 +926,7 @@ h1, h2, h3, h4 {
     
                 }
             }
+        }
         }
     }
 
@@ -1252,6 +1260,7 @@ h1, h2, h3, h4 {
         }
 
         .contacto-section {
+            .contacto-container{
             .contacto-content {
                 
                 .form-content {
@@ -1356,7 +1365,8 @@ h1, h2, h3, h4 {
     
                 }
 
-            }
+            }                    
+        }
         }
 
         footer {
@@ -1584,10 +1594,13 @@ h1, h2, h3, h4 {
 
         .contacto-section {
                 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             
+            .contacto-container {
             .contacto-content {
-    
-                height: 100%;
+                width: 100%;
                 margin: 0 auto;
                 padding: 1rem;  
                 display: flex;
@@ -1708,7 +1721,8 @@ h1, h2, h3, h4 {
                         }
                     }
                 }
-            }
+            }                 
+        }
     
             .reveal {
                 transform: translateX(150px);
@@ -1871,6 +1885,7 @@ h1, h2, h3, h4 {
     @media screen and (min-width: 1920px) {
 
         .contacto-section {
+            .contacto-container {
             .contacto-content {
                 .aside-content {
     
@@ -1919,13 +1934,15 @@ h1, h2, h3, h4 {
                         }
                     }
                 }
-            }
+            }                 
+        }
         }
 
     }
 
     @media screen and (min-height: 770px) {
         .contacto-section {
+            .contacto-container {
             .contacto-content {
                 .aside-content {
                     
@@ -1971,12 +1988,14 @@ h1, h2, h3, h4 {
                         }
                     }
                 }
-            }
+            }                      
+        }
         }
     }
 
     @media screen and (min-height: 1368px) {
         .contacto-section {
+            .contacto-container {
             .contacto-content {
                 .aside-content {
 
@@ -2033,6 +2052,7 @@ h1, h2, h3, h4 {
                         }
                     }
                 }
-            }
+            }                   
+        }
         }
     }

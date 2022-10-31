@@ -63,7 +63,7 @@ window.addEventListener("scroll", () => {
 
 //NAV DISABLED WHEN SECTION ON
 window.addEventListener("scroll", () => {
-    nav.classList.toggle("nav-disabled", contactoSection.getBoundingClientRect().top === 180.9375 ||  serviciosSection.getBoundingClientRect().top === 0)
+    nav.classList.toggle("nav-disabled", contactoSection.getBoundingClientRect().top === 0 ||  serviciosSection.getBoundingClientRect().top === 0)
 })
 
 // CURSOR EFFECT
