@@ -170,3 +170,38 @@ serviciosImages.forEach(img => {
 closePopupBtn.addEventListener("click", () => {
     popup.classList.remove("active")
 })
+
+// MODAL SLIDER
+
+const servicioArrowLeft = document.getElementById('servicio-arrow-left');
+const servicioArrowRight = document.getElementById('servicio-arrow-right');
+const servicioContainer = document.querySelector('.slider');
+
+const indicatorParent = document.querySelector('.control ul');
+const indicators = document.querySelectorAll('.control li');
+
+let index = 0;
+
+indicators.forEach((indicator, i) => {
+  indicator.addEventListener('click', () => {
+    document.querySelector('.control .selected').classList.remove('selected');
+    indicator.classList.add('selected');
+    servicioContainer.style.transform = 'translateX(' + (i) * -25 + '%)';
+    index = i;
+  });
+});
+
+
+servicioArrowLeft.addEventListener('click', function () {
+  index = (index > 0) ? index - 1 : 0;
+  document.querySelector('.control .selected').classList.remove('selected');
+  indicatorParent.children[index].classList.add('selected');
+  servicioContainer.style.transform = 'translateX(' + (index) * -25 + '%)';
+});
+
+servicioArrowRight.addEventListener('click', function () {
+  index = (index < 4 - 1) ? index + 1 : 0;
+  document.querySelector('.control .selected').classList.remove('selected');
+  indicatorParent.children[index].classList.add('selected');
+  servicioContainer.style.transform = 'translateX(' + (index) * -25 + '%)';
+});
