@@ -299,7 +299,7 @@ header .menu-mode {
 }
 .servicios-section .servicios-content h1 {
   color: #a42138;
-  font-size: 150px;
+  font-size: 50px;
   margin: 0;
 }
 .servicios-section .servicios-content .servicios-list {
@@ -450,9 +450,12 @@ header .menu-mode {
   background-color: white;
   height: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: flex-end;
 }
 .contacto-section .contacto-container {
   height: 82%;
+  width: 100%;
   background-color: #025694;
 }
 .contacto-section .contacto-container .contacto-content {
@@ -1060,10 +1063,13 @@ footer .copyright-side .copyright-container .mm-logo img {
   .about-section .about-content .about-aside-text p:last-child {
     color: white;
   }
+  .servicios-section .servicios-content {
+    padding: 2rem 1rem;
+  }
   .servicios-section .servicios-content h1 {
     margin: 0 10px;
     color: #a42138;
-    font-size: 150px;
+    font-size: 100px;
   }
   .servicios-section .servicios-content .servicios-list .servicio-group {
     overflow: hidden;

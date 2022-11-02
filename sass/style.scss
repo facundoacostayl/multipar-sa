@@ -396,7 +396,7 @@ h1, h2, h3, h4 {
             
             h1 {
                 color: #a42138;
-                font-size: 150px;
+                font-size: 50px;
                 margin: 0;
             }
            
@@ -587,9 +587,12 @@ h1, h2, h3, h4 {
         background-color: white;
         height: 100%;
         overflow: hidden;
+        display: flex;
+        align-items: flex-end;
 
         .contacto-container {
             height: 82%;
+            width: 100%;
             background-color: #025694;
 
         .contacto-content {
@@ -1506,12 +1509,13 @@ h1, h2, h3, h4 {
         .servicios-section {
     
             .servicios-content {
+                padding: 2rem 1rem;
             
     
                 h1 {
                     margin: 0 10px;
                     color: #a42138;
-                    font-size: 150px;
+                    font-size: 100px;
                 }
                
                 .servicios-list {
@@ -1519,11 +1523,7 @@ h1, h2, h3, h4 {
                     .servicio-group {
     
                         overflow: hidden;
-    
-                            img {
-                                
-                            }
-                         
+                        
                         
                         .servicio-info {
                                 margin-top: 5px;
