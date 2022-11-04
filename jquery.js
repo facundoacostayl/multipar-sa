@@ -13,10 +13,40 @@ $(window).scroll(function () {
 
 // TITLE PARALLAX EFFECT ON (CONTACT: Y Position 3492) (SERVICIOS TOP -20%)
 
+const mediumWindow = window.matchMedia("(min-width: 540px)");
+const desktopWindow = window.matchMedia("(min-width: 768px)");
 const contactoSection = document.querySelector("#contacto-section");
 
-$(document).on("scroll", function () {
+
+  $(document).on("scroll", function () {
     console.log(window.scrollY)
+    console.log("MOBILE")
+  if (window.scrollY < 2970) {
+    $(".contacto-title").css(
+      "top",
+      Math.max(100 - 0.35 * (window.scrollY - 2790)) + "px"
+    );
+  }
+});
+
+$(document).on("scroll", function () {
+  if (window.scrollY < 1525) {
+    $(".servicios-title").css(
+      "top",
+      Math.max(100 - 0.35 * (window.scrollY - 1175)) + "px"
+    );
+  }
+});
+
+
+//FOLLOW HERE
+if(desktopWindow.matches) {
+}
+
+if(desktopWindow.matches) {
+  $(document).on("scroll", function () {
+    console.log(window.scrollY)
+    console.log("DESKTOP")
   if (window.scrollY < 4170) {
     $(".contacto-title").css(
       "top",
@@ -33,3 +63,5 @@ $(document).on("scroll", function () {
     );
   }
 });
+}
+

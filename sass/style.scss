@@ -727,20 +727,20 @@ h1, h2, h3, h4 {
 
     .contacto-title {
         position: absolute;
-        top: 220px;
+        top: 100px;
         left: 0;
         padding: 0 1rem;
         color: #025694;
-        line-height: 70px;
+        line-height: 35px;
 
         p {
-            font-size: 25px;
+            font-size: 10px;
             margin: 0;
         }
 
         h1 {
             margin: 0;
-            font-size: 150px;
+            font-size: 60px;
         }
     }
 
@@ -1371,6 +1371,25 @@ h1, h2, h3, h4 {
 
             }                    
         }
+        }
+
+        .contacto-title {
+            position: absolute;
+            top: 220px;
+            left: 0;
+            padding: 0 1rem;
+            color: #025694;
+            line-height: 70px;
+    
+            p {
+                font-size: 25px;
+                margin: 0;
+            }
+    
+            h1 {
+                margin: 0;
+                font-size: 150px;
+            }
         }
 
         footer {

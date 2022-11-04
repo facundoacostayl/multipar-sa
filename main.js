@@ -100,77 +100,6 @@ function getBackCursorText() {
     })
 }
 
-//OPEN MODAL
-
-const popup = document.querySelector('.detalles-servicio-popup');
-const closePopupBtn = document.querySelector('#btn-close-popup');
-const tituloPopup = document.querySelector('.titulo-detalle');
-const textoPopup = document.querySelector('.texto-detalle');
-
-serviciosImages.forEach(img => {
-    img.addEventListener("click", (e) => {
-        const imgId = e.target.id;
-        
-        popup.classList.add("active")
-
-        if (imgId === "practicaje") {
-            tituloPopup.textContent = "Practicaje"
-            textoPopup.textContent = `
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            voluptate nobis molestiae vero et, saepe, asperiores amet laudantium
-            nam repudiandae culpa dicta in tenetur sed numquam. Natus
-            consequatur sunt quisquam? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Aut provident ad aliquam laudantium omnis
-            officiis, iusto ex laboriosam placeat enim, hic illum a! Deserunt
-            similique nesciunt delectus rem repudiandae nobis!
-            `
-        }
-
-        if (imgId === "translados") {
-            tituloPopup.textContent = "Translados"
-            textoPopup.textContent = `
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            voluptate nobis molestiae vero et, saepe, asperiores amet laudantium
-            nam repudiandae culpa dicta in tenetur sed numquam. Natus
-            consequatur sunt quisquam? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Aut provident ad aliquam laudantium omnis
-            officiis, iusto ex laboriosam placeat enim, hic illum a! Deserunt
-            similique nesciunt delectus rem repudiandae nobis!
-            `
-        }
-
-        if (imgId === "asesoramiento") {
-            tituloPopup.textContent = "Asesoramiento"
-            textoPopup.textContent = `
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            voluptate nobis molestiae vero et, saepe, asperiores amet laudantium
-            nam repudiandae culpa dicta in tenetur sed numquam. Natus
-            consequatur sunt quisquam? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Aut provident ad aliquam laudantium omnis
-            officiis, iusto ex laboriosam placeat enim, hic illum a! Deserunt
-            similique nesciunt delectus rem repudiandae nobis!
-            `
-        }
-
-        if (imgId === "informacion-actualizada") {
-            tituloPopup.textContent = "Información Actualizada"
-            textoPopup.textContent = `
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            voluptate nobis molestiae vero et, saepe, asperiores amet laudantium
-            nam repudiandae culpa dicta in tenetur sed numquam. Natus
-            consequatur sunt quisquam? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Aut provident ad aliquam laudantium omnis
-            officiis, iusto ex laboriosam placeat enim, hic illum a! Deserunt
-            similique nesciunt delectus rem repudiandae nobis!
-            `
-        }
-    })
-})
-
-closePopupBtn.addEventListener("click", () => {
-    popup.classList.remove("active")
-})
-
 // MODAL SLIDER
 
 const servicioArrowLeft = document.getElementById('servicio-arrow-left');
@@ -205,3 +134,55 @@ servicioArrowRight.addEventListener('click', function () {
   indicatorParent.children[index].classList.add('selected');
   servicioContainer.style.transform = 'translateX(' + (index) * -25 + '%)';
 });
+
+
+//OPEN MODAL
+
+const popup = document.querySelector('.detalles-servicio-popup');
+const closePopupBtn = document.querySelector('#btn-close-popup');
+const tituloPopup = document.querySelector('.titulo-detalle');
+const textoPopup = document.querySelector('.texto-detalle');
+
+serviciosImages.forEach(img => {
+    img.addEventListener("click", (e) => {
+        const imgId = e.target.id;
+        
+        popup.classList.add("active")
+
+        if (imgId === "practicaje") {
+            index = 0;
+            document.querySelector('.control .selected').classList.remove('selected');
+            indicatorParent.children[index].classList.add('selected');
+            servicioContainer.style.transform = 'translateX(' + (index) * -25 + '%)';
+
+        }
+
+        if (imgId === "translados") {
+            index = 1;
+            document.querySelector('.control .selected').classList.remove('selected');
+            indicatorParent.children[index].classList.add('selected');
+            servicioContainer.style.transform = 'translateX(' + (index) * -25 + '%)';
+
+        }
+
+        if (imgId === "asesoramiento") {
+            index = 2;
+            document.querySelector('.control .selected').classList.remove('selected');
+            indicatorParent.children[index].classList.add('selected');
+            servicioContainer.style.transform = 'translateX(' + (index) * -25 + '%)';
+
+        }
+
+        if (imgId === "informacion-actualizada") {
+            index = 3;
+            document.querySelector('.control .selected').classList.remove('selected');
+            indicatorParent.children[index].classList.add('selected');
+            servicioContainer.style.transform = 'translateX(' + (index) * -25 + '%)';
+
+        }
+    })
+})
+
+closePopupBtn.addEventListener("click", () => {
+    popup.classList.remove("active")
+})
