@@ -58,14 +58,14 @@
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
-  padding: 1.5rem 1rem;
+  width: 100%;
+  padding: 2rem 2rem;
   background-color: #a42138;
   visibility: hidden;
   opacity: 0;
   transition: 0.5s;
   overflow: hidden;
+  z-index: 99999;
 }
 .detalles-servicio-popup span {
   font-family: sans-serif;
@@ -115,7 +115,7 @@
   user-select: none;
   width: 100%;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding: 1rem 0 2rem 0;
   line-height: 30px;
 }
 .detalles-servicio-popup .carousel .left, .detalles-servicio-popup .carousel .right {

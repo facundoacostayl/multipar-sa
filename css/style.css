@@ -295,11 +295,11 @@ header .menu-mode {
 
 .servicios-section .servicios-content {
   margin: 0 auto;
-  padding: 5rem 1rem 0 1rem;
+  padding: 8rem 1rem 0 1rem;
 }
 .servicios-section .servicios-content h1 {
   color: #a42138;
-  font-size: 50px;
+  font-size: 60px;
   margin: 0;
 }
 .servicios-section .servicios-content .servicios-list {
@@ -462,13 +462,13 @@ header .menu-mode {
 }
 .contacto-section .contacto-container .contacto-content {
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.2rem 1rem;
   color: white;
   opacity: 0;
   animation: transitionIn 2s linear;
 }
 .contacto-section .contacto-container .contacto-content .form-content {
-  padding: 25px 0 5px 0;
+  padding: 20px 0 0 0;
 }
 .contacto-section .contacto-container .contacto-content .form-content .form-group {
   display: flex;
@@ -488,8 +488,8 @@ header .menu-mode {
   color: white;
 }
 .contacto-section .contacto-container .contacto-content .form-content .form-group textarea {
-  height: 80px;
-  font-size: 25px;
+  height: 50px;
+  font-size: 17px;
 }
 .contacto-section .contacto-container .contacto-content .form-content .form-group input:focus, .contacto-section .contacto-container .contacto-content .form-content .form-group textarea:focus {
   outline: none;
@@ -510,7 +510,7 @@ header .menu-mode {
 }
 .contacto-section .contacto-container .contacto-content .aside-content {
   font-size: 17px;
-  line-height: 10px;
+  line-height: 5px;
 }
 .contacto-section .contacto-container .contacto-content .aside-content .info-group {
   width: 100%;
@@ -521,14 +521,15 @@ header .menu-mode {
 }
 .contacto-section .contacto-container .contacto-content .aside-content .info-group span {
   font-weight: 500;
+  font-size: 17px;
 }
 .contacto-section .contacto-container .contacto-content .aside-content .info-group p {
-  font-size: 18px;
+  font-size: 17px;
 }
 .contacto-section .contacto-container .contacto-content .aside-content .info-group a {
   text-decoration: none;
-  line-height: 40px;
-  font-size: 18px;
+  line-height: 25px;
+  font-size: 20px;
   color: white;
 }
 .contacto-section .contacto-container .contacto-content .aside-content .info-group .big-screen-info {
@@ -542,12 +543,15 @@ header .menu-mode {
 }
 .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group .ubicacion-info {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   gap: 5px;
+  line-height: 11px;
 }
 .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group p {
-  margin-right: 1px;
+  margin: 7px 5px 0 0;
+}
+.contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group .localidad-group {
+  display: flex;
 }
 .contacto-section .reveal {
   transform: translateX(150px);
@@ -692,6 +696,9 @@ footer .copyright-side .copyright-container .mm-logo img {
   .contacto-section .contacto-container .contacto-content .aside-content .info-group p {
     font-size: 20px;
   }
+  .contacto-section .contacto-container .contacto-content .aside-content .info-group a {
+    line-height: 35px;
+  }
   .contacto-section .contacto-container .contacto-content .aside-content .telefono-group {
     margin: 0;
     padding: 0;
@@ -701,11 +708,14 @@ footer .copyright-side .copyright-container .mm-logo img {
   .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group .ubicacion-info {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    gap: 15px;
+    line-height: 11px;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group p {
-    margin-right: 1px;
+    margin: 10px 5px 0 0;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group .localidad-group {
+    display: flex;
   }
 }
 @media screen and (min-width: 481px) {
@@ -760,7 +770,6 @@ footer .copyright-side .copyright-container .mm-logo img {
     margin: 0;
   }
   .contacto-section .contacto-content .aside-content .email-group h4 {
-    display: block;
     font-size: 27px;
     font-weight: 500;
     margin: 15px 0;
@@ -772,7 +781,6 @@ footer .copyright-side .copyright-container .mm-logo img {
     align-items: flex-start;
   }
   .contacto-section .contacto-content .aside-content .telefono-group h4 {
-    display: block;
     font-size: 27px;
     font-weight: 500;
     margin: 15px 0;
@@ -781,7 +789,6 @@ footer .copyright-side .copyright-container .mm-logo img {
     margin: 0;
   }
   .contacto-section .contacto-content .aside-content .ubicacion-group h4 {
-    display: block;
     font-size: 28px;
     font-weight: 500;
     margin: 15px 0;
@@ -943,6 +950,9 @@ footer .copyright-side .copyright-container .mm-logo img {
     line-height: 35px;
     font-size: 25px;
   }
+  .contacto-section .contacto-container .contacto-content .aside-content .info-group span {
+    font-size: 25px;
+  }
   .contacto-section .contacto-container .contacto-content .aside-content .telefono-group {
     margin: 0;
     padding: 0;
@@ -950,7 +960,6 @@ footer .copyright-side .copyright-container .mm-logo img {
     align-items: flex-start;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .telefono-group h4 {
-    display: block;
     font-size: 30px;
     font-weight: 500;
     margin: 15px 0;
@@ -962,7 +971,6 @@ footer .copyright-side .copyright-container .mm-logo img {
     display: flex;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group h4 {
-    display: block;
     font-size: 30px;
     font-weight: 500;
     margin: 10px 0;
@@ -975,6 +983,7 @@ footer .copyright-side .copyright-container .mm-logo img {
     display: flex;
     flex-direction: row;
     gap: 5px;
+    line-height: normal;
   }
   .contacto-title {
     position: absolute;
@@ -1219,6 +1228,9 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
 }
 @media screen and (min-width: 1024px) {
+  .servicios-section .servicios-content {
+    padding-top: 1rem;
+  }
   .servicios-section .servicios-content h1 {
     color: #a42138;
     font-size: 150px;
@@ -1314,6 +1326,9 @@ footer .copyright-side .copyright-container .mm-logo img {
   .contacto-section .contacto-container .contacto-content .aside-content .info-group .small-screen-info {
     display: none;
   }
+  .contacto-section .contacto-container .contacto-content .aside-content .email-group h4 {
+    display: block;
+  }
   .contacto-section .contacto-container .contacto-content .aside-content .email-group span {
     font-weight: 300;
   }
@@ -1323,11 +1338,17 @@ footer .copyright-side .copyright-container .mm-logo img {
     flex-direction: column;
     align-items: flex-start;
   }
+  .contacto-section .contacto-container .contacto-content .aside-content .telefono-group h4 {
+    display: block;
+  }
   .contacto-section .contacto-container .contacto-content .aside-content .telefono-group span {
     font-weight: 300;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group .ubicacion-info {
     flex-direction: column;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group h4 {
+    display: block;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group p {
     margin-right: 1px;
