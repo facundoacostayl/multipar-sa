@@ -86,6 +86,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
+        max-width: 580px;
         padding: 2rem 2rem;
         background-color: #a42138;
         visibility: hidden;
@@ -99,7 +100,7 @@
             font-weight: bold;
             position: absolute;
             top: 0;
-            right: 0;
+            right: 5%;
             margin: 1rem;
             cursor: pointer;
             font-size: 25px;
@@ -134,7 +135,7 @@
                         font-size: 2rem;
                         font-weight: 700;
                         text-transform: uppercase;
-                        margin: 1rem 0;
+                        margin-top: 1rem;
                         user-select: none; 
                     }
 
@@ -144,7 +145,7 @@
                             user-select: none;
                             width: 100%;
                             margin: 0 auto;
-                            padding: 1rem 0 2rem 0;
+                            padding: 2rem 0 4rem 0;
                             line-height: 30px;
                         }
                 }
@@ -163,10 +164,10 @@
             font-size: 1.7rem;
         }
         .left {
-            left: -20px;
+            left: -12px;
           }
           .right {
-            right: -20px;
+            right: -12px;
           }
           .control ul {
             list-style: none;
@@ -195,6 +196,90 @@
 }
         
 
+@media screen and (min-width: 768px) {
+    .detalles-servicio-popup {
+        width: 70%;
+        padding: 2rem 2rem;
+
+        span {
+            top: 0;
+            right: 0;
+        }
+
+        .carousel{
+        
+        .slider {
+
+            section {
+
+                .section-content {
+                    color: white;
+                    padding: 0 4rem;
+
+                    h2 {
+                        font-size: 2rem;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        padding: .5rem;
+                        user-select: none; 
+                    }
+
+                        p {
+                            font-size: 20px;
+                            color: white;
+                            user-select: none;
+                            width: 100%;
+                            margin: 0 auto;
+                            padding: 2rem 0 5rem 0;
+                            line-height: 30px;
+                        }
+                }
+            }
+        }
+
+        .left, .right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+          }
+          .sucursal__arrow i{
+            color: white;
+            cursor:pointer;
+            font-size: 1.7rem;
+        }
+        .left {
+            left: -12px;
+          }
+          .right {
+            right: -12px;
+          }
+          .control ul {
+            list-style: none;
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin: 0;
+            padding: 0;
+            transform: translate(-50%);
+          }
+          .control ul li {
+            width: 10px;
+            height: 10px;
+            background: white;
+            border: 2px solid white;
+            border-radius: 50px;
+            margin: 10px;
+            cursor: pointer;
+          }
+          .control ul li.selected {
+            background: transparent;
+          }
+
+    }
+}
+}
         /*.contenido-popup {
 
             width: 100%;
