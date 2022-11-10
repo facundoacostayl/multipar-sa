@@ -91,7 +91,8 @@ header .hero {
 header .hero .hero-menu {
   z-index: 9999;
   height: 100%;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: none;
   text-align: right;
 }
@@ -120,7 +121,7 @@ header .hero .hero-menu .menu-container ul li {
 header .hero .hero-menu .menu-container ul a {
   text-decoration: none;
   font-weight: 500;
-  color: white;
+  color: #3c3b3b;
   transition: all ease-in 0.1s;
 }
 header .hero .hero-menu .menu-container ul a:hover {
@@ -132,6 +133,7 @@ header .hero .menu-active {
 }
 header .hero .menu-active .menu-container {
   display: flex;
+  justify-content: flex-end;
 }
 header .hero .hero-all-content {
   animation: transitionIn 0.5s ease-in-out;
