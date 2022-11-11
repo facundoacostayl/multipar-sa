@@ -400,9 +400,28 @@ header .menu-mode {
   flex-direction: column;
 }
 .servicios-section .servicios-content .servicios-list .servicio-group img {
+  opacity: 1;
   cursor: pointer;
   position: relative;
   vertical-align: top;
+  transition: all 0.5s;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group .overlay {
+  opacity: 0;
+  z-index: 9999;
+  transition: all 0.7s;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group .overlay .content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: #a42138;
+  font-size: 70px;
+  cursor: pointer;
+  opacity: 1;
 }
 .servicios-section .servicios-content .servicios-list .servicio-group .servicio-info h4 {
   color: #a42138;
@@ -413,16 +432,10 @@ header .menu-mode {
   color: #3c3b3b;
   font-size: 15px;
 }
-.servicios-section .servicios-content .servicios-list .servicio-group:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transition: all 1s;
-  -webkit-transition: all 1s;
+.servicios-section .servicios-content .servicios-list .servicio-group:hover .servicio-img {
+  opacity: 0.7;
 }
-.servicios-section .servicios-content .servicios-list .servicio-group:hover:after {
+.servicios-section .servicios-content .servicios-list .servicio-group:hover .overlay {
   opacity: 1;
 }
 
