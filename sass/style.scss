@@ -450,9 +450,16 @@ h1, h2, h3, h4 {
 
                     .servicio-group:nth-child(2) {
                     
+                        position: relative;
                         width: 100%;
                         height: 250px;
                         justify-content: center;
+
+                        .overlay {
+                            .content {
+                                font-size: 50px;
+                            }
+                        }
 
                         img {
                         min-width: 100%;
@@ -460,7 +467,6 @@ h1, h2, h3, h4 {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
-                        transform: tranlsate(-50%);
                         }
                     }
                 }
@@ -474,8 +480,15 @@ h1, h2, h3, h4 {
 
                     .servicio-group:nth-child(1) {
                     
+                        position: relative;
                         width: 100%;
                         height: 100%;
+
+                        .overlay {
+                            .content {
+                                font-size: 50px;
+                            }
+                        }
 
                         img {
                             min-width: 100%;
@@ -491,6 +504,7 @@ h1, h2, h3, h4 {
                     
                         position: relative;
                         width: 100%;
+                        height: 100%;
 
                         img {
                             min-width: 100%;
@@ -499,15 +513,7 @@ h1, h2, h3, h4 {
                             height: 100%;
                             object-fit: cover;
                         }
-
-                        .servicios-lorem {
-                            position: absolute;
-                            top: 0;
-                            width: 100%;
-                            color: white;
-                            padding: 0 1rem;
-                            font-size: 25px;
-                        }
+                        
                     }
 
                 }
@@ -527,8 +533,8 @@ h1, h2, h3, h4 {
                     
                     .overlay {
 
+                        display: none;
                         opacity: 0;
-                        z-index: 9999;
                         transition: all .7s;
 
                         .content {
@@ -542,6 +548,12 @@ h1, h2, h3, h4 {
                             font-size: 70px;
                             cursor: pointer;
                             opacity: 1;
+                            overflow: hidden;
+
+                            p {
+                                margin: 0;
+                                padding: 0;
+                            }
                         }
                     }
 
@@ -1625,7 +1637,7 @@ h1, h2, h3, h4 {
     
                         .servicio-group:nth-child(2) {
                         
-                            width: 25%;
+                            width: 30%;
                             height: 750px;
                             justify-content: center;
                             margin-top: 150px;
@@ -1655,7 +1667,7 @@ h1, h2, h3, h4 {
                         .servicio-group:nth-child(1) {
                         
                             margin-top: -100px;
-                            width: 25%;
+                            width: 30%;
                             height: 700px;
                             margin-left: 120px;
     
@@ -1769,7 +1781,13 @@ h1, h2, h3, h4 {
                                         font-size: 15px;
                                     }
                             }
+
+                            .overlay {
+                                display: block;
+                            }
                     }
+
+                    
                     
                 }   
             }

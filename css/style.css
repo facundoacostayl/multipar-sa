@@ -346,9 +346,13 @@ header .menu-mode {
   z-index: -1;
 }
 .servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(2) {
+  position: relative;
   width: 100%;
   height: 250px;
   justify-content: center;
+}
+.servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(2) .overlay .content {
+  font-size: 50px;
 }
 .servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(2) img {
   min-width: 100%;
@@ -356,7 +360,6 @@ header .menu-mode {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: tranlsate(-50%);
 }
 .servicios-section .servicios-content .servicios-list .row-2 {
   display: flex;
@@ -365,8 +368,12 @@ header .menu-mode {
   gap: 2vw;
 }
 .servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(1) {
+  position: relative;
   width: 100%;
   height: 100%;
+}
+.servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(1) .overlay .content {
+  font-size: 50px;
 }
 .servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(1) img {
   min-width: 100%;
@@ -379,6 +386,7 @@ header .menu-mode {
 .servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(2) {
   position: relative;
   width: 100%;
+  height: 100%;
 }
 .servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(2) img {
   min-width: 100%;
@@ -386,14 +394,6 @@ header .menu-mode {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(2) .servicios-lorem {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  color: white;
-  padding: 0 1rem;
-  font-size: 25px;
 }
 .servicios-section .servicios-content .servicios-list .servicio-group {
   display: flex;
@@ -407,8 +407,8 @@ header .menu-mode {
   transition: all 0.5s;
 }
 .servicios-section .servicios-content .servicios-list .servicio-group .overlay {
+  display: none;
   opacity: 0;
-  z-index: 9999;
   transition: all 0.7s;
 }
 .servicios-section .servicios-content .servicios-list .servicio-group .overlay .content {
@@ -422,6 +422,11 @@ header .menu-mode {
   font-size: 70px;
   cursor: pointer;
   opacity: 1;
+  overflow: hidden;
+}
+.servicios-section .servicios-content .servicios-list .servicio-group .overlay .content p {
+  margin: 0;
+  padding: 0;
 }
 .servicios-section .servicios-content .servicios-list .servicio-group .servicio-info h4 {
   color: #a42138;
@@ -1158,7 +1163,7 @@ footer .copyright-side .copyright-container .mm-logo img {
     z-index: -1;
   }
   .servicios-section .servicios-content .servicios-list .row-1 .servicio-group:nth-child(2) {
-    width: 25%;
+    width: 30%;
     height: 750px;
     justify-content: center;
     margin-top: 150px;
@@ -1182,7 +1187,7 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
   .servicios-section .servicios-content .servicios-list .row-2 .servicio-group:nth-child(1) {
     margin-top: -100px;
-    width: 25%;
+    width: 30%;
     height: 700px;
     margin-left: 120px;
   }
@@ -1258,6 +1263,9 @@ footer .copyright-side .copyright-container .mm-logo img {
     margin-top: 5px;
     color: #3c3b3b;
     font-size: 15px;
+  }
+  .servicios-section .servicios-content .servicios-list .servicio-group .overlay {
+    display: block;
   }
   .interes-section .interes-content a {
     font-size: 90px;

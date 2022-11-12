@@ -143,9 +143,13 @@ const closePopupBtn = document.querySelector('#btn-close-popup');
 const tituloPopup = document.querySelector('.titulo-detalle');
 const textoPopup = document.querySelector('.texto-detalle');
 
+const overlayButtons = document.querySelectorAll('.overlay-button');
+
+
 serviciosImages.forEach(img => {
     img.addEventListener("click", (e) => {
         const imgId = e.target.id;
+        console.log(e.target.id)
         
         popup.classList.add("active")
 
@@ -174,6 +178,47 @@ serviciosImages.forEach(img => {
         }
 
         if (imgId === "informacion-actualizada") {
+            index = 3;
+            document.querySelector('.control .selected').classList.remove('selected');
+            indicatorParent.children[index].classList.add('selected');
+            servicioContainer.style.transform = 'translateX(' + (index) * -25 + '%)';
+
+        }
+    })
+})
+
+overlayButtons.forEach(button => {
+    button.addEventListener("click", (e) => {
+        const buttonId = e.target.id;
+        console.log(e.target.id)
+        
+        popup.classList.add("active")
+
+        if (buttonId === "practicaje-button") {
+            index = 0;
+            document.querySelector('.control .selected').classList.remove('selected');
+            indicatorParent.children[index].classList.add('selected');
+            servicioContainer.style.transform = 'translateX(' + (index) * -25 + '%)';
+
+        }
+
+        if (buttonId === "translados-button") {
+            index = 1;
+            document.querySelector('.control .selected').classList.remove('selected');
+            indicatorParent.children[index].classList.add('selected');
+            servicioContainer.style.transform = 'translateX(' + (index) * -25 + '%)';
+
+        }
+
+        if (buttonId === "asesoramiento-button") {
+            index = 2;
+            document.querySelector('.control .selected').classList.remove('selected');
+            indicatorParent.children[index].classList.add('selected');
+            servicioContainer.style.transform = 'translateX(' + (index) * -25 + '%)';
+
+        }
+
+        if (buttonId === "informacion-actualizada-button") {
             index = 3;
             document.querySelector('.control .selected').classList.remove('selected');
             indicatorParent.children[index].classList.add('selected');
