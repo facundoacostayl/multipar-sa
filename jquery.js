@@ -21,7 +21,6 @@ const contactoSection = document.querySelector("#contacto-section");
 
 
   $(document).on("scroll", function () {
-    console.log(window.scrollY)
   if (window.scrollY < 3061) {
     $(".contacto-title").css(
       "top",
@@ -43,7 +42,6 @@ $(document).on("scroll", function () {
 
 if(standardMobile.matches) {
   $(document).on("scroll", function () {
-    console.log(window.scrollY)
   if (window.scrollY < 3600) {
     $(".contacto-title").css(
       "top",
@@ -64,7 +62,6 @@ if(bigStandardMobile.matches) {
 
 if(mediumWindow.matches) {
   $(document).on("scroll", function () {
-    console.log(window.scrollY)
   if (window.scrollY < 3473) {
     $(".contacto-title").css(
       "top",
@@ -87,7 +84,6 @@ $(document).on("scroll", function () {
 
 if(desktopWindow.matches) {
   $(document).on("scroll", function () {
-    console.log(window.scrollY)
   if (window.scrollY < 4170) {
     $(".contacto-title").css(
       "top",

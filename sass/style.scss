@@ -917,15 +917,21 @@ h1, h2, h3, h4 {
             }
 
             .arrow-up-container {
-                border: 1px solid #a42138;
                 background-color: #a42138;
+                padding: .4rem;
                 position: fixed;
                 bottom: 5%;
-                right: 5%;
+                right: -50%;
+                transition: all .3s;
 
                 img {
-                    width: 50px;
+                    width: 40px;
+                    transition: .3s all;
                 }
+            }
+
+            .arrow-up-active {
+                right: 5%;
             }
 
         }

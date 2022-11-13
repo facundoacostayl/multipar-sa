@@ -231,3 +231,18 @@ overlayButtons.forEach(button => {
 closePopupBtn.addEventListener("click", () => {
     popup.classList.remove("active")
 })
+
+// ARROW TOP APPEARS AND DISAPPEARS
+
+const arrowUp = document.querySelector('#arrow-up');
+const aboutSection = document.querySelector('#about-section');
+const headerSection = document.querySelector('#header-section');
+
+window.addEventListener("scroll", () => {
+    if(aboutSection.getBoundingClientRect().top < 500) {
+        arrowUp.classList.add("arrow-up-active");
+    }else if (aboutSection.getBoundingClientRect().top > 500) {
+        arrowUp.classList.remove("arrow-up-active");
+    }
+})
+
