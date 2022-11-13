@@ -15,7 +15,7 @@ h1, h2, h3, h4 {
     
     header {
 
-        z-index: 9999;
+        z-index: 9998;
         transition: 0.9s;
 
         nav {
@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 9999;
+            z-index: 9998;
             transition: 0.7s;
 
             .content {
@@ -922,11 +922,10 @@ h1, h2, h3, h4 {
                 position: fixed;
                 bottom: 5%;
                 right: -50%;
-                transition: all .3s;
+                transition: all .5s;
 
                 img {
                     width: 40px;
-                    transition: .3s all;
                 }
             }
 

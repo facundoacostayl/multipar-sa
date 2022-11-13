@@ -139,6 +139,8 @@ servicioArrowRight.addEventListener('click', function () {
 //OPEN MODAL
 
 const popup = document.querySelector('.detalles-servicio-popup');
+const popupContainer = document.querySelector('.popup-container');
+const backdropPopup = document.querySelector('.popup-backdrop');
 const closePopupBtn = document.querySelector('#btn-close-popup');
 const tituloPopup = document.querySelector('.titulo-detalle');
 const textoPopup = document.querySelector('.texto-detalle');
@@ -152,6 +154,7 @@ serviciosImages.forEach(img => {
         console.log(e.target.id)
         
         popup.classList.add("active")
+        popupContainer.classList.add("active");
 
         if (imgId === "practicaje") {
             index = 0;
@@ -193,6 +196,7 @@ overlayButtons.forEach(button => {
         console.log(e.target.id)
         
         popup.classList.add("active")
+        popupContainer.classList.add("active");
 
         if (buttonId === "practicaje-button") {
             index = 0;
@@ -229,8 +233,16 @@ overlayButtons.forEach(button => {
 })
 
 closePopupBtn.addEventListener("click", () => {
-    popup.classList.remove("active")
+    popup.classList.remove("active");
+    popupContainer.classList.remove("active");
 })
+
+backdropPopup.addEventListener("click", () => {
+    console.log("now")
+    popup.classList.remove("active");
+    popupContainer.classList.remove("active");
+})
+
 
 // ARROW TOP APPEARS AND DISAPPEARS
 

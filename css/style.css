@@ -12,7 +12,7 @@ h1, h2, h3, h4 {
 }
 
 header {
-  z-index: 9999;
+  z-index: 9998;
   transition: 0.9s;
 }
 header nav {
@@ -20,7 +20,7 @@ header nav {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 9998;
   transition: 0.7s;
 }
 header nav .content {
@@ -717,11 +717,10 @@ footer .footer-content .arrow-up-container {
   position: fixed;
   bottom: 5%;
   right: -50%;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 footer .footer-content .arrow-up-container img {
   width: 40px;
-  transition: 0.3s all;
 }
 footer .footer-content .arrow-up-active {
   right: 5%;

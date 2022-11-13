@@ -53,7 +53,10 @@
     background-color: white;
   }
 }
-.detalles-servicio-popup {
+.popup-container {
+  display: none;
+}
+.popup-container .detalles-servicio-popup {
   position: fixed;
   top: 45%;
   left: 50%;
@@ -63,12 +66,11 @@
   padding: 2rem 2rem;
   background-color: #a42138;
   visibility: hidden;
-  opacity: 0;
   transition: 0.5s;
   overflow: hidden;
   z-index: 99999;
 }
-.detalles-servicio-popup span {
+.popup-container .detalles-servicio-popup span {
   font-family: sans-serif;
   font-weight: bold;
   position: absolute;
@@ -81,17 +83,17 @@
   height: 20px;
   color: white;
 }
-.detalles-servicio-popup .carousel {
+.popup-container .detalles-servicio-popup .carousel {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.detalles-servicio-popup .carousel .slider {
+.popup-container .detalles-servicio-popup .carousel .slider {
   display: flex;
   height: 100%;
   width: 400%;
 }
-.detalles-servicio-popup .carousel .slider section {
+.popup-container .detalles-servicio-popup .carousel .slider section {
   flex-basis: 100%;
   justify-content: center;
   align-items: center;
@@ -99,44 +101,44 @@
   flex-direction: column;
   text-align: center;
 }
-.detalles-servicio-popup .carousel .slider section .section-content {
+.popup-container .detalles-servicio-popup .carousel .slider section .section-content {
   color: white;
-  padding: 0 2rem;
+  padding: 0 4rem;
 }
-.detalles-servicio-popup .carousel .slider section .section-content h2 {
+.popup-container .detalles-servicio-popup .carousel .slider section .section-content h2 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: normal;
   text-transform: uppercase;
   margin-top: 1rem;
   user-select: none;
 }
-.detalles-servicio-popup .carousel .slider section .section-content p {
+.popup-container .detalles-servicio-popup .carousel .slider section .section-content p {
   font-size: 20px;
   color: white;
   user-select: none;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 0 4rem 0;
   line-height: 30px;
+  text-align: left;
 }
-.detalles-servicio-popup .carousel .left, .detalles-servicio-popup .carousel .right {
+.popup-container .detalles-servicio-popup .carousel .left, .popup-container .detalles-servicio-popup .carousel .right {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
 }
-.detalles-servicio-popup .carousel .sucursal__arrow i {
+.popup-container .detalles-servicio-popup .carousel .sucursal__arrow i {
   color: white;
   cursor: pointer;
   font-size: 1.7rem;
 }
-.detalles-servicio-popup .carousel .left {
+.popup-container .detalles-servicio-popup .carousel .left {
   left: -12px;
 }
-.detalles-servicio-popup .carousel .right {
+.popup-container .detalles-servicio-popup .carousel .right {
   right: -12px;
 }
-.detalles-servicio-popup .carousel .control ul {
+.popup-container .detalles-servicio-popup .carousel .control ul {
   list-style: none;
   display: flex;
   position: absolute;
@@ -146,7 +148,7 @@
   padding: 0;
   transform: translate(-50%);
 }
-.detalles-servicio-popup .carousel .control ul li {
+.popup-container .detalles-servicio-popup .carousel .control ul li {
   width: 10px;
   height: 10px;
   background: white;
@@ -155,8 +157,16 @@
   margin: 10px;
   cursor: pointer;
 }
-.detalles-servicio-popup .carousel .control ul li.selected {
+.popup-container .detalles-servicio-popup .carousel .control ul li.selected {
   background: transparent;
+}
+.popup-container .popup-backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
 }
 
 @media screen and (min-width: 768px) {
@@ -174,7 +184,6 @@
   }
   .detalles-servicio-popup .carousel .slider section .section-content h2 {
     font-size: 2rem;
-    font-weight: 700;
     text-transform: uppercase;
     padding: 0.5rem;
     user-select: none;
@@ -262,6 +271,10 @@
   visibility: visible;
   opacity: 1;
   transition: 0.5s;
+}
+
+.popup.active {
+  display: block;
 }
 
 /*# sourceMappingURL=effects.css.map */
