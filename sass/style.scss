@@ -241,12 +241,11 @@ h1, h2, h3, h4 {
             bottom: 0;
             left: 0;
             text-align: center;
-            padding-bottom: 2rem;
+            padding-bottom: 1rem;
 
             img {
                 cursor: pointer;
-                width: 50px;
-                color: #3c3b3b;
+                width: 40px;
             }
         }
     }
@@ -386,9 +385,26 @@ h1, h2, h3, h4 {
             transform: translateX(0);
             opacity: 1;
         }
+
+        .hero-arrow {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            padding-bottom: 1rem;
+
+            img {
+                cursor: pointer;
+                width: 40px;
+                color: white;
+            }
+        }
     }
 
     .servicios-section {
+
+        position: relative;
 
         .servicios-content {
 
@@ -582,8 +598,20 @@ h1, h2, h3, h4 {
                         opacity: 1;
                     }
 
-            }   
+            }  
+        }
+        .hero-arrow {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            padding-top: 5rem;
 
+            img {
+                cursor: pointer;
+                width: 40px;
+            }
         }
     }
 
@@ -612,6 +640,20 @@ h1, h2, h3, h4 {
             a:hover {
                 color: #a42138;
                 text-decoration: underline;
+            }
+        }
+
+        .hero-arrow {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            padding-bottom: 1rem;
+
+            img {
+                cursor: pointer;
+                width: 40px;
             }
         }
     }
@@ -760,6 +802,20 @@ h1, h2, h3, h4 {
             opacity: 1;
         }
 
+        .hero-arrow {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            padding-bottom: 1rem;
+
+            img {
+                cursor: pointer;
+                width: 40px;
+            }
+        }
+
     }
 
     .contacto-title {
@@ -861,7 +917,9 @@ h1, h2, h3, h4 {
             }
 
             .arrow-up-container {
-                position: absolute;
+                border: 1px solid #a42138;
+                background-color: #a42138;
+                position: fixed;
                 bottom: 5%;
                 right: 5%;
 
