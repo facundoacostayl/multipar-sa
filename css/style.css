@@ -178,10 +178,28 @@ header .hero .hero-all-content .hero-arrow {
   left: 0;
   text-align: center;
   padding-bottom: 1rem;
+  animation: rotate 0.9s ease-in-out both;
 }
 header .hero .hero-all-content .hero-arrow img {
   cursor: pointer;
-  width: 40px;
+  width: 50px;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(10deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-10deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(5deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
 }
 header .menu-active-background::before {
   content: "";
@@ -461,10 +479,9 @@ header .menu-mode {
 .servicios-section .hero-arrow {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -7%;
   left: 0;
   text-align: center;
-  padding-top: 5rem;
 }
 .servicios-section .hero-arrow img {
   cursor: pointer;
@@ -549,6 +566,7 @@ header .menu-mode {
 .contacto-section .contacto-container .contacto-content .form-content .form-group textarea {
   height: 50px;
   font-size: 17px;
+  margin: 0;
 }
 .contacto-section .contacto-container .contacto-content .form-content .form-group input:focus, .contacto-section .contacto-container .contacto-content .form-content .form-group textarea:focus {
   outline: none;
@@ -558,14 +576,38 @@ header .menu-mode {
   display: flex;
   justify-content: right;
 }
-.contacto-section .contacto-container .contacto-content .form-content .form-button-container img {
-  width: 50px;
-}
 .contacto-section .contacto-container .contacto-content .form-content .form-button-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 10px 0 10px 0;
   color: white;
-  border: none;
   background-color: #025694;
+  border: none;
+  cursor: pointer;
+}
+.contacto-section .contacto-container .contacto-content .form-content .form-button-container button img {
+  width: 50px;
+}
+.contacto-section .contacto-container .contacto-content .form-content .form-button-container button img:hover {
+  animation: rotate 0.9s ease-in-out both;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(10deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-10deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(5deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
 }
 .contacto-section .contacto-container .contacto-content .aside-content {
   font-size: 17px;
@@ -682,6 +724,29 @@ footer .footer-content .contact-info-side span {
 }
 footer .footer-content .contact-info-side img {
   display: none;
+}
+footer .footer-content .contact-info-side img:hover {
+  animation: rotate 0.9s ease-in-out both;
+}
+footer .footer-content .contact-info-side .animation-active {
+  animation: rotate 0.9s ease-in-out both;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(10deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-10deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(5deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
 }
 footer .footer-content .links-side .logo-footer {
   display: flex;
@@ -993,15 +1058,13 @@ footer .copyright-side .copyright-container .mm-logo img {
     font-size: 20px;
     height: 40px;
   }
-  .contacto-section .contacto-container .contacto-content .form-content .form-button-container img {
-    width: 100px;
-  }
   .contacto-section .contacto-container .contacto-content .form-content .form-button-container button {
     margin: 10px 0 10px 0;
     color: white;
-    border: none;
-    background-color: #025694;
     font-size: 30px;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content .form-button-container button img {
+    width: 100px;
   }
   .contacto-section .contacto-container .contacto-content .aside-content {
     line-height: normal;
@@ -1303,6 +1366,9 @@ footer .copyright-side .copyright-container .mm-logo img {
   .servicios-section .servicios-content .servicios-list .servicio-group:hover:after {
     opacity: 1;
   }
+  .servicios-section .hero-arrow {
+    bottom: -10%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .servicios-section .servicios-content {
@@ -1323,6 +1389,9 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
   .servicios-section .servicios-content .servicios-list .servicio-group .overlay {
     display: block;
+  }
+  .servicios-section .hero-arrow {
+    bottom: -15%;
   }
   .interes-section .interes-content a {
     font-size: 90px;
@@ -1352,7 +1421,7 @@ footer .copyright-side .copyright-container .mm-logo img {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
   .contacto-section .contacto-container .contacto-content .form-content .form-group label {
     font-weight: 100;
@@ -1371,21 +1440,16 @@ footer .copyright-side .copyright-container .mm-logo img {
   .contacto-section .contacto-container .contacto-content .form-content .form-group input:focus, .contacto-section .contacto-container .contacto-content .form-content .form-group textarea:focus {
     outline: none;
   }
-  .contacto-section .contacto-container .contacto-content .form-content .form-button-container {
-    width: 100%;
-    display: flex;
-    justify-content: right;
-  }
-  .contacto-section .contacto-container .contacto-content .form-content .form-button-container img {
-    width: 100px;
-  }
   .contacto-section .contacto-container .contacto-content .form-content .form-button-container button {
-    cursor: pointer;
-    font-size: 40px;
-    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
     color: white;
-    border: none;
     background-color: #025694;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content .form-button-container button img {
+    width: 120px;
   }
   .contacto-section .contacto-container .contacto-content .aside-content {
     display: flex;

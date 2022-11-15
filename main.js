@@ -258,3 +258,13 @@ window.addEventListener("scroll", () => {
     }
 })
 
+//FOOTER ANIMATION
+
+const radioIcon = document.querySelector('#contacto-section');
+
+window.addEventListener("scroll", () => {
+    if(radioIcon.getBoundingClientRect().top < 1000) {
+        radioIcon.classList.add("animation-active");
+        console.log("now")
+    }
+})

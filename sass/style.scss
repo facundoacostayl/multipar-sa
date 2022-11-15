@@ -242,10 +242,36 @@ h1, h2, h3, h4 {
             left: 0;
             text-align: center;
             padding-bottom: 1rem;
+            animation: rotate .9s ease-in-out both;
 
             img {
                 cursor: pointer;
-                width: 40px;
+                width: 50px;
+            }
+        }
+
+
+        @keyframes rotate
+        {
+            0%
+            {
+                transform: rotate(0deg) translate3d(0, 0, 0);
+            }
+            25%
+            {
+                transform: rotate(10deg) translate3d(0, 0, 0);
+            }
+            50%
+            {
+                transform: rotate(-10deg) translate3d(0, 0, 0);
+            }
+            75%
+            {
+                transform: rotate(5deg) translate3d(0, 0, 0);
+            }
+            100%
+            {
+                transform: rotate(0deg) translate3d(0, 0, 0);
             }
         }
     }
@@ -603,10 +629,9 @@ h1, h2, h3, h4 {
         .hero-arrow {
             width: 100%;
             position: absolute;
-            bottom: 0;
+            bottom: -7%;
             left: 0;
             text-align: center;
-            padding-top: 5rem;
 
             img {
                 cursor: pointer;
@@ -703,6 +728,7 @@ h1, h2, h3, h4 {
                     textarea {
                         height: 50px;
                         font-size: 17px;
+                        margin: 0;
                     }
 
                     input:focus, textarea:focus {
@@ -711,21 +737,54 @@ h1, h2, h3, h4 {
                 }
 
                 .form-button-container {
-                    width:100%;
+                    width: 100%;
                     display: flex;
                     justify-content: right;
 
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 10px 0 10px 0;
+                        color: white;
+                        background-color: #025694;
+                        border: none;
+                        cursor: pointer;
+ 
                     img {
                         width: 50px;
                     }
 
-                    button {
-                        margin: 10px 0 10px 0;
-                        color: white;
-                        border: none;
-                        background-color: #025694;
+                    img:hover {
+                        animation: rotate .9s ease-in-out both;
                     }
-                }         
+
+                    @keyframes rotate
+        {
+            0%
+            {
+                transform: rotate(0deg) translate3d(0, 0, 0);
+            }
+            25%
+            {
+                transform: rotate(10deg) translate3d(0, 0, 0);
+            }
+            50%
+            {
+                transform: rotate(-10deg) translate3d(0, 0, 0);
+            }
+            75%
+            {
+                transform: rotate(5deg) translate3d(0, 0, 0);
+            }
+            100%
+            {
+                transform: rotate(0deg) translate3d(0, 0, 0);
+            }
+        }
+                    }
+
+                }        
             }
 
             .aside-content {
@@ -871,6 +930,39 @@ h1, h2, h3, h4 {
                 img {
                     display: none;
                 }
+
+                img:hover {
+                    animation: rotate .9s ease-in-out both;
+                }
+
+                .animation-active{
+                    animation: rotate .9s ease-in-out both;
+                }
+
+
+        @keyframes rotate
+        {
+            0%
+            {
+                transform: rotate(0deg) translate3d(0, 0, 0);
+            }
+            25%
+            {
+                transform: rotate(10deg) translate3d(0, 0, 0);
+            }
+            50%
+            {
+                transform: rotate(-10deg) translate3d(0, 0, 0);
+            }
+            75%
+            {
+                transform: rotate(5deg) translate3d(0, 0, 0);
+            }
+            100%
+            {
+                transform: rotate(0deg) translate3d(0, 0, 0);
+            }
+        }
             }
 
             .links-side {
@@ -1383,19 +1475,17 @@ h1, h2, h3, h4 {
                     }
 
                     .form-button-container {
-                           
-                        img {
-                            width: 100px;
-                        }
     
                         button {
                             margin: 10px 0 10px 0;
                             color: white;
-                            border: none;
-                            background-color: #025694;
                             font-size: 30px;
+     
+                        img {
+                            width: 100px;
                         }
-                    }    
+                        }
+                    }  
                 } 
 
                 .aside-content {
@@ -1809,6 +1899,10 @@ h1, h2, h3, h4 {
                 }   
     
             }
+
+            .hero-arrow {
+                bottom: -10%;
+            }
         }
 
     }
@@ -1854,6 +1948,10 @@ h1, h2, h3, h4 {
                     
                 }   
             }
+
+            .hero-arrow {
+                bottom: -15%;
+            }
         }
 
         .interes-section {            
@@ -1893,7 +1991,7 @@ h1, h2, h3, h4 {
                         display: flex;
                         flex-direction: column;
                         gap: 5px;
-                        margin-bottom: 35px;
+                        margin-bottom: 30px;
     
                         label {
                             font-weight: 100;
@@ -1918,23 +2016,20 @@ h1, h2, h3, h4 {
                     }
     
                     .form-button-container {
-                        width:100%;
-                        display: flex;
-                        justify-content: right;
-    
-                        img {
-                            width: 100px;
-                        }
     
                         button {
-                            cursor: pointer;
-                            font-size: 40px;
-                            margin: 10px 0 10px 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 0;
                             color: white;
-                            border: none;
                             background-color: #025694;
+     
+                        img {
+                            width: 120px;
                         }
-                    }         
+                        }
+                    }       
                 }
     
                 .aside-content {
