@@ -755,11 +755,7 @@ h1, h2, h3, h4 {
                         width: 50px;
                     }
 
-                    img:hover {
-                        animation: rotate .9s ease-in-out both;
-                    }
-
-                    @keyframes rotate
+                    @keyframes button-effect
         {
             0%
             {
@@ -767,15 +763,15 @@ h1, h2, h3, h4 {
             }
             25%
             {
-                transform: rotate(10deg) translate3d(0, 0, 0);
+                transform: rotate(1deg) translate3d(0, 0, 0);
             }
             50%
             {
-                transform: rotate(-10deg) translate3d(0, 0, 0);
+                transform: rotate(0deg) translate3d(0, 0, 0);
             }
             75%
             {
-                transform: rotate(5deg) translate3d(0, 0, 0);
+                transform: rotate(1deg) translate3d(0, 0, 0);
             }
             100%
             {
@@ -784,7 +780,11 @@ h1, h2, h3, h4 {
         }
                     }
 
-                }        
+                }      
+                
+                .form-button-container:hover {
+                    animation: button-effect .9s ease-in-out both;
+                }
             }
 
             .aside-content {
@@ -936,11 +936,35 @@ h1, h2, h3, h4 {
                 }
 
                 .animation-active{
-                    animation: rotate .9s ease-in-out both;
+                    animation: vibrate .9s ease-in-out both;
                 }
 
 
         @keyframes rotate
+        {
+            0%
+            {
+                transform: rotate(0deg) translate3d(0, 0, 0);
+            }
+            25%
+            {
+                transform: rotate(10deg) translate3d(0, 0, 0);
+            }
+            50%
+            {
+                transform: rotate(-10deg) translate3d(0, 0, 0);
+            }
+            75%
+            {
+                transform: rotate(5deg) translate3d(0, 0, 0);
+            }
+            100%
+            {
+                transform: rotate(0deg) translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes vibrate
         {
             0%
             {
@@ -2159,14 +2183,15 @@ h1, h2, h3, h4 {
 
                     height: 100%;
                     display: flex;
-                    align-items: center;
+                    margin-top: 50px;
                     
                     .logo-footer {
     
                         display: flex;
-                        justify-content: center;
+                        align-items: flex-start;
                         margin-bottom: 20px;
                         width: 30%;
+                        margin-top: 50px;
     
                         img {
                             width: 200px;

@@ -589,25 +589,25 @@ header .menu-mode {
 .contacto-section .contacto-container .contacto-content .form-content .form-button-container button img {
   width: 50px;
 }
-.contacto-section .contacto-container .contacto-content .form-content .form-button-container button img:hover {
-  animation: rotate 0.9s ease-in-out both;
-}
-@keyframes rotate {
+@keyframes button-effect {
   0% {
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
   25% {
-    transform: rotate(10deg) translate3d(0, 0, 0);
+    transform: rotate(1deg) translate3d(0, 0, 0);
   }
   50% {
-    transform: rotate(-10deg) translate3d(0, 0, 0);
+    transform: rotate(0deg) translate3d(0, 0, 0);
   }
   75% {
-    transform: rotate(5deg) translate3d(0, 0, 0);
+    transform: rotate(1deg) translate3d(0, 0, 0);
   }
   100% {
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
+}
+.contacto-section .contacto-container .contacto-content .form-content .form-button-container:hover {
+  animation: button-effect 0.9s ease-in-out both;
 }
 .contacto-section .contacto-container .contacto-content .aside-content {
   font-size: 17px;
@@ -729,9 +729,26 @@ footer .footer-content .contact-info-side img:hover {
   animation: rotate 0.9s ease-in-out both;
 }
 footer .footer-content .contact-info-side .animation-active {
-  animation: rotate 0.9s ease-in-out both;
+  animation: vibrate 0.9s ease-in-out both;
 }
 @keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(10deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-10deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(5deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+@keyframes vibrate {
   0% {
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
@@ -1540,13 +1557,14 @@ footer .copyright-side .copyright-container .mm-logo img {
   footer .footer-content .links-side {
     height: 100%;
     display: flex;
-    align-items: center;
+    margin-top: 50px;
   }
   footer .footer-content .links-side .logo-footer {
     display: flex;
-    justify-content: center;
+    align-items: flex-start;
     margin-bottom: 20px;
     width: 30%;
+    margin-top: 50px;
   }
   footer .footer-content .links-side .logo-footer img {
     width: 200px;

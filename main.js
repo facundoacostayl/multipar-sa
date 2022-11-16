@@ -260,11 +260,13 @@ window.addEventListener("scroll", () => {
 
 //FOOTER ANIMATION
 
-const radioIcon = document.querySelector('#contacto-section');
+const radioIcon = document.querySelector('#radio-footer-img');
 
 window.addEventListener("scroll", () => {
-    if(radioIcon.getBoundingClientRect().top < 1000) {
+    if(contactoSection.getBoundingClientRect().top < 100) {
         radioIcon.classList.add("animation-active");
         console.log("now")
+    } else {
+        radioIcon.classList.remove("animation-active");
     }
 })
