@@ -483,7 +483,6 @@ header .menu-mode {
 .servicios-section .hero-arrow {
   width: 100%;
   text-align: center;
-  padding-top: 4rem;
 }
 .servicios-section .hero-arrow img {
   cursor: pointer;
@@ -1060,7 +1059,7 @@ footer .copyright-side .copyright-container .mm-logo img {
     margin: 0 auto;
   }
   .interes-section .interes-content a {
-    font-size: 60px;
+    font-size: 50px;
     color: #3c3b3b;
     text-decoration: none;
   }
@@ -1408,7 +1407,7 @@ footer .copyright-side .copyright-container .mm-logo img {
     display: block;
   }
   .interes-section .interes-content a {
-    font-size: 90px;
+    font-size: 50px;
   }
   .interes-section .interes-content a:hover {
     color: #a42138;
@@ -1630,6 +1629,11 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
   footer .copyright-side .copyright-container .mm-logo img {
     width: 50px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .interes-section .interes-content a {
+    font-size: 80px;
   }
 }
 @media screen and (min-width: 1920px) {

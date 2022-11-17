@@ -634,7 +634,6 @@ h1, h2, h3, h4 {
         .hero-arrow {
             width: 100%;
             text-align: center;
-            padding-top: 4rem;
 
             img {
                 cursor: pointer;
@@ -1471,7 +1470,7 @@ h1, h2, h3, h4 {
 
 
                 a {
-                    font-size: 60px;
+                    font-size: 50px;
                     color: #3c3b3b;
                     text-decoration: none;
                 }
@@ -1978,7 +1977,7 @@ h1, h2, h3, h4 {
             .interes-content {
 
                 a {
-                    font-size: 90px;
+                    font-size: 50px;
                 }
 
                 a:hover {
@@ -2285,6 +2284,16 @@ h1, h2, h3, h4 {
 
         }
     
+    }
+
+    @media screen and (min-width: 1366px) {
+        .interes-section {            
+            .interes-content {
+                a {
+                    font-size: 80px;
+                }
+            }
+        }
     }
 
     @media screen and (min-width: 1920px) {
