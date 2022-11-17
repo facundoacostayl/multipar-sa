@@ -29,7 +29,7 @@
               /></a>
               <div class="nav-right">
                 <div class="nav-info">
-                  <p>inforio@multipar.com.ar</p>
+                  <p>inforio@riopar.com</p>
                   <p>(+54 11) 4331.9111</p>
                 </div>
                 <img
@@ -76,7 +76,7 @@
                 </div>
               </div>
 
-              <div class="hero-arrow">
+              <div id="hero-arrow" class="hero-arrow">
                 <a href="#about-section"
                   ><img src="./img/icons/arrow-down-red.png" alt="arrow"
                 /></a>
@@ -141,7 +141,7 @@
         <div class="cursor"></div>
       </div>
 
-      <div class="section hidden-section">
+      <div class="hidden-section">
         <div id="servicios-section" class="servicios-section">
           <div class="servicios-content">
             <div class="servicios-list">
@@ -197,8 +197,8 @@
         <div class="cursor"></div>
       </div>
 
-      <div class="section hidden-section">
-        <div id="servicios-section" class="servicios-section">
+      <div class="hidden-section">
+        <div id="servicios-section" class="servicios-section servicios-section-2">
           <div class="servicios-content">
             <div class="servicios-list">
               <div class="row-2">
@@ -261,14 +261,19 @@
       <div class="section hidden-section">
         <div id="interes-section" class="interes-section">
           <div class="interes-content">
-            <a href="#">Herramientas y links de interés,</a>
-            <a href="#">Live Ship Map</a>,
-            <a href="#">Profundidades Mínimas</a>,
-            <a href="#">Horarios de Mareas</a>
-            <a href="#">Pronóstico Meteorológico</a>
-            <a href="#">Comisión Administradora del Rio de la Plata</a>,
-            <a href="#"> Prefectura Naval Argentina</a>,
-            <a href="#">WindGURU</a>
+            <a target="_blank" href="#">Herramientas y links de interés,</a>
+            <a target="_blank" href="https://www.marinetraffic.com/en/ais/home/centerx:-58.8/centery:-33.8/zoom:8">Live Ship Map,</a>
+            <a target="_blank" href="https://www.argentina.gob.ar/puertos-vias-navegables-y-marina-mercante/planilla-de-determinantes">Profundidades Mínimas,</a>
+            <a target="_blank" href="http://www.hidro.gov.ar/oceanografia/alturashorarias.asp">Horarios de Mareas,</a>
+            <a target="_blank" href="http://www.hidro.gov.ar/oceanografia/tmareas/form_tmareas.asp">Tabla de Mareas,</a>
+            <a target="_blank" href="http://www.hidro.gov.ar/oceanografia/pronostico.asp">Pronóstico Mareológico,</a>
+            <a target="_blank" href="https://www.smn.gob.ar">Pronóstico Meteorológico,</a>
+            <a target="_blank" href=" https://www.argentina.gob.ar/puertos-vias-navegables-y-marina-mercante/boletin-fluvial">Boletín Fluvial,</a>
+            <a target="_blank" href="https://www.comisionriodelaplata.org">Comisión Administradora del Rio de la Plata,</a>
+            <a target="_blank" href="https://siga.prefecturanaval.gob.ar/">PNA/SIGA,</a>
+            <a target="_blank" href="https://siga.prefecturanaval.gob.ar/"> Prefectura Naval Argentina,</a>
+            <a target="_blank" href="https://www.windguru.cz/53">WindGURU,</a>
+            <a target="_blank" href="https://www.argentina.gob.ar/transporte/administracion-general-puertos-se/via-navegable-troncal/hidrometros">Hidrometros Río Paraná</a>
           </div>
 
           <div class="hero-arrow">
@@ -293,19 +298,19 @@
                 <form action="https://formspree.io/f/moqrygej" method="POST">
                   <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input name="name" id="nombre" type="text" />
+                    <input name="name" id="nombre" type="text" required />
                   </div>
                   <div class="form-group">
                     <label for="empresa">Empresa</label>
-                    <input name="empresa" id="empresa" type="text" />
+                    <input name="empresa" id="empresa" type="text" required />
                   </div>
                   <div class="form-group">
                     <label for="telefono">Teléfono</label>
-                    <input name="telefono" id="telefono" type="text" />
+                    <input name="telefono" id="telefono" type="text" required />
                   </div>
                   <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input name="email" id="email" type="text" />
+                    <input name="email" id="email" type="text" required />
                   </div>
                   <div class="form-group">
                     <label for="mensaje">Mensaje</label>
@@ -314,6 +319,7 @@
                       id="mensaje"
                       cols="30"
                       rows="10"
+                      required
                     ></textarea>
                   </div>
                   <div class="form-button-container">
@@ -377,7 +383,7 @@
               <div class="contact-info-side">
                 <div>
                   <span>Contactenos</span>
-                  <h3>inforio@multipar.com</h3>
+                  <h3>inforio@riopar.com</h3>
                   <h3>(+54 11) 4331.9111</h3>
                 </div>
 

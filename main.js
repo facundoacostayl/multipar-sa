@@ -56,6 +56,7 @@ menuLists.forEach(li => {
 const nav = document.querySelector("nav");
 serviciosSection = document.querySelector("#servicios-section");
 contactoSection = document.querySelector("#contacto-section");
+const footerSection = document.querySelector("#footer-section");
 
 window.addEventListener("scroll", () => {
     nav.classList.toggle("nav-down", window.scrollY > 0);
@@ -63,7 +64,7 @@ window.addEventListener("scroll", () => {
 
 //NAV DISABLED WHEN SECTION ON
 window.addEventListener("scroll", () => {
-    nav.classList.toggle("nav-disabled", contactoSection.getBoundingClientRect().top === 0 ||  serviciosSection.getBoundingClientRect().top === 0)
+    nav.classList.toggle("nav-disabled", contactoSection.getBoundingClientRect().top === 0 ||  serviciosSection.getBoundingClientRect().top === 0 || footerSection.getBoundingClientRect().top === 0)
 })
 
 // CURSOR EFFECT
@@ -258,15 +259,35 @@ window.addEventListener("scroll", () => {
     }
 })
 
+//HERO ARROW ANIMATION
+
+const heroArrow = document.querySelector('#hero-arrow');
+
+window.addEventListener("click", () => {
+    if(headerSection.getBoundingClientRect().top === 0) {
+        heroArrow.classList.add("animation-active")
+        console.log("now")
+    }
+});
+
 //FOOTER ANIMATION
 
 const radioIcon = document.querySelector('#radio-footer-img');
 
 window.addEventListener("scroll", () => {
-    if(contactoSection.getBoundingClientRect().top < 100) {
+    if(contactoSection.getBoundingClientRect().top < 0) {
         radioIcon.classList.add("animation-active");
         console.log("now")
-    } else {
+    } else if(contactoSection.getBoundingClientRect().top >= 0) {
         radioIcon.classList.remove("animation-active");
     }
 })
+
+// CONTACTO FORM VALIDATIONS
+
+const nameInput = document.querySelector('#name');
+const empresaInput = document.querySelector('#empresa');
+const telefonoInput = document.querySelector('#telefono');
+const emailInput = document.querySelector('#email');
+const mensajeInput = document.querySelector('#mensaje');
+

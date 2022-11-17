@@ -250,6 +250,10 @@ h1, h2, h3, h4 {
             }
         }
 
+        .hero-arrow.animation-active{
+            animation: rotate .9s ease-in-out both;
+        }
+
 
         @keyframes rotate
         {
@@ -381,6 +385,7 @@ h1, h2, h3, h4 {
 
             h4 {
                 color: white;
+                font-size: 25px;
             }
 
             .about-aside-text {
@@ -439,7 +444,7 @@ h1, h2, h3, h4 {
             
             h1 {
                 color: #a42138;
-                font-size: 60px;
+                font-size: 70px;
                 margin: 0;
             }
            
@@ -451,7 +456,6 @@ h1, h2, h3, h4 {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    gap: 15vw;
 
                     .servicio-group:nth-child(1) {
                     
@@ -494,7 +498,7 @@ h1, h2, h3, h4 {
                     
                         position: relative;
                         width: 100%;
-                        height: 250px;
+                        height: 100%;
                         justify-content: center;
 
                         .overlay {
@@ -536,7 +540,7 @@ h1, h2, h3, h4 {
                             min-width: 100%;
                             max-width: 100%;
                             width: 100%;
-                            height: 250px;
+                            height: 100%;
                             object-fit: cover;
                             transform: tranlsate(-50%);
                         }
@@ -564,6 +568,7 @@ h1, h2, h3, h4 {
 
                     display: flex;
                     flex-direction: column;
+                    margin-bottom: 20px;
 
                     img {
                         opacity: 1;
@@ -605,13 +610,13 @@ h1, h2, h3, h4 {
 
                             h4 {
                                 color: #a42138;
-                                font-size: 15px;
+                                font-size: 20px;
                             }
 
                             p{
                                 margin-top: 5px;
                                 color: #3c3b3b;
-                                font-size: 15px;
+                                font-size: 18px;
                             }
                     }
                 }
@@ -628,15 +633,21 @@ h1, h2, h3, h4 {
         }
         .hero-arrow {
             width: 100%;
-            position: absolute;
-            bottom: -7%;
-            left: 0;
             text-align: center;
+            padding-top: 4rem;
 
             img {
                 cursor: pointer;
                 width: 40px;
             }
+        }
+    }
+
+    .servicios-section-2 {
+        padding: 0;
+
+        .servicios-content {
+            padding: 0rem 1rem 0 1rem;
         }
     }
 
@@ -653,18 +664,13 @@ h1, h2, h3, h4 {
             padding: 0 .5rem;
 
             a {
-                font-size: 35px;
+                font-size: 30px;
                 color: #3c3b3b;
                 text-decoration: none;
             }
 
             a:nth-child(1) {
                 color: #a42138;
-            }
-
-            a:hover {
-                color: #a42138;
-                text-decoration: underline;
             }
         }
 
@@ -745,7 +751,6 @@ h1, h2, h3, h4 {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        margin: 10px 0 10px 0;
                         color: white;
                         background-color: #025694;
                         border: none;
@@ -1073,7 +1078,7 @@ h1, h2, h3, h4 {
                 .mm-logo {
     
                     display: flex;
-                    justify-content: right;
+                    
                     align-items: flex-end;
                     gap: 5px;
                     margin-right: 20px;
@@ -1084,9 +1089,7 @@ h1, h2, h3, h4 {
     
                 } 
             }
-            
         }
-
     }
 
     // LESS BIGGER
@@ -1923,10 +1926,6 @@ h1, h2, h3, h4 {
                 }   
     
             }
-
-            .hero-arrow {
-                bottom: -10%;
-            }
         }
 
     }
@@ -1972,10 +1971,6 @@ h1, h2, h3, h4 {
                     
                 }   
             }
-
-            .hero-arrow {
-                bottom: -15%;
-            }
         }
 
         .interes-section {            
@@ -1984,6 +1979,11 @@ h1, h2, h3, h4 {
 
                 a {
                     font-size: 90px;
+                }
+
+                a:hover {
+                    color: #a42138;
+                    text-decoration: underline;
                 }
             }
         }
