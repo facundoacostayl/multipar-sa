@@ -1931,6 +1931,20 @@ h1, h2, h3, h4 {
 
     @media screen and (min-width: 1024px) {
 
+        header {
+            .hero {
+                .hero-menu {
+                    .menu-container {
+                        ul {
+                            li {
+                                font-size: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .servicios-section {
     
             .servicios-content {
@@ -2159,7 +2173,7 @@ h1, h2, h3, h4 {
                 .contact-info-side {
                     text-align: left;
                     border-bottom: 2px solid white;
-                    padding: 70px 0 100px 0;
+                    padding: 20px 0 20px 0;
                     display: flex;
                     justify-content: space-around;
     
@@ -2287,6 +2301,21 @@ h1, h2, h3, h4 {
     }
 
     @media screen and (min-width: 1366px) {
+
+        header {
+            .hero {
+                .hero-menu {
+                    .menu-container {
+                        ul {
+                            li {
+                                font-size: 70px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .interes-section {            
             .interes-content {
                 a {
@@ -2297,6 +2326,26 @@ h1, h2, h3, h4 {
     }
 
     @media screen and (min-width: 1920px) {
+
+        header {
+            .hero {
+                .hero-menu {
+                    .menu-container {
+                        ul {
+                            li {
+                                font-size: 90px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .servicios-section {
+            .hero-arrow {
+                padding-top: 2rem;
+            }
+        }
 
         .contacto-section {
             .contacto-container {
@@ -2350,6 +2399,150 @@ h1, h2, h3, h4 {
                 }
             }                 
         }
+        }
+
+        footer {
+
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+
+            .footer-content {
+
+                margin: 0 auto;
+                height: 100%;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                
+    
+                .contact-info-side {
+                    text-align: left;
+                    border-bottom: 2px solid white;
+                    padding: 70px 0 70px 0;
+                    display: flex;
+                    justify-content: space-around;
+    
+                    span {
+                        font-weight: 100;
+                    }
+    
+                    h3 {
+                        font-size: 60px;
+                    }
+
+                    img {
+                        align-items: right;
+                        display: block;
+                        width: 100px;
+                    }
+                }
+    
+                .links-side {
+
+                    height: 100%;
+                    display: flex;
+                    margin-top: 50px;
+                    
+                    .logo-footer {
+    
+                        display: flex;
+                        align-items: flex-start;
+                        margin-bottom: 20px;
+                        width: 30%;
+                        margin-top: 50px;
+    
+                        img {
+                            width: 200px;
+                        }
+                    }
+    
+                    .links-footer {
+    
+                        width: 70%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        gap: 15px;
+                            
+                        h4 {
+                            font-weight: 600;
+                            font-size: 30px;
+                        }
+    
+                        p {
+                            text-decoration: none;
+                            font-size: 20px;
+                        }
+    
+                        a {
+                            text-decoration: none;
+                            font-size: 20px;
+                        }    
+
+                        .side-footer {
+                            width: 30%;
+                        }
+    
+                        .menu-side-footer, .herramientas-side-footer {
+                            h4 {
+                                margin-bottom: 12px;
+                            }
+
+                            display: flex;
+                            flex-direction: column;
+
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .copyright-side {
+
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                
+                
+                background-color: white;
+                padding: .2rem 1rem;
+
+                .copyright-container {
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        font-size: 20px;
+                        color: #3c3b3b;
+                        margin: 0;
+                    }
+
+                    .mm-logo {
+    
+                        display: flex;
+                        justify-content: right;
+                        align-items: flex-end;
+                        gap: 5px;
+
+                        p {
+                            font-size: 15px;
+                        }
+        
+                        img {
+                            width: 50px;
+                        }
+        
+                    }
+                }
+    
+                
+            }
+
         }
 
     }
