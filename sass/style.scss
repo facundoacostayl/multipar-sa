@@ -702,92 +702,95 @@ h1, h2, h3, h4 {
             background-color: #025694;
 
         .contacto-content {
+            height: 100%;
             margin: 0 auto;
-            padding: .2rem 1rem;  
+            padding: 0 1rem;  
             color: white;  
             opacity: 0;
             animation: transitionIn 2s linear;
 
             .form-content {
                 padding: 20px 0 0 0;
+
+                form { 
+
+                    height: 100%;
                 
-                .form-group {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-                    margin-bottom: 15px;
-
-                    label {
-                        font-weight: 100;
-                    }
-
-                    input, textarea {
-                        background-color: transparent;
-                        border-bottom: white 1px solid;
-                        border-top: none;
-                        border-right: none;
-                        border-left: none;
-                        color: white;
-                    }
-
-                    textarea {
-                        height: 50px;
-                        font-size: 17px;
-                        margin: 0;
-                    }
-
-                    input:focus, textarea:focus {
-                        outline: none;
-                    }
-                }
-
-                .form-button-container {
-                    width: 100%;
-                    display: flex;
-                    justify-content: right;
-
-                    button {
+                    .form-group {
                         display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: white;
-                        background-color: #025694;
-                        border: none;
-                        cursor: pointer;
- 
-                    img {
-                        width: 50px;
+                        flex-direction: column;
+                        gap: 5px;
+                        margin-bottom: 15px;
+    
+                        label {
+                            font-weight: 100;
+                        }
+    
+                        input, textarea {
+                            background-color: transparent;
+                            border-bottom: white 1px solid;
+                            border-top: none;
+                            border-right: none;
+                            border-left: none;
+                            color: white;
+                        }
+    
+                        textarea {
+                            height: 50px;
+                            font-size: 17px;
+                            margin: 0;
+                        }
+    
+                        input:focus, textarea:focus {
+                            outline: none;
+                        }
                     }
+    
+                    .form-button-container {
+                        width: 100%;
+                        display: flex;
+                        justify-content: right;
+    
+                        button {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: white;
+                            background-color: #025694;
+                            border: none;
+                            cursor: pointer;
 
-                    @keyframes button-effect
-        {
-            0%
+    
+                        @keyframes button-effect
             {
-                transform: rotate(0deg) translate3d(0, 0, 0);
+                0%
+                {
+                    transform: rotate(0deg) translate3d(0, 0, 0);
+                }
+                25%
+                {
+                    transform: rotate(1deg) translate3d(0, 0, 0);
+                }
+                50%
+                {
+                    transform: rotate(0deg) translate3d(0, 0, 0);
+                }
+                75%
+                {
+                    transform: rotate(1deg) translate3d(0, 0, 0);
+                }
+                100%
+                {
+                    transform: rotate(0deg) translate3d(0, 0, 0);
+                }
             }
-            25%
-            {
-                transform: rotate(1deg) translate3d(0, 0, 0);
-            }
-            50%
-            {
-                transform: rotate(0deg) translate3d(0, 0, 0);
-            }
-            75%
-            {
-                transform: rotate(1deg) translate3d(0, 0, 0);
-            }
-            100%
-            {
-                transform: rotate(0deg) translate3d(0, 0, 0);
-            }
-        }
+                        }
+    
+                    }      
+                    
+                    .form-button-container:hover {
+                        animation: button-effect .9s ease-in-out both;
                     }
-
-                }      
-                
-                .form-button-container:hover {
-                    animation: button-effect .9s ease-in-out both;
                 }
             }
 
@@ -1491,21 +1494,22 @@ h1, h2, h3, h4 {
             .contacto-content {
                 
                 .form-content {
+
                     label {
                         font-size: 25px;
                     }
 
                     input {
                         font-size: 20px;
-                        height: 40px;
+                        height: 20px;
                     }
 
                     .form-button-container {
     
                         button {
-                            margin: 10px 0 10px 0;
                             color: white;
                             font-size: 30px;
+
      
                         img {
                             width: 100px;
@@ -1517,19 +1521,22 @@ h1, h2, h3, h4 {
                 .aside-content {
 
                     line-height: normal;
-                    font-size: 28px;
+                    margin: 0;
+                    padding: 0;
     
                     .info-group {
                         width: 100%;
                         display: flex;
                         flex-direction: column;
                         align-items: flex-start;   
-                        justify-content: center;     
+                        justify-content: center;  
+                        margin-bottom: 10px; 
                         
                         h4 {
                             font-size: 35px;
                             font-weight: 500;
-                            margin: 15px 0;
+                            margin-bottom: 15px;
+                            padding: 0;
                         }
 
                         p {
@@ -1557,13 +1564,18 @@ h1, h2, h3, h4 {
                         
     
                         h4 {
-                            font-size: 30px;
+                            font-size: 35px;
                             font-weight: 500;
                             margin: 15px 0;
                         }
 
                         p {
                             margin: 0;
+                            font-size: 25px;
+                        }
+
+                        span {
+                            font-size: 25px;
                         }
     
                     }
@@ -1579,6 +1591,7 @@ h1, h2, h3, h4 {
                         }
     
                         p {
+                            font-size: 22px;
                             margin: 0;
                             margin-right: 1px;
                         }
@@ -2011,7 +2024,6 @@ h1, h2, h3, h4 {
             .contacto-content {
                 width: 100%;
                 margin: 0 auto;
-                padding: 1rem;  
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -2022,7 +2034,6 @@ h1, h2, h3, h4 {
     
                 .form-content {
                     width: 60%;
-                    padding: 0;
                     
                     .form-group {
                         display: flex;
@@ -2073,9 +2084,11 @@ h1, h2, h3, h4 {
                     
                     display: flex;
                     flex-direction: column;
+                    align-items:center;
+                    justify-content: center;
                     gap: 25px;
                     width: 30%;
-                    font-size: 25px;
+                    height: 100%;
     
                     .info-group {
                         width: 100%;
@@ -2102,6 +2115,10 @@ h1, h2, h3, h4 {
     
                         span {
                             font-weight: 300;
+                        }
+
+                        a {
+                            font-size: 23px;
                         }
                     }
     
@@ -2131,10 +2148,12 @@ h1, h2, h3, h4 {
 
                         h4 {
                             display: block;
+                            font-size: 35px;
                         }
 
                         p {
                             margin-right: 1px;
+                            font-size: 15px;
                         }
                     }
                 }
@@ -2150,6 +2169,10 @@ h1, h2, h3, h4 {
             .reveal.active {
                 transform: translateX(0);
                 opacity: 1;
+            }
+
+            .hero-arrow {
+                display: none;
             }
     
         }
@@ -2314,6 +2337,174 @@ h1, h2, h3, h4 {
                     }
                 }
             }
+        }
+
+        .contacto-section {
+                
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            
+            .contacto-container {
+            .contacto-content {
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 100px;
+                color: white;  
+                opacity: 0;
+                animation: transitionIn 2s linear;
+    
+                .form-content {
+                    width: 60%;
+                    
+                    .form-group {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        margin-bottom: 30px;
+    
+                        label {
+                            font-weight: 100;
+                        }
+    
+                        input, textarea {
+                            background-color: transparent;
+                            border-bottom: white 1px solid;
+                            border-top: none;
+                            border-right: none;
+                            border-left: none;
+                            color: white;
+                            height: 40px;
+                        }
+    
+                        textarea {
+                            height: 80px;
+                        }
+    
+                        input:focus, textarea:focus {
+                            outline: none;
+                        }
+                    }
+    
+                    .form-button-container {
+    
+                        button {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 0;
+                            color: white;
+                            background-color: #025694;
+     
+                        img {
+                            width: 120px;
+                        }
+                        }
+                    }       
+                }
+    
+                .aside-content {
+                    
+                    display: flex;
+                    flex-direction: column;
+                    align-items:center;
+                    justify-content: center;
+                    gap: 25px;
+                    width: 30%;
+                    height: 100%;
+    
+                    .info-group {
+                        width: 100%;
+
+                        h4 {
+                            font-weight: 500;
+                            font-size: 40px;
+                        }
+
+                        p {
+                            font-size: 25px;
+                        }
+
+                        .big-screen-info {
+                            display: block;
+                        }
+
+                        .small-screen-info {
+                            display: none;
+                        }
+
+                    }
+    
+                    .email-group {
+                        
+                        h4 {
+                            font-size: 40px;
+                            display: block;
+                        }
+    
+                        span {
+                            font-weight: 300;
+                        }
+
+                        a {
+                            font-size: 30px;
+                        }
+                    }
+    
+                    .telefono-group {
+    
+                        margin: 0;
+                        padding: 0;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        h4 {
+                            display: block;
+                        }
+    
+    
+                        span {
+                            font-weight: 300;
+                        }
+    
+                    }
+    
+                    .ubicacion-group {
+
+                        .ubicacion-info {
+                            flex-direction: column;
+                        }
+
+                        h4 {
+                            display: block;
+                        }
+
+                        p {
+                            margin-right: 1px;
+                        }
+                    }
+                }
+            }                 
+        }
+    
+            .reveal {
+                transform: translateX(150px);
+                opacity: 0;
+                transition: all 1s ease;
+            }
+    
+            .reveal.active {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            .hero-arrow {
+                display: block;
+            }
+    
         }
 
         .interes-section {            

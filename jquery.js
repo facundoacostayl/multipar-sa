@@ -5,6 +5,7 @@
 // SERVICIOS IMAGES ZOOM EFFECT
 
 $(window).scroll(function () {
+  console.log(window.scrollY)
   const scroll = $(window).scrollTop();
   $(".zoom img").css({
     width: 100 + (scroll - 1450) / 50 + "%",
@@ -16,7 +17,8 @@ $(window).scroll(function () {
 const standardMobile = window.matchMedia("(min-height: 736px)");
 const bigStandardMobile = window.matchMedia("(min-height: 850px)");
 const mediumWindow = window.matchMedia("(min-width: 540px)");
-const desktopWindow = window.matchMedia("(min-width: 768px)");
+const tabletWindow = window.matchMedia("(min-width: 768px)");
+const smallDesktopWindow = window.matchMedia("(min-width: 1024px)");
 const contactoSection = document.querySelector("#contacto-section");
 
 
@@ -82,12 +84,12 @@ $(document).on("scroll", function () {
 
 }
 
-if(desktopWindow.matches) {
+if(tabletWindow.matches) {
   $(document).on("scroll", function () {
-  if (window.scrollY < 4170) {
+  if (window.scrollY < 3920) {
     $(".contacto-title").css(
       "top",
-      Math.max(220 - 0.35 * (window.scrollY - 3500)) + "px"
+      Math.max(220 - 0.35 * (window.scrollY - 3200)) + "px"
     );
   }
 });

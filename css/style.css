@@ -541,8 +541,9 @@ header .menu-mode {
   background-color: #025694;
 }
 .contacto-section .contacto-container .contacto-content {
+  height: 100%;
   margin: 0 auto;
-  padding: 0.2rem 1rem;
+  padding: 0 1rem;
   color: white;
   opacity: 0;
   animation: transitionIn 2s linear;
@@ -550,16 +551,19 @@ header .menu-mode {
 .contacto-section .contacto-container .contacto-content .form-content {
   padding: 20px 0 0 0;
 }
-.contacto-section .contacto-container .contacto-content .form-content .form-group {
+.contacto-section .contacto-container .contacto-content .form-content form {
+  height: 100%;
+}
+.contacto-section .contacto-container .contacto-content .form-content form .form-group {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-bottom: 15px;
 }
-.contacto-section .contacto-container .contacto-content .form-content .form-group label {
+.contacto-section .contacto-container .contacto-content .form-content form .form-group label {
   font-weight: 100;
 }
-.contacto-section .contacto-container .contacto-content .form-content .form-group input, .contacto-section .contacto-container .contacto-content .form-content .form-group textarea {
+.contacto-section .contacto-container .contacto-content .form-content form .form-group input, .contacto-section .contacto-container .contacto-content .form-content form .form-group textarea {
   background-color: transparent;
   border-bottom: white 1px solid;
   border-top: none;
@@ -567,20 +571,20 @@ header .menu-mode {
   border-left: none;
   color: white;
 }
-.contacto-section .contacto-container .contacto-content .form-content .form-group textarea {
+.contacto-section .contacto-container .contacto-content .form-content form .form-group textarea {
   height: 50px;
   font-size: 17px;
   margin: 0;
 }
-.contacto-section .contacto-container .contacto-content .form-content .form-group input:focus, .contacto-section .contacto-container .contacto-content .form-content .form-group textarea:focus {
+.contacto-section .contacto-container .contacto-content .form-content form .form-group input:focus, .contacto-section .contacto-container .contacto-content .form-content form .form-group textarea:focus {
   outline: none;
 }
-.contacto-section .contacto-container .contacto-content .form-content .form-button-container {
+.contacto-section .contacto-container .contacto-content .form-content form .form-button-container {
   width: 100%;
   display: flex;
   justify-content: right;
 }
-.contacto-section .contacto-container .contacto-content .form-content .form-button-container button {
+.contacto-section .contacto-container .contacto-content .form-content form .form-button-container button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -588,9 +592,6 @@ header .menu-mode {
   background-color: #025694;
   border: none;
   cursor: pointer;
-}
-.contacto-section .contacto-container .contacto-content .form-content .form-button-container button img {
-  width: 50px;
 }
 @keyframes button-effect {
   0% {
@@ -609,7 +610,7 @@ header .menu-mode {
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
 }
-.contacto-section .contacto-container .contacto-content .form-content .form-button-container:hover {
+.contacto-section .contacto-container .contacto-content .form-content form .form-button-container:hover {
   animation: button-effect 0.9s ease-in-out both;
 }
 .contacto-section .contacto-container .contacto-content .aside-content {
@@ -1075,10 +1076,9 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
   .contacto-section .contacto-container .contacto-content .form-content input {
     font-size: 20px;
-    height: 40px;
+    height: 20px;
   }
   .contacto-section .contacto-container .contacto-content .form-content .form-button-container button {
-    margin: 10px 0 10px 0;
     color: white;
     font-size: 30px;
   }
@@ -1087,7 +1087,8 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
   .contacto-section .contacto-container .contacto-content .aside-content {
     line-height: normal;
-    font-size: 28px;
+    margin: 0;
+    padding: 0;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .info-group {
     width: 100%;
@@ -1095,11 +1096,13 @@ footer .copyright-side .copyright-container .mm-logo img {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    margin-bottom: 10px;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .info-group h4 {
     font-size: 35px;
     font-weight: 500;
-    margin: 15px 0;
+    margin-bottom: 15px;
+    padding: 0;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .info-group p {
     margin: 0;
@@ -1119,12 +1122,16 @@ footer .copyright-side .copyright-container .mm-logo img {
     align-items: flex-start;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .telefono-group h4 {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 500;
     margin: 15px 0;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .telefono-group p {
     margin: 0;
+    font-size: 25px;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .telefono-group span {
+    font-size: 25px;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group {
     display: flex;
@@ -1135,6 +1142,7 @@ footer .copyright-side .copyright-container .mm-logo img {
     margin: 10px 0;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group p {
+    font-size: 22px;
     margin: 0;
     margin-right: 1px;
   }
@@ -1424,7 +1432,6 @@ footer .copyright-side .copyright-container .mm-logo img {
   .contacto-section .contacto-container .contacto-content {
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1435,7 +1442,6 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
   .contacto-section .contacto-container .contacto-content .form-content {
     width: 60%;
-    padding: 0;
   }
   .contacto-section .contacto-container .contacto-content .form-content .form-group {
     display: flex;
@@ -1474,9 +1480,11 @@ footer .copyright-side .copyright-container .mm-logo img {
   .contacto-section .contacto-container .contacto-content .aside-content {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 25px;
     width: 30%;
-    font-size: 25px;
+    height: 100%;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .info-group {
     width: 100%;
@@ -1496,6 +1504,9 @@ footer .copyright-side .copyright-container .mm-logo img {
   .contacto-section .contacto-container .contacto-content .aside-content .email-group span {
     font-weight: 300;
   }
+  .contacto-section .contacto-container .contacto-content .aside-content .email-group a {
+    font-size: 23px;
+  }
   .contacto-section .contacto-container .contacto-content .aside-content .telefono-group {
     margin: 0;
     padding: 0;
@@ -1513,9 +1524,11 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
   .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group h4 {
     display: block;
+    font-size: 35px;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group p {
     margin-right: 1px;
+    font-size: 15px;
   }
   .contacto-section .reveal {
     transform: translateX(150px);
@@ -1525,6 +1538,9 @@ footer .copyright-side .copyright-container .mm-logo img {
   .contacto-section .reveal.active {
     transform: translateX(0);
     opacity: 1;
+  }
+  .contacto-section .hero-arrow {
+    display: none;
   }
   footer {
     padding: 0;
@@ -1637,6 +1653,128 @@ footer .copyright-side .copyright-container .mm-logo img {
 @media screen and (min-width: 1366px) {
   header .hero .hero-menu .menu-container ul li {
     font-size: 70px;
+  }
+  .contacto-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .contacto-section .contacto-container .contacto-content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    color: white;
+    opacity: 0;
+    animation: transitionIn 2s linear;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content {
+    width: 60%;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content .form-group label {
+    font-weight: 100;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content .form-group input, .contacto-section .contacto-container .contacto-content .form-content .form-group textarea {
+    background-color: transparent;
+    border-bottom: white 1px solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: white;
+    height: 40px;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content .form-group textarea {
+    height: 80px;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content .form-group input:focus, .contacto-section .contacto-container .contacto-content .form-content .form-group textarea:focus {
+    outline: none;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content .form-button-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    color: white;
+    background-color: #025694;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content .form-button-container button img {
+    width: 120px;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 30%;
+    height: 100%;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .info-group {
+    width: 100%;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .info-group h4 {
+    font-weight: 500;
+    font-size: 40px;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .info-group p {
+    font-size: 25px;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .info-group .big-screen-info {
+    display: block;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .info-group .small-screen-info {
+    display: none;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .email-group h4 {
+    font-size: 40px;
+    display: block;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .email-group span {
+    font-weight: 300;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .email-group a {
+    font-size: 30px;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .telefono-group {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .telefono-group h4 {
+    display: block;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .telefono-group span {
+    font-weight: 300;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group .ubicacion-info {
+    flex-direction: column;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group h4 {
+    display: block;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group p {
+    margin-right: 1px;
+  }
+  .contacto-section .reveal {
+    transform: translateX(150px);
+    opacity: 0;
+    transition: all 1s ease;
+  }
+  .contacto-section .reveal.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .contacto-section .hero-arrow {
+    display: block;
   }
   .interes-section .interes-content a {
     font-size: 80px;
