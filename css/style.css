@@ -514,6 +514,10 @@ header .menu-mode {
 .interes-section .interes-content a:nth-child(1) {
   color: #a42138;
 }
+.interes-section .interes-content a:nth-child(1)::after {
+  content: "\a";
+  white-space: pre;
+}
 .interes-section .hero-arrow {
   width: 100%;
   position: absolute;
@@ -1423,6 +1427,9 @@ footer .copyright-side .copyright-container .mm-logo img {
   .interes-section .interes-content a:hover {
     color: #a42138;
     text-decoration: underline;
+  }
+  .interes-section .interes-content a:nth-child(1)::after {
+    content: " ";
   }
   .contacto-section {
     display: flex;

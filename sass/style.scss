@@ -671,6 +671,11 @@ h1, h2, h3, h4 {
             a:nth-child(1) {
                 color: #a42138;
             }
+
+            a:nth-child(1)::after{
+                content: "\a";
+                white-space: pre;
+            }
         }
 
         .hero-arrow {
@@ -2010,6 +2015,10 @@ h1, h2, h3, h4 {
                 a:hover {
                     color: #a42138;
                     text-decoration: underline;
+                }
+
+                a:nth-child(1)::after {
+                    content: " ";
                 }
             }
         }
