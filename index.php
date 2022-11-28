@@ -1,3 +1,60 @@
+<?php
+
+if($_POST) {
+  $name = "";
+  $empresa = "";
+  $telefono = "";
+  $email = "";
+  $mensaje = "";
+
+  
+$ip = $_SERVER['REMOTE_ADDR'];
+$captcha = $_POST['g-recaptcha-response'];
+$secretkey = "6Ld3pTwjAAAAAAQR0amDrWAwRG745f72UcpJjNR5";
+
+$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&
+response=$captcha&remoteip=$ip");
+
+$attributes = json_decode($response, TRUE);
+
+$errors = array();
+
+if($attributes['success']) {
+    $errors[] = "Verificar captcha";
+}
+  
+  if(isset($_POST['name'])) {
+    $name = filter_var($_POST['name'], FILTER_UNSAFE_RAW);
+  }
+  
+  if(isset($_POST['empresa'])) {
+    $empresa = filter_var($_POST['empresa'], FILTER_UNSAFE_RAW);
+  }
+
+  if(isset($_POST['email'])) {
+    $email = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['email']);
+    $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+  }
+  
+  if(isset($_POST['mensaje'])) {
+    $mensaje = htmlspecialchars($_POST['mensaje']);
+  }
+
+  $recipient = "facundoacostayl@gmail.com";
+
+  $headers  = 'MIME-Version: 1.0' . "\r\n"
+  .'Content-type: text/html; charset=utf-8' . "\r\n"
+  .'From: ' . $email . "\r\n";
+
+  if(mail($recipient, "Multipar Web", $mensaje, $headers)) {
+    echo "<p>Gracias por contactarnos, $visitor_name. Obtendrás una respuesta en las próximas horas.</p>";
+} else {
+    echo '<p>Ocurrió un error. Intenta nuevamente o contáctanos a través de nuestros otros medios de comunicación.</p>';
+}
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +74,7 @@
     <script defer src="./main.js"></script>
     <script defer src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script defer src="./jquery.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <div class="container">
@@ -295,7 +353,7 @@
             </div>
             <div class="contacto-content reveal">
               <div class="form-content">
-                <form action="contact.php" method="post">
+                <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" autocomplete="off" method="post">
                   <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input name="name" id="nombre" type="text" required />
@@ -322,6 +380,18 @@
                       required
                     ></textarea>
                   </div>
+                  <div class="recaptcha-container">
+                    <div class="g-recaptcha" data-sitekey="6Ld3pTwjAAAAAJkpbIsgj8UUcrUgetxr97xfRD1F"></div>
+                  </div>
+                  <?php
+                        if(isset($errors)) {
+                          if(count($errors) > 0) {
+                            ?>
+                            <p>Validar Captcha para continuar</p>
+                            <?php
+                          }
+                        }
+                      ?>
                   <div class="form-button-container">
                     <button type="submit">Enviar
                     <img

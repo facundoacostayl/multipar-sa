@@ -1,14 +1,5 @@
 <?php
 
-require "PHPMailer/Exception.php";
-require "PHPMailer/PHPMailer.php";
-require "PHPMailer/SMTP.php";
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
-
-
 if($_POST) {
     $name = "";
     $empresa = "";
@@ -34,19 +25,16 @@ if($_POST) {
     }
 
     $recipient = "facundoacostayl@gmail.com";
-    
-    $oMail= new PHPMailer();
-    $oMail->isSMTP();
-    $oMail->Host="smtp.gmail.com";
-    $oMail->Port=587;
-    $oMail->SMTPSecure="tls";
-    $oMail->SMTPAuth=true;
-    $oMail->Username=$email;
-    $oMail->Password="tupassword";
-    $oMail->setFrom("tumail@gmail.com","Pepito el que pica papas");
-    $oMail->addAddress("maildestino@mail.com","Pepito2");
-    $oMail->Subject="Hola pepe el que pica";
-    $oMail->msgHTML("Hola soy un mensaje");
+
+    $headers  = 'MIME-Version: 1.0' . "\r\n"
+    .'Content-type: text/html; charset=utf-8' . "\r\n"
+    .'From: ' . $email . "\r\n";
+
+    if(mail($recipient, "Multipar Web", $mensaje, $headers)) {
+      echo "<p>Gracias por contactarnos, $visitor_name. Obtendrás una respuesta en las próximas horas.</p>";
+  } else {
+      echo '<p>Ocurrió un error. Intenta nuevamente o contáctanos a través de nuestros otros medios de comunicación.</p>';
+  }
     
 } else {
     echo '<p>Ocurrió un error</p>';
