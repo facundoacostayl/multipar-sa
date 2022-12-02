@@ -741,7 +741,6 @@ h1, h2, h3, h4 {
                         }
     
                         textarea {
-                            height: 50px;
                             font-size: 17px;
                             margin: 0;
                         }
@@ -750,9 +749,13 @@ h1, h2, h3, h4 {
                             outline: none;
                         }
                     }
+
+                    .submit-group-container {
+                        display: flex;
+                    }
     
                     .form-button-container {
-                        width: 100%;
+                        width: 95%;
                         display: flex;
                         justify-content: right;
     
@@ -764,6 +767,7 @@ h1, h2, h3, h4 {
                             background-color: #025694;
                             border: none;
                             cursor: pointer;
+                            font-size: 20px;
 
     
                         @keyframes button-effect
@@ -795,6 +799,10 @@ h1, h2, h3, h4 {
                     
                     .form-button-container:hover {
                         animation: button-effect .9s ease-in-out both;
+                    }
+
+                    .recaptcha-container {
+                        margin-left: -18px;
                     }
                 }
             }
@@ -832,12 +840,20 @@ h1, h2, h3, h4 {
                     }
                 }
 
+                .email-group {
+                    display: none;
+                }
+
                 .telefono-group {
 
                     margin: 0;
                     padding: 0;
                     flex-direction: column;
                     align-items: flex-start;
+
+                    .telefono-item {
+                        display: none;
+                    }
                 }
 
                 .ubicacion-group {
@@ -1051,6 +1067,7 @@ h1, h2, h3, h4 {
                 bottom: 5%;
                 right: -50%;
                 transition: all .5s;
+                z-index: 9999;
 
                 img {
                     width: 40px;
@@ -1100,6 +1117,30 @@ h1, h2, h3, h4 {
     }
 
     // LESS BIGGER
+
+    @media screen and (min-width: 360px) {
+        .contacto-section {
+            .contacto-container {
+                .contacto-content {
+                    .form-content {
+
+                    form {
+                        .recaptcha-container {
+                            margin-left: 0;
+                        }
+
+                        .form-button-container{ 
+                            button {
+                                font-size: 23px;
+                            }
+                        }
+
+                    }
+                }                            
+            }
+            }
+        }
+    }
 
     @media screen and (min-width: 390px) {
 
@@ -1561,10 +1602,19 @@ h1, h2, h3, h4 {
     
                     .telefono-group {
     
-                        margin: 0;
+                        margin-bottom: 10px; 
                         padding: 0;
                         flex-direction: column;
                         align-items: flex-start;
+
+                        .telefono-item {
+                            display: block;
+                            margin-bottom: 10px; 
+                        }
+
+                        .whatsapp-item {
+                            margin-bottom: 10px; 
+                        }
                         
                         
     
@@ -2064,15 +2114,21 @@ h1, h2, h3, h4 {
                         }
     
                         textarea {
-                            height: 80px;
+                            height: 30px;
                         }
     
                         input:focus, textarea:focus {
                             outline: none;
                         }
                     }
+
+                    .submit-group-container {
+                        flex-direction: row;
+                    }
     
                     .form-button-container {
+
+                        margin-bottom: 30px;
     
                         button {
                             display: flex;
@@ -2081,9 +2137,10 @@ h1, h2, h3, h4 {
                             padding: 0;
                             color: white;
                             background-color: #025694;
+                            
      
                         img {
-                            width: 120px;
+                            width: 100px;
                         }
                         }
                     }       
@@ -2407,6 +2464,7 @@ h1, h2, h3, h4 {
                             padding: 0;
                             color: white;
                             background-color: #025694;
+                            font-size: 30px;
      
                         img {
                             width: 120px;
@@ -2862,4 +2920,43 @@ h1, h2, h3, h4 {
             }                   
         }
         }
+    }
+
+    .hero-arrow {
+        display: none;
+    }
+
+    @media screen and (min-width: 375px) {
+        .hero-arrow {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .contacto-section {
+            .contacto-container {
+            .contacto-content {
+                form
+                    .form-group {
+                        textarea {
+                            height: 20px;
+                        }
+                    }
+            }
+        }
+    }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .contacto-section {
+            .contacto-container {
+            .contacto-content {
+                form{
+                    .submit-group-container {
+                        flex-direction: column;
+                    }
+                    }
+            }
+        }
+    }
     }

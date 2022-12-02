@@ -380,6 +380,7 @@ if($attributes['success']) {
                       required
                     ></textarea>
                   </div>
+                  <div class="submit-group-container">
                   <div class="recaptcha-container">
                     <div class="g-recaptcha" data-sitekey="6Ld3pTwjAAAAAJkpbIsgj8UUcrUgetxr97xfRD1F"></div>
                   </div>
@@ -401,6 +402,7 @@ if($attributes['success']) {
                     />
                   </button>
                   </div>
+                  </div>
                 </form>
               </div>
               <div class="aside-content">
@@ -412,10 +414,10 @@ if($attributes['success']) {
                 </div>
                 <div class="info-group telefono-group">
                   <h4>Teléfono</h4>
-                  <a href="tel:+541143319111"
+                  <a href="tel:+541143319111" class="telefono-item"
                     ><span>Teléfono</span>: +54 11 4331.9111</a
                   >
-                  <a href="https://wa.me/+5491143319111" target="_blank"
+                  <a href="https://wa.me/+5491143319111" target="_blank" class="whatsapp-item"
                     ><span>WhatsApp</span>: +54 9 11 4331.9111</a
                   >
                 </div>

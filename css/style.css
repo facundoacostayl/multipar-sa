@@ -576,15 +576,17 @@ header .menu-mode {
   color: white;
 }
 .contacto-section .contacto-container .contacto-content .form-content form .form-group textarea {
-  height: 50px;
   font-size: 17px;
   margin: 0;
 }
 .contacto-section .contacto-container .contacto-content .form-content form .form-group input:focus, .contacto-section .contacto-container .contacto-content .form-content form .form-group textarea:focus {
   outline: none;
 }
+.contacto-section .contacto-container .contacto-content .form-content form .submit-group-container {
+  display: flex;
+}
 .contacto-section .contacto-container .contacto-content .form-content form .form-button-container {
-  width: 100%;
+  width: 95%;
   display: flex;
   justify-content: right;
 }
@@ -596,6 +598,7 @@ header .menu-mode {
   background-color: #025694;
   border: none;
   cursor: pointer;
+  font-size: 20px;
 }
 @keyframes button-effect {
   0% {
@@ -616,6 +619,9 @@ header .menu-mode {
 }
 .contacto-section .contacto-container .contacto-content .form-content form .form-button-container:hover {
   animation: button-effect 0.9s ease-in-out both;
+}
+.contacto-section .contacto-container .contacto-content .form-content form .recaptcha-container {
+  margin-left: -18px;
 }
 .contacto-section .contacto-container .contacto-content .aside-content {
   font-size: 17px;
@@ -644,11 +650,17 @@ header .menu-mode {
 .contacto-section .contacto-container .contacto-content .aside-content .info-group .big-screen-info {
   display: none;
 }
+.contacto-section .contacto-container .contacto-content .aside-content .email-group {
+  display: none;
+}
 .contacto-section .contacto-container .contacto-content .aside-content .telefono-group {
   margin: 0;
   padding: 0;
   flex-direction: column;
   align-items: flex-start;
+}
+.contacto-section .contacto-container .contacto-content .aside-content .telefono-group .telefono-item {
+  display: none;
 }
 .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group .ubicacion-info {
   display: flex;
@@ -808,6 +820,7 @@ footer .footer-content .arrow-up-container {
   bottom: 5%;
   right: -50%;
   transition: all 0.5s;
+  z-index: 9999;
 }
 footer .footer-content .arrow-up-container img {
   width: 40px;
@@ -841,6 +854,14 @@ footer .copyright-side .copyright-container .mm-logo img {
   width: 50px;
 }
 
+@media screen and (min-width: 360px) {
+  .contacto-section .contacto-container .contacto-content .form-content form .recaptcha-container {
+    margin-left: 0;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content form .form-button-container button {
+    font-size: 23px;
+  }
+}
 @media screen and (min-width: 390px) {
   .contacto-section .contacto-container .contacto-content .aside-content {
     font-size: 17px;
@@ -1120,10 +1141,17 @@ footer .copyright-side .copyright-container .mm-logo img {
     font-size: 25px;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .telefono-group {
-    margin: 0;
+    margin-bottom: 10px;
     padding: 0;
     flex-direction: column;
     align-items: flex-start;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .telefono-group .telefono-item {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .contacto-section .contacto-container .contacto-content .aside-content .telefono-group .whatsapp-item {
+    margin-bottom: 10px;
   }
   .contacto-section .contacto-container .contacto-content .aside-content .telefono-group h4 {
     font-size: 35px;
@@ -1468,10 +1496,16 @@ footer .copyright-side .copyright-container .mm-logo img {
     color: white;
   }
   .contacto-section .contacto-container .contacto-content .form-content .form-group textarea {
-    height: 80px;
+    height: 30px;
   }
   .contacto-section .contacto-container .contacto-content .form-content .form-group input:focus, .contacto-section .contacto-container .contacto-content .form-content .form-group textarea:focus {
     outline: none;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content .submit-group-container {
+    flex-direction: row;
+  }
+  .contacto-section .contacto-container .contacto-content .form-content .form-button-container {
+    margin-bottom: 30px;
   }
   .contacto-section .contacto-container .contacto-content .form-content .form-button-container button {
     display: flex;
@@ -1482,7 +1516,7 @@ footer .copyright-side .copyright-container .mm-logo img {
     background-color: #025694;
   }
   .contacto-section .contacto-container .contacto-content .form-content .form-button-container button img {
-    width: 120px;
+    width: 100px;
   }
   .contacto-section .contacto-container .contacto-content .aside-content {
     display: flex;
@@ -1711,6 +1745,7 @@ footer .copyright-side .copyright-container .mm-logo img {
     padding: 0;
     color: white;
     background-color: #025694;
+    font-size: 30px;
   }
   .contacto-section .contacto-container .contacto-content .form-content .form-button-container button img {
     width: 120px;
@@ -1979,6 +2014,25 @@ footer .copyright-side .copyright-container .mm-logo img {
   }
   .contacto-section .contacto-container .contacto-content .aside-content .ubicacion-group p {
     margin-right: 1px;
+  }
+}
+.hero-arrow {
+  display: none;
+}
+
+@media screen and (min-width: 375px) {
+  .hero-arrow {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contacto-section .contacto-container .contacto-content form .form-group textarea {
+    height: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .contacto-section .contacto-container .contacto-content form .submit-group-container {
+    flex-direction: column;
   }
 }
 
