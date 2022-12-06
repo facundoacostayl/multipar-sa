@@ -12,7 +12,7 @@ $(window).scroll(function () {
   });
 });
 
-// TITLE PARALLAX EFFECT ON (CONTACT: Y Position 3492) (SERVICIOS TOP -20%)
+/*// TITLE PARALLAX EFFECT ON (CONTACT: Y Position 3492) (SERVICIOS TOP -20%)
 
 const standardMobile = window.matchMedia("(min-height: 736px)");
 const bigStandardMobile = window.matchMedia("(min-height: 850px)");
@@ -93,4 +93,4 @@ if(tabletWindow.matches) {
     );
   }
 });
-}
+}*/

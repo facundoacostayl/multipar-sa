@@ -346,14 +346,14 @@ if($attributes['success']) {
 
       <div class="section hidden-section">
         <div id="contacto-section" class="contacto-section">
+          <div class="contacto-title title-effect">
+            <p>Ponte en contacto</p>
+            <h1>Contacto</h1>
+          </div>
           <div class="contacto-container">
-            <div class="contacto-title title-effect">
-              <p>Ponte en contacto</p>
-              <h1>Contacto</h1>
-            </div>
             <div class="contacto-content reveal">
               <div class="form-content">
-                <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" autocomplete="off" method="post">
+                <form action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" autocomplete="off" method="post">
                   <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input name="name" id="nombre" type="text" required />
@@ -429,9 +429,7 @@ if($attributes['success']) {
                       <p class="big-screen-info">
                         Ciudad Autónoma de Buenos Aires.
                       </p>
-                      <p class="small-screen-info">CABA.</p>
-                      <p>Argentina.</p>
-                    </div>
+                      <p class="">Argentina</p>
                   </div>
                 </div>
               </div>
@@ -536,17 +534,11 @@ if($attributes['success']) {
           <div class="slider">
             <section>
               <div class="section-content">
-                <h2>PRACTICAJE</h2>
+                <h2>PILOTAJE</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                  nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                  aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                  dolor in hendrerit in vulputate velit esse molestie consequat,
-                  vel illum dolore eu feugiat nulla facilisis at vero eros et
-                  accumsan et iusto odio dignissim qui blandit praesent luptatum
-                  zzril
+                  Nuestro servicio de pilotaje es un servicio integral y se extiende a lo largo de todo el río Paraná,
+
+Este servicio integral lo conforma personal calificado y experimentado en el rubro, compuesto por operadores logísticos, flota de vehículos propia para el traslado de los prácticos y coordinadores de servicios a cargo de nuestros capitanes más calificados, 
                 </p>
               </div>
             </section>
@@ -570,15 +562,9 @@ if($attributes['success']) {
               <div class="section-content">
                 <h2>ASESORAMIENTO</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                  nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                  aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                  dolor in hendrerit in vulputate velit esse molestie consequat,
-                  vel illum dolore eu feugiat nulla facilisis at vero eros et
-                  accumsan et iusto odio dignissim qui blandit praesent luptatum
-                  zzril
+                  Brindamos un asesoramiento completo en todo momento, porque nuestro espíritu es ser una empresa de servicios 360. asesorando a todos y cada una de las personas que así lo requieran en el momento que así lo soliciten, poniendo a disposición a los profesionales que conforman la empresa, brindando comunicación fluida y asesoramiento técnico las 24hs los 365 días del año.
+
+Asimismo contamos con una política de capacitación interna, para que dicho asesoramiento se encuentre a la vanguardia de las nuevas tecnologías y reglamentaciones vigentes.
                 </p>
               </div>
             </section>
