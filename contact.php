@@ -6,6 +6,21 @@ if($_POST) {
     $telefono = "";
     $email = "";
     $mensaje = "";
+
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $captcha = $_POST['g-recaptcha-response'];
+    $secretkey = "6Ld3pTwjAAAAAAQR0amDrWAwRG745f72UcpJjNR5";
+
+    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&
+    response=$captcha&remoteip=$ip");
+
+    $attributes = json_decode($response, TRUE);
+
+    $errors = array();
+
+    if(!$attributes['success']) {
+        $errors[] = "Verificar captcha";
+    }
     
     if(isset($_POST['name'])) {
       $name = filter_var($_POST['name'], FILTER_UNSAFE_RAW);
@@ -30,12 +45,5 @@ if($_POST) {
     .'Content-type: text/html; charset=utf-8' . "\r\n"
     .'From: ' . $email . "\r\n";
 
-    if(mail($recipient, "Multipar Web", $mensaje, $headers)) {
-      echo "<p>Gracias por contactarnos, $visitor_name. Obtendrás una respuesta en las próximas horas.</p>";
-  } else {
-      echo '<p>Ocurrió un error. Intenta nuevamente o contáctanos a través de nuestros otros medios de comunicación.</p>';
-  }
-    
-} else {
-    echo '<p>Ocurrió un error</p>';
+    $mail = mail($recipient, "Multipar Web", $mensaje, $headers);
 }

@@ -80,8 +80,8 @@
 //POPUP
 
     .popup-container {
-
         display: none;
+
 
         .detalles-servicio-popup {
             position: fixed;
@@ -205,6 +205,57 @@
             height: 100%;
             z-index: 9999;
         }
+    }
+
+    .popup-submitted {
+        
+       display: none;
+
+        .submit-popup-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: fixed;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 580px;
+            padding: 2rem 2rem;
+            background-color: #025694;
+            transition: 0.5s;
+            overflow: hidden;
+            z-index: 99999;
+
+            .popup-text-details {
+                color: white;
+                padding: 0 2rem;
+                margin-bottom: 20px;
+                font-size: 20px;
+
+                h1 {
+                    text-align: center;
+                    font-size: 50px;
+                }
+            }
+            
+            button {
+                width: 120px;
+                margin: 0 auto;
+                border: none;
+                background-color: #025694;
+                color: white;
+                border: 1px solid white;
+                padding: 1rem;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: white;
+                color: #025694;
+            }
+    }
     }
         
 

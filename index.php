@@ -1,57 +1,6 @@
 <?php
 
-if($_POST) {
-  $name = "";
-  $empresa = "";
-  $telefono = "";
-  $email = "";
-  $mensaje = "";
-
-  
-$ip = $_SERVER['REMOTE_ADDR'];
-$captcha = $_POST['g-recaptcha-response'];
-$secretkey = "6Ld3pTwjAAAAAAQR0amDrWAwRG745f72UcpJjNR5";
-
-$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&
-response=$captcha&remoteip=$ip");
-
-$attributes = json_decode($response, TRUE);
-
-$errors = array();
-
-if($attributes['success']) {
-    $errors[] = "Verificar captcha";
-}
-  
-  if(isset($_POST['name'])) {
-    $name = filter_var($_POST['name'], FILTER_UNSAFE_RAW);
-  }
-  
-  if(isset($_POST['empresa'])) {
-    $empresa = filter_var($_POST['empresa'], FILTER_UNSAFE_RAW);
-  }
-
-  if(isset($_POST['email'])) {
-    $email = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['email']);
-    $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-  }
-  
-  if(isset($_POST['mensaje'])) {
-    $mensaje = htmlspecialchars($_POST['mensaje']);
-  }
-
-  $recipient = "facundoacostayl@gmail.com";
-
-  $headers  = 'MIME-Version: 1.0' . "\r\n"
-  .'Content-type: text/html; charset=utf-8' . "\r\n"
-  .'From: ' . $email . "\r\n";
-
-  if(mail($recipient, "Multipar Web", $mensaje, $headers)) {
-    echo "<p>Gracias por contactarnos, $visitor_name. Obtendrás una respuesta en las próximas horas.</p>";
-} else {
-    echo '<p>Ocurrió un error. Intenta nuevamente o contáctanos a través de nuestros otros medios de comunicación.</p>';
-}
-}
+include('contact.php');
 
 ?>
 
@@ -62,6 +11,11 @@ if($attributes['success']) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multipar S.A.</title>
+    <!--FAVICON-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="https://use.typekit.net/rco5sgx.css" />
@@ -78,6 +32,29 @@ if($attributes['success']) {
   </head>
   <body>
     <div class="container">
+      <div class="popup-submitted">
+        <div class="submit-popup-container">
+          <div class="popup-text-details">
+            <?php
+            if(isset($mail)) {
+              if($mail) {
+                ?>
+                                            
+                <h1>¡Gracias!</h1>
+                <p>Hemos recibido tu mensaje. Obtendrás una respuesta en las próximas horas.</p>
+                <?php
+              }else {
+                ?>
+                <h1>¡Ups!</h1>
+                <p>Ha ocurrido un error. Por favor intenta nuevamente o contáctanos por nuestros medios de comunicación.</p>
+                <?php
+              }
+            }
+            ?>
+          </div>
+          <button id="submit-popup-accept-button">Aceptar</button>
+        </div>
+      </div>
       <header id="header-section">
         <div class="section">
           <nav class="">
@@ -239,12 +216,12 @@ if($attributes['success']) {
 
                   <div class="overlay">
                     <div class="content overlay-button">
-                      <p id="translados-button">Translados</p>
+                      <p id="translados-button">Traslados</p>
                     </div>
                   </div>
 
                   <div class="servicio-info">
-                    <h4>TRANSLADOS</h4>
+                    <h4>TRASLADOS</h4>
                     <p>Acuáticos y terrestres</p>
                   </div>
                 </div>
@@ -387,9 +364,9 @@ if($attributes['success']) {
                   <?php
                         if(isset($errors)) {
                           if(count($errors) > 0) {
-                            ?>
-                            <p>Validar Captcha para continuar</p>
-                            <?php
+
+                            echo "<p>Validar Captcha para continuar</p>";
+                            
                           }
                         }
                       ?>
@@ -544,17 +521,9 @@ Este servicio integral lo conforma personal calificado y experimentado en el rub
             </section>
             <section>
               <div class="section-content">
-                <h2>TRANSLADOS</h2>
+                <h2>TRASLADOS</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                  nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                  aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                  dolor in hendrerit in vulputate velit esse molestie consequat,
-                  vel illum dolore eu feugiat nulla facilisis at vero eros et
-                  accumsan et iusto odio dignissim qui blandit praesent luptatum
-                  zzril
+                El traslado de nuestros prácticos se realiza con una flota propia de vehículos y choferes especialmente dedicados y habilitados para dicha tarea. 
                 </p>
               </div>
             </section>

@@ -1,1 +1,11 @@
 ARROW TOP SHOULD DISAPPEAR WHEN I CLICK INICIO FROM MENU
+
+if($mail) {
+    echo "<script>alert('Mail was sent !');</script>";
+    echo "<script>document.location.href='contact.php'</script>";
+      }
+      else
+      {
+      echo "<script>alert('Ha ocurrido un error. Intenta nuevamente');</script>";
+      }
+  }

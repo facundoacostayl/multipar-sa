@@ -291,3 +291,15 @@ const telefonoInput = document.querySelector('#telefono');
 const emailInput = document.querySelector('#email');
 const mensajeInput = document.querySelector('#mensaje');
 
+//FORM POPUP ACCEPT BUTTON
+
+const formSubmittedConfirmationPopup = document.querySelector('.popup-submitted');
+const popupAcceptButton = document.querySelector('#submit-popup-accept-button');
+popupAcceptButton.addEventListener('click', () => {
+    formSubmittedConfirmationPopup.style.display="none";
+})
+
+const popupText = document.querySelector('.popup-text-details');
+if(popupText.children.length > 0) {
+    formSubmittedConfirmationPopup.style.display="block";
+}
